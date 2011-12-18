@@ -1,4 +1,0 @@
-VHDL dcr_v29_v9_00_a /home/rihuber/reconos/projects/sort_demo/hw/edk-static/pcores/dcr_v29_v9_00_a/hdl/vhdl/or_muxcy.vhd
-VHDL dcr_v29_v9_00_a /home/rihuber/reconos/projects/sort_demo/hw/edk-static/pcores/dcr_v29_v9_00_a/hdl/vhdl/or_gate.vhd
-VHDL dcr_v29_v9_00_a /home/rihuber/reconos/projects/sort_demo/hw/edk-static/pcores/dcr_v29_v9_00_a/hdl/vhdl/dcr_v29.vhd
-vhdl work ../hdl/dcr_wrapper.vhd

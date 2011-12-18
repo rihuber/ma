@@ -1,6 +1,0 @@
-pcore generated.
-Don't forget to put any additional user logic files into the hw_task_v1_01_b/hdl/vhdl directory.
-Add a line in hw_task_v1_01_b/data/hw_task_v2_1_0.pao for each file (before the last hw_task line).
-pcore generated.
-Don't forget to put any additional user logic files into the hw_task_v1_01_b/hdl/vhdl directory.
-Add a line in hw_task_v1_01_b/data/hw_task_v2_1_0.pao for each file (before the last hw_task line).

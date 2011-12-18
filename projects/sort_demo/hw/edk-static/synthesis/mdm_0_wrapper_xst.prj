@@ -1,7 +1,0 @@
-VHDL proc_common_v3_00_a /opt/Xilinx/12.3/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect.vhd
-VHDL proc_common_v3_00_a /opt/Xilinx/12.3/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/family_support.vhd
-VHDL mdm_v1_00_g /opt/Xilinx/12.3/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v1_00_g/hdl/vhdl/srl_fifo.vhd
-VHDL mdm_v1_00_g /opt/Xilinx/12.3/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v1_00_g/hdl/vhdl/jtag_control.vhd
-VHDL mdm_v1_00_g /opt/Xilinx/12.3/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v1_00_g/hdl/vhdl/mdm_core.vhd
-VHDL mdm_v1_00_g /opt/Xilinx/12.3/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v1_00_g/hdl/vhdl/mdm.vhd
-vhdl work ../hdl/mdm_0_wrapper.vhd

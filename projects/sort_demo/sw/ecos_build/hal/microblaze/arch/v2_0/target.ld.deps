@@ -1,4 +1,0 @@
-/home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/lib/target.ld : \
-  /home/rihuber/reconos/projects/sort_demo/hw/edk-static/microblaze_0/include/xparameters.h \
-  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/hal_microblaze_mb.h
-

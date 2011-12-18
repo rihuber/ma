@@ -1,0 +1,6 @@
+# Reconos FPGA layout file (version 3.1.0a)
+
+target
+	device XC2VP30
+	family xc2vp
+end

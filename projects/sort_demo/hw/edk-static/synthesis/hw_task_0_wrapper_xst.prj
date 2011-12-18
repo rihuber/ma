@@ -1,0 +1,8 @@
+vhdl reconos_v2_01_a /home/rihuber/reconos/projects/sort_demo/hw/edk-static/pcores/reconos_v2_01_a/hdl/vhdl/reconos_pkg.vhd
+vhdl burst_ram_v2_01_a /home/rihuber/reconos/projects/sort_demo/hw/edk-static/pcores/burst_ram_v2_01_a/hdl/vhdl/bram_wrapper.vhd
+vhdl burst_ram_v2_01_a /home/rihuber/reconos/projects/sort_demo/hw/edk-static/pcores/burst_ram_v2_01_a/hdl/vhdl/ram_single.vhd
+vhdl burst_ram_v2_01_a /home/rihuber/reconos/projects/sort_demo/hw/edk-static/pcores/burst_ram_v2_01_a/hdl/vhdl/burst_ram.vhd
+vhdl hw_task_v1_01_b /home/rihuber/reconos/projects/sort_demo/hw/edk-static/pcores/hw_task_v1_01_b/hdl/vhdl/bubble_sorter.vhd
+vhdl hw_task_v1_01_b /home/rihuber/reconos/projects/sort_demo/hw/edk-static/pcores/hw_task_v1_01_b/hdl/vhdl/sort8k.vhd
+vhdl hw_task_v1_01_b /home/rihuber/reconos/projects/sort_demo/hw/edk-static/pcores/hw_task_v1_01_b/hdl/vhdl/hw_task.vhd
+vhdl work ../hdl/hw_task_0_wrapper.vhd

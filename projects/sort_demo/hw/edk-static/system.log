@@ -1,0 +1,48 @@
+=====================
+Opened log file
+=====================
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 12.3 Build EDK_MS3.70d
+
+Xilinx EDK 12.3 Build EDK_MS3.70d
+
+WARNING:EDK - Option "CORE_STATE" in
+   /home/rihuber/reconos/projects/sort_demo/hw/edk-static/pcores/dcr_timebase_v1
+   _00_b/data/dcr_timebase_v2_1_0.mpd line 10  is deprecated. Please use Option
+   ARCH_SUPPORT_MAP instead. 
+WARNING:EDK - Option "CORE_STATE" in
+   /home/rihuber/reconos/projects/sort_demo/hw/edk-static/pcores/hw_task_v1_01_b
+   /data/hw_task_v2_1_0.mpd line 15  is deprecated. Please use Option
+   ARCH_SUPPORT_MAP instead. 
+WARNING:EDK - IPNAME:microblaze INSTANCE:microblaze_0 -
+   /home/rihuber/reconos/projects/sort_demo/hw/edk-static/system.mhs line 24 -
+   Superseded core for architecture 'virtex6lx'!
+WARNING:EDK - IPNAME:dcr_v29 INSTANCE:dcr -
+   /home/rihuber/reconos/projects/sort_demo/hw/edk-static/system.mhs line 50 -
+   Pre-Production version not verified on hardware for architecture 'virtex6lx'!
+WARNING:EDK - IPNAME:mdm INSTANCE:mdm_0 -
+   /home/rihuber/reconos/projects/sort_demo/hw/edk-static/system.mhs line 213 -
+   Superseded core for architecture 'virtex6lx'!
+WARNING:EDK - IPNAME:proc_sys_reset INSTANCE:proc_sys_reset_0 -
+   /home/rihuber/reconos/projects/sort_demo/hw/edk-static/system.mhs line 226 -
+   Superseded core for architecture 'virtex6lx'!
+WARNING:EDK - IPNAME:plbv46_dcr_bridge INSTANCE:plbv46_dcr_bridge_0 -
+   /home/rihuber/reconos/projects/sort_demo/hw/edk-static/system.mhs line 259 -
+   Pre-Production version not verified on hardware for architecture 'virtex6lx'!
+WARNING:EDK:3449 - IPNAME:microblaze INSTANCE:microblaze_0 - /home/rihuber/reconos/projects/sort_demo/hw/edk-static/system.mhs line 28 - Superseded core for architecture 'virtex6lx'!
+WARNING:EDK:3450 - IPNAME:dcr_v29 INSTANCE:dcr - /home/rihuber/reconos/projects/sort_demo/hw/edk-static/system.mhs line 54 - Pre-Production version not verified on hardware for architecture 'virtex6lx'!
+WARNING:EDK:3449 - IPNAME:mdm INSTANCE:mdm_0 - /home/rihuber/reconos/projects/sort_demo/hw/edk-static/system.mhs line 217 - Superseded core for architecture 'virtex6lx'!
+WARNING:EDK:3449 - IPNAME:proc_sys_reset INSTANCE:proc_sys_reset_0 - /home/rihuber/reconos/projects/sort_demo/hw/edk-static/system.mhs line 230 - Superseded core for architecture 'virtex6lx'!
+WARNING:EDK:3450 - IPNAME:plbv46_dcr_bridge INSTANCE:plbv46_dcr_bridge_0 - /home/rihuber/reconos/projects/sort_demo/hw/edk-static/system.mhs line 263 - Pre-Production version not verified on hardware for architecture 'virtex6lx'!
+Generated Block Diagram.
+Diagram Controls
+Zoom In/Out = ALT + (Mouse + Left Button) or ARROW UP/DOWN.
+Pan = SHIFT + (Mouse + Left Button) or ARROW UP/DOWN/LEFT/RIGHT.
+Writing filter settings....
+Done writing filter settings to:
+	/home/rihuber/reconos/projects/sort_demo/hw/edk-static/__xps/system.filters
+Done writing Tab View settings to:
+	/home/rihuber/reconos/projects/sort_demo/hw/edk-static/__xps/system.gui

@@ -1,0 +1,414 @@
+Release 12.3 - xst M.70d (lin64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "dcr_timebase_0_wrapper_xst.prj"
+Verilog Include Directory          : {"/home/rihuber/reconos/projects/sort_demo/hw/edk-static/pcores/" "/opt/Xilinx/12.3/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+
+---- Target Parameters
+Target Device                      : xc6vlx240tff1156-1
+Output File Name                   : "../implementation/dcr_timebase_0_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : dcr_timebase_0_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation/dcr_timebase_0_wrapper}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/rihuber/reconos/projects/sort_demo/hw/edk-static/pcores/dcr_timebase_v1_00_b/hdl/vhdl/dcr_timebase.vhd" into library dcr_timebase_v1_00_b
+Parsing entity <dcr_timebase>.
+Parsing architecture <implementation> of entity <dcr_timebase>.
+Parsing VHDL file "/home/rihuber/reconos/projects/sort_demo/hw/edk-static/synthesis/../hdl/dcr_timebase_0_wrapper.vhd" into library work
+Parsing entity <dcr_timebase_0_wrapper>.
+Parsing architecture <STRUCTURE> of entity <dcr_timebase_0_wrapper>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <dcr_timebase_0_wrapper> (architecture <STRUCTURE>) from library <work>.
+WARNING:HDLCompiler:244 - "/home/rihuber/reconos/projects/sort_demo/hw/edk-static/synthesis/../hdl/dcr_timebase_0_wrapper.vhd" Line 32: Binding entity dcr_timebase does not have generic c_family
+dcr_timebase is declared here
+
+Elaborating entity <dcr_timebase> (architecture <implementation>) with generics from library <dcr_timebase_v1_00_b>.
+dcr_timebase is declared here
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <dcr_timebase_0_wrapper>.
+    Related source file is "/home/rihuber/reconos/projects/sort_demo/hw/edk-static/hdl/dcr_timebase_0_wrapper.vhd".
+    Summary:
+	no macro.
+Unit <dcr_timebase_0_wrapper> synthesized.
+
+Synthesizing Unit <dcr_timebase>.
+    Related source file is "/home/rihuber/reconos/projects/sort_demo/hw/edk-static/pcores/dcr_timebase_v1_00_b/hdl/vhdl/dcr_timebase.vhd".
+        C_DCR_BASEADDR = "0010000000"
+        C_DCR_HIGHADDR = "0010000011"
+        C_DCR_AWIDTH = 10
+        C_DCR_DWIDTH = 32
+    Found 1-bit register for signal <set_timebase>.
+    Found 1-bit register for signal <dcrAck>.
+    Found 32-bit register for signal <slv_reg0>.
+    Found 32-bit register for signal <slv_reg1>.
+    Found 32-bit register for signal <timebase>.
+    Found 32-bit adder for signal <timebase[0]_GND_6_o_add_17_OUT> created at line 1241.
+    Found 32-bit 4-to-1 multiplexer for signal <dcrDBus> created at line 172.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  98 D-type flip-flop(s).
+	inferred  13 Multiplexer(s).
+Unit <dcr_timebase> synthesized.
+RTL-Simplification CPUSTAT: 0.03 
+RTL-BasicInf CPUSTAT: 0.26 
+RTL-BasicOpt CPUSTAT: 0.01 
+RTL-Remain-Bus CPUSTAT: 0.00 
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Registers                                            : 5
+ 1-bit register                                        : 2
+ 32-bit register                                       : 3
+# Multiplexers                                         : 13
+ 1-bit 2-to-1 multiplexer                              : 11
+ 32-bit 2-to-1 multiplexer                             : 1
+ 32-bit 4-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <dcr_timebase>.
+The following registers are absorbed into counter <timebase>: 1 register on signal <timebase>.
+Unit <dcr_timebase> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 66
+ Flip-Flops                                            : 66
+# Multiplexers                                         : 12
+ 1-bit 2-to-1 multiplexer                              : 11
+ 32-bit 4-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <dcr_timebase_0_wrapper> ...
+
+Optimizing unit <dcr_timebase> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block dcr_timebase_0_wrapper, actual ratio is 0.
+FlipFlop dcr_timebase_0/set_timebase has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 100
+ Flip-Flops                                            : 100
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : dcr_timebase_0_wrapper.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 141
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 1
+#      LUT3                        : 33
+#      LUT4                        : 1
+#      LUT5                        : 2
+#      LUT6                        : 39
+#      MUXCY                       : 31
+#      XORCY                       : 32
+# FlipFlops/Latches                : 100
+#      FDC                         : 36
+#      FDCE                        : 64
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6vlx240tff1156-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             100  out of  301440     0%  
+ Number of Slice LUTs:                   77  out of  150720     0%  
+    Number used as Logic:                77  out of  150720     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    105
+   Number with an unused Flip Flop:       5  out of    105     4%  
+   Number with an unused LUT:            28  out of    105    26%  
+   Number of fully used LUT-FF pairs:    72  out of    105    68%  
+   Number of unique control sets:         3
+
+IO Utilization: 
+ Number of IOs:                         112
+ Number of bonded IOBs:                   0  out of    600     0%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+--------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)          | Load  |
+-----------------------------------+--------------------------------+-------+
+i_clk                              | NONE(dcr_timebase_0/timebase_0)| 100   |
+-----------------------------------+--------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 2.149ns (Maximum Frequency: 465.333MHz)
+   Minimum input arrival time before clock: 2.409ns
+   Maximum output required time after clock: 2.078ns
+   Maximum combinational path delay: 1.791ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'i_clk'
+  Clock period: 2.149ns (frequency: 465.333MHz)
+  Total number of paths / destination ports: 1683 / 99
+-------------------------------------------------------------------------
+Delay:               2.149ns (Levels of Logic = 33)
+  Source:            dcr_timebase_0/slv_reg0_31 (FF)
+  Destination:       dcr_timebase_0/timebase_0 (FF)
+  Source Clock:      i_clk rising
+  Destination Clock: i_clk rising
+
+  Data Path: dcr_timebase_0/slv_reg0_31 to dcr_timebase_0/timebase_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.375   0.581  dcr_timebase_0/slv_reg0_31 (dcr_timebase_0/slv_reg0_31)
+     LUT3:I0->O            1   0.068   0.000  dcr_timebase_0/Mcount_timebase_lut<0> (dcr_timebase_0/Mcount_timebase_lut<0>)
+     MUXCY:S->O            1   0.290   0.000  dcr_timebase_0/Mcount_timebase_cy<0> (dcr_timebase_0/Mcount_timebase_cy<0>)
+     MUXCY:CI->O           1   0.020   0.000  dcr_timebase_0/Mcount_timebase_cy<1> (dcr_timebase_0/Mcount_timebase_cy<1>)
+     MUXCY:CI->O           1   0.020   0.000  dcr_timebase_0/Mcount_timebase_cy<2> (dcr_timebase_0/Mcount_timebase_cy<2>)
+     MUXCY:CI->O           1   0.020   0.000  dcr_timebase_0/Mcount_timebase_cy<3> (dcr_timebase_0/Mcount_timebase_cy<3>)
+     MUXCY:CI->O           1   0.020   0.000  dcr_timebase_0/Mcount_timebase_cy<4> (dcr_timebase_0/Mcount_timebase_cy<4>)
+     MUXCY:CI->O           1   0.020   0.000  dcr_timebase_0/Mcount_timebase_cy<5> (dcr_timebase_0/Mcount_timebase_cy<5>)
+     MUXCY:CI->O           1   0.020   0.000  dcr_timebase_0/Mcount_timebase_cy<6> (dcr_timebase_0/Mcount_timebase_cy<6>)
+     MUXCY:CI->O           1   0.020   0.000  dcr_timebase_0/Mcount_timebase_cy<7> (dcr_timebase_0/Mcount_timebase_cy<7>)
+     MUXCY:CI->O           1   0.020   0.000  dcr_timebase_0/Mcount_timebase_cy<8> (dcr_timebase_0/Mcount_timebase_cy<8>)
+     MUXCY:CI->O           1   0.020   0.000  dcr_timebase_0/Mcount_timebase_cy<9> (dcr_timebase_0/Mcount_timebase_cy<9>)
+     MUXCY:CI->O           1   0.020   0.000  dcr_timebase_0/Mcount_timebase_cy<10> (dcr_timebase_0/Mcount_timebase_cy<10>)
+     MUXCY:CI->O           1   0.020   0.000  dcr_timebase_0/Mcount_timebase_cy<11> (dcr_timebase_0/Mcount_timebase_cy<11>)
+     MUXCY:CI->O           1   0.020   0.000  dcr_timebase_0/Mcount_timebase_cy<12> (dcr_timebase_0/Mcount_timebase_cy<12>)
+     MUXCY:CI->O           1   0.020   0.000  dcr_timebase_0/Mcount_timebase_cy<13> (dcr_timebase_0/Mcount_timebase_cy<13>)
+     MUXCY:CI->O           1   0.020   0.000  dcr_timebase_0/Mcount_timebase_cy<14> (dcr_timebase_0/Mcount_timebase_cy<14>)
+     MUXCY:CI->O           1   0.020   0.000  dcr_timebase_0/Mcount_timebase_cy<15> (dcr_timebase_0/Mcount_timebase_cy<15>)
+     MUXCY:CI->O           1   0.020   0.000  dcr_timebase_0/Mcount_timebase_cy<16> (dcr_timebase_0/Mcount_timebase_cy<16>)
+     MUXCY:CI->O           1   0.020   0.000  dcr_timebase_0/Mcount_timebase_cy<17> (dcr_timebase_0/Mcount_timebase_cy<17>)
+     MUXCY:CI->O           1   0.020   0.000  dcr_timebase_0/Mcount_timebase_cy<18> (dcr_timebase_0/Mcount_timebase_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  dcr_timebase_0/Mcount_timebase_cy<19> (dcr_timebase_0/Mcount_timebase_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  dcr_timebase_0/Mcount_timebase_cy<20> (dcr_timebase_0/Mcount_timebase_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  dcr_timebase_0/Mcount_timebase_cy<21> (dcr_timebase_0/Mcount_timebase_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  dcr_timebase_0/Mcount_timebase_cy<22> (dcr_timebase_0/Mcount_timebase_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  dcr_timebase_0/Mcount_timebase_cy<23> (dcr_timebase_0/Mcount_timebase_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  dcr_timebase_0/Mcount_timebase_cy<24> (dcr_timebase_0/Mcount_timebase_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  dcr_timebase_0/Mcount_timebase_cy<25> (dcr_timebase_0/Mcount_timebase_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  dcr_timebase_0/Mcount_timebase_cy<26> (dcr_timebase_0/Mcount_timebase_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  dcr_timebase_0/Mcount_timebase_cy<27> (dcr_timebase_0/Mcount_timebase_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  dcr_timebase_0/Mcount_timebase_cy<28> (dcr_timebase_0/Mcount_timebase_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  dcr_timebase_0/Mcount_timebase_cy<29> (dcr_timebase_0/Mcount_timebase_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  dcr_timebase_0/Mcount_timebase_cy<30> (dcr_timebase_0/Mcount_timebase_cy<30>)
+     XORCY:CI->O           1   0.239   0.000  dcr_timebase_0/Mcount_timebase_xor<31> (dcr_timebase_0/Mcount_timebase31)
+     FDC:D                     0.011          dcr_timebase_0/timebase_0
+    ----------------------------------------
+    Total                      2.149ns (1.568ns logic, 0.581ns route)
+                                       (73.0% logic, 27.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'i_clk'
+  Total number of paths / destination ports: 979 / 232
+-------------------------------------------------------------------------
+Offset:              2.409ns (Levels of Logic = 3)
+  Source:            i_dcrABus<2> (PAD)
+  Destination:       dcr_timebase_0/slv_reg0_0 (FF)
+  Destination Clock: i_clk rising
+
+  Data Path: i_dcrABus<2> to dcr_timebase_0/slv_reg0_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT4:I0->O            1   0.068   0.417  dcr_timebase_0/dcrAddrHit<0>_SW0 (N2)
+     LUT6:I5->O           35   0.068   0.734  dcr_timebase_0/dcrAddrHit<0> (dcr_timebase_0/dcrAddrHit)
+     LUT5:I2->O           35   0.068   0.552  dcr_timebase_0/GND_6_o_writeCE[0]_MUX_38_o1 (dcr_timebase_0/GND_6_o_writeCE[0]_MUX_38_o)
+     FDCE:CE                   0.263          dcr_timebase_0/slv_reg0_31
+    ----------------------------------------
+    Total                      2.409ns (0.706ns logic, 1.703ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'i_clk'
+  Total number of paths / destination ports: 129 / 66
+-------------------------------------------------------------------------
+Offset:              2.078ns (Levels of Logic = 2)
+  Source:            dcr_timebase_0/timebase_28 (FF)
+  Destination:       o_irq (PAD)
+  Source Clock:      i_clk rising
+
+  Data Path: dcr_timebase_0/timebase_28 to o_irq
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.375   0.792  dcr_timebase_0/timebase_28 (dcr_timebase_0/timebase_28)
+     LUT6:I0->O            1   0.068   0.775  dcr_timebase_0/o_irq<0>6 (dcr_timebase_0/o_irq<0>5)
+     LUT6:I1->O            0   0.068   0.000  dcr_timebase_0/o_irq<0>7 (o_irq)
+    ----------------------------------------
+    Total                      2.078ns (0.511ns logic, 1.567ns route)
+                                       (24.6% logic, 75.4% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 384 / 32
+-------------------------------------------------------------------------
+Delay:               1.791ns (Levels of Logic = 3)
+  Source:            i_dcrABus<2> (PAD)
+  Destination:       o_dcrDBus<0> (PAD)
+
+  Data Path: i_dcrABus<2> to o_dcrDBus<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT4:I0->O            1   0.068   0.417  dcr_timebase_0/dcrAddrHit<0>_SW0 (N2)
+     LUT6:I5->O           35   0.068   0.931  dcr_timebase_0/dcrAddrHit<0> (dcr_timebase_0/dcrAddrHit)
+     LUT6:I0->O            0   0.068   0.000  dcr_timebase_0/Mmux_dcrDBus91 (o_dcrDBus<17>)
+    ----------------------------------------
+    Total                      1.791ns (0.443ns logic, 1.348ns route)
+                                       (24.7% logic, 75.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock i_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+i_clk          |    2.149|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.09 secs
+ 
+--> 
+
+
+Total memory usage is 386592 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

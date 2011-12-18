@@ -1,0 +1,13 @@
+run
+-opt_mode speed
+-netlist_hierarchy as_optimized
+-opt_level 1
+-p xc6vlx240tff1156-1
+-top lmb_bram_wrapper
+-ifmt MIXED
+-ifn lmb_bram_wrapper_xst.prj
+-ofn ../implementation/lmb_bram_wrapper.ngc
+-hierarchy_separator /
+-iobuf NO
+-sd {../implementation/lmb_bram_wrapper}
+-vlgincdir {"/home/rihuber/reconos/projects/sort_demo/hw/edk-static/pcores/" "/opt/Xilinx/12.3/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }

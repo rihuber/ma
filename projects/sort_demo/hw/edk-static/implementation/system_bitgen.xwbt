@@ -1,0 +1,7 @@
+INFILE=/home/rihuber/reconos/projects/sort_demo/hw/edk-static/implementation/system.ncd
+OUTFILE=/home/rihuber/reconos/projects/sort_demo/hw/edk-static/implementation/system.bit
+FAMILY=Virtex6
+PART=xc6vlx240t-1ff1156
+WORKINGDIR=/home/rihuber/reconos/projects/sort_demo/hw/edk-static/implementation
+LICENSE=ISE
+USER_INFO=174110940_203946_606

@@ -1,0 +1,667 @@
+src/misc/matherr.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/misc/matherr.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_trac.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/infra.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_ass.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h
+src/misc/standard.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/misc/standard.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_trac.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/infra.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_ass.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/error/codes.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/error.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/errno.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/isoinfra.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/error/errno.h
+src/misc/compatmode.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/misc/compatmode.cxx \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_trac.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/infra.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_ass.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/misc/infconst.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/misc/infconst.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/ieee754-core/e_acos.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/ieee754-core/e_acos.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/ieee754-core/e_asin.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/ieee754-core/e_asin.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/ieee754-core/e_atan2.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/ieee754-core/e_atan2.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/ieee754-core/e_cosh.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/ieee754-core/e_cosh.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/ieee754-core/e_exp.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/ieee754-core/e_exp.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/ieee754-core/e_fmod.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/ieee754-core/e_fmod.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/ieee754-core/e_log.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/ieee754-core/e_log.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/ieee754-core/e_log10.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/ieee754-core/e_log10.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/ieee754-core/e_pow.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/ieee754-core/e_pow.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/ieee754-core/e_rem_pio2.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/ieee754-core/e_rem_pio2.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/ieee754-core/e_scalb.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/ieee754-core/e_scalb.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/ieee754-core/e_sinh.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/ieee754-core/e_sinh.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/ieee754-core/e_sqrt.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/ieee754-core/e_sqrt.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/ieee754-api/w_acos.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/ieee754-api/w_acos.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/ieee754-api/w_asin.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/ieee754-api/w_asin.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/ieee754-api/w_atan2.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/ieee754-api/w_atan2.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/ieee754-api/w_cosh.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/ieee754-api/w_cosh.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/ieee754-api/w_exp.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/ieee754-api/w_exp.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/ieee754-api/w_fmod.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/ieee754-api/w_fmod.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/ieee754-api/w_log.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/ieee754-api/w_log.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/ieee754-api/w_log10.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/ieee754-api/w_log10.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/ieee754-api/w_pow.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/ieee754-api/w_pow.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/ieee754-api/w_scalb.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/ieee754-api/w_scalb.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/errno.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/isoinfra.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/error/codes.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/error.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/error/errno.h
+src/double/ieee754-api/w_sinh.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/ieee754-api/w_sinh.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/ieee754-api/w_sqrt.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/ieee754-api/w_sqrt.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/internal/k_cos.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/internal/k_cos.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/internal/k_rem_pio2.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/internal/k_rem_pio2.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/internal/k_sin.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/internal/k_sin.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/internal/k_tan.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/internal/k_tan.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/portable-api/s_atan.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/portable-api/s_atan.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/portable-api/s_ceil.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/portable-api/s_ceil.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/portable-api/s_copysign.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/portable-api/s_copysign.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/portable-api/s_cos.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/portable-api/s_cos.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/portable-api/s_expm1.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/portable-api/s_expm1.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/portable-api/s_fabs.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/portable-api/s_fabs.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/portable-api/s_finite.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/portable-api/s_finite.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/portable-api/s_floor.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/portable-api/s_floor.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/portable-api/s_frexp.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/portable-api/s_frexp.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/portable-api/s_isnan.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/portable-api/s_isnan.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/portable-api/s_ldexp.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/portable-api/s_ldexp.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/portable-api/s_rint.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/portable-api/s_rint.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/portable-api/s_scalbn.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/portable-api/s_scalbn.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/portable-api/s_sin.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/portable-api/s_sin.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/portable-api/s_tan.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/portable-api/s_tan.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/portable-api/s_modf.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/portable-api/s_modf.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h
+src/double/portable-api/s_tanh.o.d:  \
+ /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/double/portable-api/s_tanh.c \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/libm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/pkgconf/system.h \
+  /home/rihuber/reconos/core/ecos/ecos-patched/ecos/packages/language/c/libm/current/src/mathincl/fdlibm.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/infra/cyg_type.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/stddef.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/stddef.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/cyg/hal/basetype.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/math.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/float.h \
+  /opt/Xilinx/12.3/ISE_DS/EDK/gnu/microblaze/lin64/bin/../lib/gcc/microblaze-xilinx-elf/4.1.2/include/float.h \
+  /home/rihuber/reconos/projects/sort_demo/sw/ecos_build/install/include/sys/ieeefp.h

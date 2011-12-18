@@ -1,0 +1,103 @@
+WARNING:EDK:2028 - Option "CORE_STATE" in
+   /home/rihuber/reconos/projects/sort_demo/hw/edk-static/pcores/dcr_timebase_v1
+   _00_b/data/dcr_timebase_v2_1_0.mpd line 10  is deprecated. Please use Option
+   ARCH_SUPPORT_MAP instead. 
+WARNING:EDK:2028 - Option "CORE_STATE" in
+   /home/rihuber/reconos/projects/sort_demo/hw/edk-static/pcores/hw_task_v1_01_b
+   /data/hw_task_v2_1_0.mpd line 15  is deprecated. Please use Option
+   ARCH_SUPPORT_MAP instead. 
+WARNING:EDK:3449 - IPNAME:microblaze INSTANCE:microblaze_0 -
+   /home/rihuber/reconos/projects/sort_demo/hw/edk-static/system.mhs line 24 -
+   Superseded core for architecture 'virtex6lx'!
+WARNING:EDK:3450 - IPNAME:dcr_v29 INSTANCE:dcr -
+   /home/rihuber/reconos/projects/sort_demo/hw/edk-static/system.mhs line 50 -
+   Pre-Production version not verified on hardware for architecture 'virtex6lx'!
+WARNING:EDK:3449 - IPNAME:mdm INSTANCE:mdm_0 -
+   /home/rihuber/reconos/projects/sort_demo/hw/edk-static/system.mhs line 213 -
+   Superseded core for architecture 'virtex6lx'!
+WARNING:EDK:3449 - IPNAME:proc_sys_reset INSTANCE:proc_sys_reset_0 -
+   /home/rihuber/reconos/projects/sort_demo/hw/edk-static/system.mhs line 226 -
+   Superseded core for architecture 'virtex6lx'!
+WARNING:EDK:3450 - IPNAME:plbv46_dcr_bridge INSTANCE:plbv46_dcr_bridge_0 -
+   /home/rihuber/reconos/projects/sort_demo/hw/edk-static/system.mhs line 259 -
+   Pre-Production version not verified on hardware for architecture 'virtex6lx'!
+WARNING:EDK:3449 - IPNAME:microblaze INSTANCE:microblaze_0 -
+   /home/rihuber/reconos/projects/sort_demo/hw/edk-static/system.mhs line 24 -
+   Superseded core for architecture 'virtex6lx'!
+WARNING:EDK:3450 - IPNAME:dcr_v29 INSTANCE:dcr -
+   /home/rihuber/reconos/projects/sort_demo/hw/edk-static/system.mhs line 50 -
+   Pre-Production version not verified on hardware for architecture 'virtex6lx'!
+WARNING:EDK:3449 - IPNAME:mdm INSTANCE:mdm_0 -
+   /home/rihuber/reconos/projects/sort_demo/hw/edk-static/system.mhs line 213 -
+   Superseded core for architecture 'virtex6lx'!
+WARNING:EDK:3449 - IPNAME:proc_sys_reset INSTANCE:proc_sys_reset_0 -
+   /home/rihuber/reconos/projects/sort_demo/hw/edk-static/system.mhs line 226 -
+   Superseded core for architecture 'virtex6lx'!
+WARNING:EDK:3450 - IPNAME:plbv46_dcr_bridge INSTANCE:plbv46_dcr_bridge_0 -
+   /home/rihuber/reconos/projects/sort_demo/hw/edk-static/system.mhs line 259 -
+   Pre-Production version not verified on hardware for architecture 'virtex6lx'!
+
+Checking platform configuration ...
+IPNAME:dcr_v29 INSTANCE:dcr -
+/home/rihuber/reconos/projects/sort_demo/hw/edk-static/system.mhs line 50 - 1
+master(s) : 2 slave(s)
+IPNAME:plb_v46 INSTANCE:mb_plb -
+/home/rihuber/reconos/projects/sort_demo/hw/edk-static/system.mhs line 55 - 3
+master(s) : 7 slave(s)
+IPNAME:lmb_v10 INSTANCE:ilmb -
+/home/rihuber/reconos/projects/sort_demo/hw/edk-static/system.mhs line 62 - 1
+master(s) : 1 slave(s)
+IPNAME:lmb_v10 INSTANCE:dlmb -
+/home/rihuber/reconos/projects/sort_demo/hw/edk-static/system.mhs line 69 - 1
+master(s) : 1 slave(s)
+
+Checking port drivers...
+WARNING:EDK:2098 - PORT:IWAIT CONNECTOR:ilmb_LMB_Wait -
+   /opt/Xilinx/12.3/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v7_30_b
+   /data/microblaze_v2_1_0.mpd line 232 - No driver found. Port will be driven
+   to GND!
+WARNING:EDK:2098 - PORT:DWAIT CONNECTOR:dlmb_LMB_Wait -
+   /opt/Xilinx/12.3/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v7_30_b
+   /data/microblaze_v2_1_0.mpd line 268 - No driver found. Port will be driven
+   to GND!
+WARNING:EDK:2098 - PORT:bscan_tdo1 CONNECTOR:bscan_tdo1 -
+   /opt/Xilinx/12.3/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v1_00_g/data/m
+   dm_v2_1_0.mpd line 228 - No driver found. Port will be driven to GND!
+WARNING:EDK:2099 - PORT:bscan_tdi CONNECTOR:bscan_tdi -
+   /opt/Xilinx/12.3/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v1_00_g/data/m
+   dm_v2_1_0.mpd line 221 - floating connection!
+WARNING:EDK:2099 - PORT:bscan_reset CONNECTOR:bscan_reset -
+   /opt/Xilinx/12.3/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v1_00_g/data/m
+   dm_v2_1_0.mpd line 222 - floating connection!
+WARNING:EDK:2099 - PORT:bscan_shift CONNECTOR:bscan_shift -
+   /opt/Xilinx/12.3/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v1_00_g/data/m
+   dm_v2_1_0.mpd line 223 - floating connection!
+WARNING:EDK:2099 - PORT:bscan_update CONNECTOR:bscan_update -
+   /opt/Xilinx/12.3/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v1_00_g/data/m
+   dm_v2_1_0.mpd line 224 - floating connection!
+WARNING:EDK:2099 - PORT:bscan_capture CONNECTOR:bscan_capture -
+   /opt/Xilinx/12.3/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v1_00_g/data/m
+   dm_v2_1_0.mpd line 225 - floating connection!
+WARNING:EDK:2099 - PORT:bscan_sel1 CONNECTOR:bscan_sel1 -
+   /opt/Xilinx/12.3/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v1_00_g/data/m
+   dm_v2_1_0.mpd line 226 - floating connection!
+WARNING:EDK:2099 - PORT:bscan_drck1 CONNECTOR:bscan_drck1 -
+   /opt/Xilinx/12.3/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v1_00_g/data/m
+   dm_v2_1_0.mpd line 227 - floating connection!
+
+Performing Clock DRCs...
+
+Performing Reset DRCs...
+
+Overriding system level properties...
+
+Running system level update procedures...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+
+Running system level DRCs...
+
+Performing System level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+Conversion to XML complete.

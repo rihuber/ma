@@ -4,15 +4,17 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 import ch.rihuber.noc.matching.MatchingResult;
-import ch.rihuber.noc.topology.GridTopology;
+import ch.rihuber.noc.topology.RingTopology;
 import ch.rihuber.noc.topology.Topology;
 
 
 public class NetworkSimulator 
 {
-	private final int GRID_SIZE = 5;
-	private final String outputFilename = "gridXY5";
-
+	//private final int GRID_SIZE = 5;
+	private final int RING_SIZE = 5;
+	//private final String outputFilename = "gridXY5";
+	private final String outputFilename = "ring5";
+	
 	public static void main(String[] args) 
 	{
 		new NetworkSimulator().run();
@@ -21,7 +23,8 @@ public class NetworkSimulator
 	private void run() 
 	{
 		
-		Topology topology = new GridTopology(GRID_SIZE, GridTopology.XY_ROUTING);
+		Topology topology = new RingTopology(RING_SIZE);
+//		System.out.println(topology);
 		
 		sendExplorerPackages(topology);
 		
@@ -48,6 +51,7 @@ public class NetworkSimulator
 		
 		output += "\n\n-----------------------";
 		output += "\nTotal link weight: " + totalWeight;
+		output += "\n-----------------------\n";
 		
 		try {
 			FileOutputStream outputStream = new FileOutputStream(outputFilename);

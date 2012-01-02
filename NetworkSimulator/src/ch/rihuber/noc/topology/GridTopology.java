@@ -4,24 +4,31 @@ import java.util.LinkedList;
 
 import ch.rihuber.noc.Link;
 import ch.rihuber.noc.Node;
+import ch.rihuber.noc.router.Router;
+import ch.rihuber.noc.router.XYRouter;
 
 public class GridTopology extends Topology 
 {
 	
 	private int gridSize;
 	private int nodeCount;
-	private int routingPolicy;
+	
+	private Router router; 
 	
 	public final static String NORTH = "North";
 	public final static String SOUTH = "South";
 	public final static String WEST = "West";
 	public final static String EAST = "East";
 	
+	public static final int XY_ROUTING = 0;
+	
 	public GridTopology(int gridSize, int routingPolicy)
 	{
 		this.gridSize = gridSize;
 		this.nodeCount = gridSize * gridSize;
-		this.routingPolicy = routingPolicy;
+		
+		if(routingPolicy == XY_ROUTING)
+			router = new XYRouter(gridSize);
 		
 		init();
 	}
@@ -32,7 +39,7 @@ public class GridTopology extends Topology
 		LinkedList<Node> result = new LinkedList<Node>();
 		
 		for(int i=0; i<nodeCount; i++)
-			result.add(new Node(i, routingPolicy, this));
+			result.add(new Node(i, router));
 		
 		return result;
 	}
@@ -46,19 +53,19 @@ public class GridTopology extends Topology
 		{
 			// north
 			if(i >= gridSize)
-				result.add(createLink(i, GridTopology.NORTH, i-gridSize, GridTopology.SOUTH));
+				result.add(createLink(i, GridTopology.NORTH, i-gridSize));
 			
 			// south
 			if(i+gridSize < (nodeCount))
-				result.add(createLink(i, GridTopology.SOUTH, i+gridSize, GridTopology.NORTH));
+				result.add(createLink(i, GridTopology.SOUTH, i+gridSize));
 			
 			// west
 			if(i%gridSize != 0)
-				result.add(createLink(i, GridTopology.WEST, i-1, GridTopology.EAST));
+				result.add(createLink(i, GridTopology.WEST, i-1));
 			
 			// east
 			if(i%gridSize != gridSize-1)
-				result.add(createLink(i, GridTopology.EAST, i+1, GridTopology.WEST));
+				result.add(createLink(i, GridTopology.EAST, i+1));
 		}
 		
 		return result;

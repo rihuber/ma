@@ -2,16 +2,15 @@ package ch.rihuber.noc.router;
 
 import ch.rihuber.noc.Node;
 import ch.rihuber.noc.topology.GridTopology;
-import ch.rihuber.noc.topology.Topology;
 
 public class XYRouter extends Router 
 {
 
-	private GridTopology gridTopology;
+	private int xSize;
 	
-	public XYRouter(GridTopology gridTopology) 
+	public XYRouter(int xSize) 
 	{
-		this.gridTopology = gridTopology;
+		this.xSize = xSize;
 	}
 
 	@Override
@@ -19,18 +18,17 @@ public class XYRouter extends Router
 	{
 		int destId = dest.getId();
 		int switchingNodeId = switchingNode.getId();
-		int gridSize = gridTopology.getGridSize();
 
-		if (destId % gridSize > switchingNodeId % gridSize)
+		if (destId % xSize > switchingNodeId % xSize)
 			return GridTopology.EAST;
-		if (destId % gridSize < switchingNodeId % gridSize)
+		if (destId % xSize < switchingNodeId % xSize)
 			return GridTopology.WEST;
 		if (destId > switchingNodeId)
 			return GridTopology.SOUTH;
 		if(destId < switchingNodeId)
 			return GridTopology.NORTH;
 		
-		return Topology.SINK;
+		return null;
 	}
 
 }

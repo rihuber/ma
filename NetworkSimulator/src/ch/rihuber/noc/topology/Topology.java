@@ -8,12 +8,10 @@ import ch.rihuber.noc.Node;
 public abstract class Topology 
 {
 	
-	public static final String SINK = "Sink";
-
-	// All routers in the network
+	// All switches in the network
 	private LinkedList<Node> nodeList;
 	
-	// All active links between nodes
+	// All links between nodes
 	private LinkedList<Link> linkList;
 	
 	protected void init()
@@ -26,7 +24,7 @@ public abstract class Topology
 	
 	protected abstract LinkedList<Link> createLinkList();
 	
-	protected Link createLink(int startId, String startNodeLinkName, int endId, String endNodeLinkName) 
+	protected Link createLink(int startId, String startNodeLinkName, int endId) 
 	{
 		Node startNode = null, endNode = null;
 		for(Node currentNode : nodeList)
@@ -38,49 +36,15 @@ public abstract class Topology
 			if(startNode != null && endNode != null)
 				break;
 		}
-		Link result = new Link(startNode, startNodeLinkName, endNode, endNodeLinkName);
+		Link result = new Link(startNode, endNode);
+		startNode.addOutgoingLink(result, startNodeLinkName);
+		linkList.add(result);
 		return result;
-	}
-
-	public Link getBottleneckLink() 
-	{
-		Link bottleNeckLink = linkList.getFirst();
-		for(Link currentLink : linkList)
-		{
-			if(currentLink.getTotalLoad() > bottleNeckLink.getTotalLoad())
-				bottleNeckLink = currentLink;
-		}
-		return bottleNeckLink;
 	}
 
 	public LinkedList<Node> getNodes() 
 	{
 		return nodeList;
-	}
-
-	public void clearLoads() 
-	{
-		for(Node currentNode : nodeList)
-		{
-			currentNode.clearLoad();
-		}
-		
-		for(Link currentLink : linkList)
-		{
-			currentLink.clearLoads();
-		}
-	
-			
-		
-				
-	}
-
-	public void routeCurrentLoads() 
-	{
-		for(Node currentNode : nodeList)
-		{
-			currentNode.routeCurrentLoad();
-		}
 	}
 
 }

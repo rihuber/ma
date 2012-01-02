@@ -75,5 +75,38 @@ public class GridTopology extends Topology
 	{
 		return gridSize;
 	}
+	
+	public String toString()
+	{
+		String result = "G R I D  T O P O L O G Y\n" +
+						"------------------------\n\n";
+		
+		result += "Grid size: " + gridSize + "\n\n";
+		
+		for(int i=0; i<gridSize; i++)
+		{
+			for(int j=1; j<=gridSize; j++)
+			{
+				if(j>1)
+					result += "--";
+				int nodeNumber = (i*gridSize+j-1);
+				if(nodeNumber < 10)
+					result += " ";
+				result += nodeNumber;
+				result += " ";
+			}
+			result += "\n";
+			if(i<gridSize-1)
+			{
+				for(int j=1; j<=gridSize; j++)
+				{
+					result += " |   ";
+				}
+			}
+			result += "\n";
+		}
+		
+		return result;
+	}
 
 }

@@ -1,0 +1,111 @@
+G R I D  T O P O L O G Y
+------------------------
+
+Grid size: 3
+
+ 0 -- 1 -- 2 
+ |    |    |   
+ 3 -- 4 -- 5 
+ |    |    |   
+ 6 -- 7 -- 8 
+
+Link 0 -> 3:
+Weight: 2
+Selected matching: (0->3) (1->6) 
+
+Link 0 -> 1:
+Weight: 1
+Selected matching: (0->1) 
+
+Link 1 -> 4:
+Weight: 2
+Selected matching: (1->7) (0->4) 
+
+Link 1 -> 0:
+Weight: 2
+Selected matching: (1->0) (2->3) 
+
+Link 1 -> 2:
+Weight: 2
+Selected matching: (0->2) (1->5) 
+
+Link 2 -> 5:
+Weight: 2
+Selected matching: (1->8) (0->5) 
+
+Link 2 -> 1:
+Weight: 1
+Selected matching: (2->0) 
+
+Link 3 -> 0:
+Weight: 1
+Selected matching: (3->0) 
+
+Link 3 -> 6:
+Weight: 1
+Selected matching: (0->6) 
+
+Link 3 -> 4:
+Weight: 1
+Selected matching: (3->1) 
+
+Link 4 -> 1:
+Weight: 1
+Selected matching: (3->1) 
+
+Link 4 -> 7:
+Weight: 1
+Selected matching: (0->7) 
+
+Link 4 -> 3:
+Weight: 2
+Selected matching: (4->0) (5->3) 
+
+Link 4 -> 5:
+Weight: 2
+Selected matching: (4->5) (3->2) 
+
+Link 5 -> 2:
+Weight: 1
+Selected matching: (3->2) 
+
+Link 5 -> 8:
+Weight: 1
+Selected matching: (0->8) 
+
+Link 5 -> 4:
+Weight: 1
+Selected matching: (5->0) 
+
+Link 6 -> 3:
+Weight: 2
+Selected matching: (6->0) (7->3) 
+
+Link 6 -> 7:
+Weight: 1
+Selected matching: (6->1) 
+
+Link 7 -> 4:
+Weight: 2
+Selected matching: (6->1) (7->4) 
+
+Link 7 -> 6:
+Weight: 2
+Selected matching: (8->3) (7->0) 
+
+Link 7 -> 8:
+Weight: 2
+Selected matching: (6->2) (7->5) 
+
+Link 8 -> 5:
+Weight: 2
+Selected matching: (6->2) (7->5) 
+
+Link 8 -> 7:
+Weight: 1
+Selected matching: (8->0) 
+
+
+
+-----------------------
+Total link weight: 36

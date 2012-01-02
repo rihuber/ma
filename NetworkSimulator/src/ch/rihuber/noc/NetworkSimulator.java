@@ -1,4 +1,8 @@
 package ch.rihuber.noc;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 import ch.rihuber.noc.matching.MatchingResult;
 import ch.rihuber.noc.topology.GridTopology;
 import ch.rihuber.noc.topology.Topology;
@@ -6,8 +10,8 @@ import ch.rihuber.noc.topology.Topology;
 
 public class NetworkSimulator 
 {
-
-	private final int GRID_SIZE = 4;
+	private final int GRID_SIZE = 5;
+	private final String outputFilename = "gridXY5";
 
 	public static void main(String[] args) 
 	{
@@ -22,11 +26,13 @@ public class NetworkSimulator
 		sendExplorerPackages(topology);
 		
 		printResults(topology);
+		
+		System.out.println("...done!");
 	}
 
 	private void printResults(Topology topology) 
 	{
-		String output = "";
+		String output = topology.toString();
 		int totalWeight = 0;
 		for(Link link : topology.getLinks())
 		{
@@ -42,7 +48,15 @@ public class NetworkSimulator
 		
 		output += "\n\n-----------------------";
 		output += "\nTotal link weight: " + totalWeight;
-		System.out.println(output);
+		
+		try {
+			FileOutputStream outputStream = new FileOutputStream(outputFilename);
+			outputStream.write(output.getBytes());
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	private void sendExplorerPackages(Topology topology) 
@@ -56,11 +70,4 @@ public class NetworkSimulator
 		}
 	}
 	
-	private void printSummary(Topology topology) 
-	{
-		for(Link currentLink : topology.getLinks())
-		{
-			System.out.println(currentLink);
-		}
-	}
 }

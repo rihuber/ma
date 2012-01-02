@@ -1,6 +1,5 @@
 package ch.rihuber.noc;
-import java.util.LinkedList;
-
+import ch.rihuber.noc.matching.MatchingResult;
 import ch.rihuber.noc.topology.GridTopology;
 import ch.rihuber.noc.topology.Topology;
 
@@ -12,16 +11,7 @@ public class NetworkSimulator
 
 	public static void main(String[] args) 
 	{
-		System.out.println("Starting calculation");
-		
-		long startTime = System.currentTimeMillis();
-		
 		new NetworkSimulator().run();
-		
-		long endTime = System.currentTimeMillis();
-		
-		long timeUtilization = endTime - startTime;
-		System.out.print("Calculation completed in " + timeUtilization + "ms");
 	}
 
 	private void run() 
@@ -30,17 +20,47 @@ public class NetworkSimulator
 		Topology topology = new GridTopology(GRID_SIZE, GridTopology.XY_ROUTING);
 		
 		sendExplorerPackages(topology);
+		
+		printResults(topology);
+	}
+
+	private void printResults(Topology topology) 
+	{
+		String output = "";
+		int totalWeight = 0;
+		for(Link link : topology.getLinks())
+		{
+			MatchingResult matchingResult = link.getMatchingResult();
+			
+			totalWeight += matchingResult.getLinkWeight();
+			
+			output += link + ":\n";
+			output += "Weight: " + matchingResult.getLinkWeight() + "\n";
+			output += "Selected matching: " + matchingResult.getSelectedMatching() + "\n";
+			output += "\n";			
+		}
+		
+		output += "\n\n-----------------------";
+		output += "\nTotal link weight: " + totalWeight;
+		System.out.println(output);
 	}
 
 	private void sendExplorerPackages(Topology topology) 
 	{
-		LinkedList<Node> nodes = topology.getNodes();
-		for(Node sourceNode : nodes)
+		for(Node sourceNode : topology.getNodes())
 		{
-			for(Node destNode : nodes)
+			for(Node destNode : topology.getNodes())
 			{
 				sourceNode.forward(sourceNode, destNode);
 			}
+		}
+	}
+	
+	private void printSummary(Topology topology) 
+	{
+		for(Link currentLink : topology.getLinks())
+		{
+			System.out.println(currentLink);
 		}
 	}
 }

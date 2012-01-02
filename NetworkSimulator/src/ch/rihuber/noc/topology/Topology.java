@@ -38,13 +38,17 @@ public abstract class Topology
 		}
 		Link result = new Link(startNode, endNode);
 		startNode.addOutgoingLink(result, startNodeLinkName);
-		linkList.add(result);
 		return result;
 	}
 
 	public LinkedList<Node> getNodes() 
 	{
 		return nodeList;
+	}
+
+	public LinkedList<Link> getLinks() 
+	{
+		return linkList;
 	}
 
 }

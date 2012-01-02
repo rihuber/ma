@@ -2,34 +2,35 @@ package ch.rihuber.noc.router;
 
 import ch.rihuber.noc.Node;
 import ch.rihuber.noc.topology.GridTopology;
+import ch.rihuber.noc.topology.Topology;
 
 public class XYRouter extends Router 
 {
 
-	private int id;
-	
 	private GridTopology gridTopology;
 	
-	public XYRouter(int id, GridTopology gridTopology) 
+	public XYRouter(GridTopology gridTopology) 
 	{
-		this.id = id;
 		this.gridTopology = gridTopology;
 	}
 
 	@Override
-	public String selectForwardingLink(Node dest) 
+	public String selectForwardingLink(Node switchingNode, Node dest) 
 	{
 		int destId = dest.getId();
+		int switchingNodeId = switchingNode.getId();
 		int gridSize = gridTopology.getGridSize();
 
-		if (destId % gridSize > id % gridSize)
+		if (destId % gridSize > switchingNodeId % gridSize)
 			return GridTopology.EAST;
-		if (destId % gridSize < id % gridSize)
+		if (destId % gridSize < switchingNodeId % gridSize)
 			return GridTopology.WEST;
-		if (destId > id)
+		if (destId > switchingNodeId)
 			return GridTopology.SOUTH;
-		// if(destId < id)
+		if(destId < switchingNodeId)
 			return GridTopology.NORTH;
+		
+		return Topology.SINK;
 	}
 
 }

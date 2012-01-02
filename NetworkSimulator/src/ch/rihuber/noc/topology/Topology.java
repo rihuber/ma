@@ -8,6 +8,8 @@ import ch.rihuber.noc.Node;
 public abstract class Topology 
 {
 	
+	public static final String SINK = "Sink";
+
 	// All routers in the network
 	private LinkedList<Node> nodeList;
 	

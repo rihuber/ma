@@ -32,7 +32,7 @@ public class Node
 		load = new Hashtable<Node, Float>();
 		
 		if(routingPolicy == XY_ROUTING)
-			router = new XYRouter(id, (GridTopology) topology);
+			router = new XYRouter((GridTopology) topology);
 	}
 
 	public int getId() 
@@ -92,7 +92,7 @@ public class Node
 	
 	private Link selectLink(Node dest)
 	{
-		String selectedLinkName = router.selectForwardingLink(dest);
+		String selectedLinkName = router.selectForwardingLink(this, dest);
 		return outgoingLinks.get(selectedLinkName);
 	}
 

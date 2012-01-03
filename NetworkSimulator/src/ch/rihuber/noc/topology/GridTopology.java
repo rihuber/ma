@@ -22,13 +22,12 @@ public class GridTopology extends Topology
 	
 	public static final int XY_ROUTING = 0;
 	
-	public GridTopology(int gridSize, int routingPolicy)
+	public GridTopology(int nodeCount)
 	{
-		this.gridSize = gridSize;
+		this.gridSize = (int) Math.sqrt(nodeCount);
 		this.nodeCount = gridSize * gridSize;
 		
-		if(routingPolicy == XY_ROUTING)
-			router = new XYRouter(gridSize);
+		router = new XYRouter(gridSize);
 		
 		init();
 	}

@@ -30,5 +30,11 @@ public class XYRouter extends Router
 		
 		return null;
 	}
+	
+	public String toString()
+	{
+		return "XY Router";
+	}
+
 
 }

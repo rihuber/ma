@@ -20,14 +20,15 @@ public class GridTopology extends Topology
 	public final static String WEST = "West";
 	public final static String EAST = "East";
 	
-	public static final int XY_ROUTING = 0;
+	private final static String XY_ROUTER = "xyRouter";
 	
-	public GridTopology(int nodeCount)
+	public GridTopology(int nodeCount, String routerName)
 	{
 		this.gridSize = (int) Math.sqrt(nodeCount);
 		this.nodeCount = gridSize * gridSize;
 		
-		router = new XYRouter(gridSize);
+		if(routerName.equals(XY_ROUTER))
+			router = new XYRouter(gridSize);
 		
 		init();
 	}
@@ -70,17 +71,13 @@ public class GridTopology extends Topology
 		return result;
 	}
 
-	public int getGridSize() 
-	{
-		return gridSize;
-	}
-	
 	public String toString()
 	{
 		String result = "G R I D  T O P O L O G Y\n" +
 						"------------------------\n\n";
 		
 		result += "Grid size: " + gridSize + "\n\n";
+		result += "Router: " + router.toString() + "\n\n";
 		
 		for(int i=0; i<gridSize; i++)
 		{

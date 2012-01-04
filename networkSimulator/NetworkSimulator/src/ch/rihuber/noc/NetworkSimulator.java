@@ -6,18 +6,24 @@ import java.io.IOException;
 import ch.rihuber.noc.matching.MatchingResult;
 import ch.rihuber.noc.topology.GridTopology;
 import ch.rihuber.noc.topology.RingTopology;
+import ch.rihuber.noc.topology.SpinTopology;
 import ch.rihuber.noc.topology.Topology;
+import ch.rihuber.noc.topology.TorusTopology;
 
 
 public class NetworkSimulator 
 {
 	
 	private final static String GRID_TOPOLOGY = "grid";
-	private static final Object RING_TOPOLOGY = "ring";
+	private final static String RING_TOPOLOGY = "ring";
+	private final static String TORUS_TOPOLOGY = "torus";
+	private final static String SPIN_TOPOLOGY = "spin";
 	
 	private final static String TOPOLOGY_FLAG = "-t";
-	private static final String NODE_COUNT_FLAG = "-s";
-	private static final String FILE_NAME_FLAG = "-f";
+	private final static String NODE_COUNT_FLAG = "-s";
+	private final static String FILE_NAME_FLAG = "-f";
+	private final static String ROUTER_FLAG = "-r";
+	private final static String FANOUT_FLAG = "--fanout";
 	
 	
 	public static void main(String[] args) 
@@ -25,6 +31,8 @@ public class NetworkSimulator
 		String selectedTopology = GRID_TOPOLOGY;
 		int selectedNodeCount = 1;
 		String selectedOutputFileName = null;
+		String selectedRouter = null;
+		int selectedFanout = 2;
 		
 		for(int i=0; i<args.length; i++)
 		{
@@ -43,20 +51,34 @@ public class NetworkSimulator
 				selectedOutputFileName = args[++i];
 				continue;
 			}
+			if(args[i].equals(ROUTER_FLAG))
+			{
+				selectedRouter = args[++i];
+				continue;
+			}
+			if(args[i].equals(FANOUT_FLAG))
+			{
+				selectedFanout = Integer.parseInt(args[++i]);
+				continue;
+			}
 		}
-		new NetworkSimulator().run(selectedTopology, selectedNodeCount, selectedOutputFileName);
+		new NetworkSimulator().run(selectedTopology, selectedNodeCount, selectedOutputFileName, selectedRouter, selectedFanout);
 	}
 
-	private void run(String topologyName, int nodeCount, String outputFileName) 
+	private void run(String topologyName, int nodeCount, String outputFileName, String routerName, int fanout) 
 	{
 		Topology topology = null;
 		if(topologyName.equals(GRID_TOPOLOGY))
-			topology = new GridTopology(nodeCount);
+			topology = new GridTopology(nodeCount, routerName);
 		if(topologyName.equals(RING_TOPOLOGY))
-			topology = new RingTopology(nodeCount);
+			topology = new RingTopology(nodeCount, routerName);
+		if(topologyName.equals(TORUS_TOPOLOGY))
+			topology = new TorusTopology(nodeCount, routerName);
+		if(topologyName.equals(SPIN_TOPOLOGY))
+			topology = new SpinTopology(nodeCount, fanout, routerName);
 //		System.out.println(topology);
 		
-		sendExplorerPackages(topology);
+		topology.sendExplorerPackages();
 		
 		printResults(topology, outputFileName);
 		
@@ -98,15 +120,4 @@ public class NetworkSimulator
 		}
 	}
 
-	private void sendExplorerPackages(Topology topology) 
-	{
-		for(Node sourceNode : topology.getNodes())
-		{
-			for(Node destNode : topology.getNodes())
-			{
-				sourceNode.forward(sourceNode, destNode);
-			}
-		}
-	}
-	
 }

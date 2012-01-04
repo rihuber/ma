@@ -47,8 +47,8 @@ public class Node
 	{
 		if(dest == this)
 			return;
-		
-		selectLink(dest).forward(src, dest);
+		Link link = selectLink(dest);
+		link.forward(src, dest);
 	}
 	
 	private Link selectLink(Node dest)

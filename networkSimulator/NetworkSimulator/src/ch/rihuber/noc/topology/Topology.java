@@ -50,5 +50,16 @@ public abstract class Topology
 	{
 		return linkList;
 	}
+	
+	public void sendExplorerPackages() 
+	{
+		for(Node sourceNode : getNodes())
+		{
+			for(Node destNode : getNodes())
+			{
+				sourceNode.forward(sourceNode, destNode);
+			}
+		}
+	}
 
 }

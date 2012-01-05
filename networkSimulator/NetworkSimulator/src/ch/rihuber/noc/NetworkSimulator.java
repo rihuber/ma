@@ -82,7 +82,19 @@ public class NetworkSimulator
 		
 		printResults(topology, outputFileName);
 		
-		System.out.println("...done!");
+		echoSummary(topology);
+	}
+	
+	private void echoSummary(Topology topology)
+	{
+		int totalWeight = 0;
+		for(Link link : topology.getLinks())
+		{
+			MatchingResult matchingResult = link.getMatchingResult();
+			totalWeight += matchingResult.getLinkWeight();
+		}
+		
+		System.out.print(totalWeight);
 	}
 
 	private void printResults(Topology topology, String outputFileName) 

@@ -1,0 +1,74 @@
+// BMM LOC annotation file.
+//
+// Release 12.3 - Data2MEM M.70d, build 1.9 Aug 19, 2010
+// Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// Processor 'microblaze_0', ID 100, memory map.
+//
+///////////////////////////////////////////////////////////////////////////////
+
+ADDRESS_MAP microblaze_0 MICROBLAZE 100
+
+
+    ///////////////////////////////////////////////////////////////////////////////
+    //
+    // Processor 'microblaze_0' address space 'lmb_bram_combined' 0x00000000:0x00001FFF (8 KBytes).
+    //
+    ///////////////////////////////////////////////////////////////////////////////
+
+    ADDRESS_SPACE lmb_bram_combined RAMB32 [0x00000000:0x00001FFF]
+        BUS_BLOCK
+            lmb_bram/lmb_bram/ramb36e1_0 [31:16] INPUT = lmb_bram_combined_0.mem PLACED = X4Y14;
+            lmb_bram/lmb_bram/ramb36e1_1 [15:0] INPUT = lmb_bram_combined_1.mem PLACED = X4Y13;
+        END_BUS_BLOCK;
+    END_ADDRESS_SPACE;
+
+
+    ///////////////////////////////////////////////////////////////////////////////
+    //
+    // Processor 'microblaze_0' address space 'xps_bram_if_cntlr_1_bram_combined' 0x41A00000:0x41A1FFFF (128 KBytes).
+    //
+    ///////////////////////////////////////////////////////////////////////////////
+
+    ADDRESS_SPACE xps_bram_if_cntlr_1_bram_combined RAMB32 [0x41A00000:0x41A1FFFF]
+        BUS_BLOCK
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_0 [31:31] INPUT = xps_bram_if_cntlr_1_bram_combined_0.mem PLACED = X3Y2;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_1 [30:30] INPUT = xps_bram_if_cntlr_1_bram_combined_1.mem PLACED = X5Y3;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_2 [29:29] INPUT = xps_bram_if_cntlr_1_bram_combined_2.mem PLACED = X4Y0;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_3 [28:28] INPUT = xps_bram_if_cntlr_1_bram_combined_3.mem PLACED = X5Y2;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_4 [27:27] INPUT = xps_bram_if_cntlr_1_bram_combined_4.mem PLACED = X2Y2;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_5 [26:26] INPUT = xps_bram_if_cntlr_1_bram_combined_5.mem PLACED = X1Y2;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_6 [25:25] INPUT = xps_bram_if_cntlr_1_bram_combined_6.mem PLACED = X2Y3;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_7 [24:24] INPUT = xps_bram_if_cntlr_1_bram_combined_7.mem PLACED = X3Y4;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_8 [23:23] INPUT = xps_bram_if_cntlr_1_bram_combined_8.mem PLACED = X4Y7;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_9 [22:22] INPUT = xps_bram_if_cntlr_1_bram_combined_9.mem PLACED = X5Y7;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_10 [21:21] INPUT = xps_bram_if_cntlr_1_bram_combined_10.mem PLACED = X4Y6;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_11 [20:20] INPUT = xps_bram_if_cntlr_1_bram_combined_11.mem PLACED = X5Y6;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_12 [19:19] INPUT = xps_bram_if_cntlr_1_bram_combined_12.mem PLACED = X4Y8;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_13 [18:18] INPUT = xps_bram_if_cntlr_1_bram_combined_13.mem PLACED = X4Y11;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_14 [17:17] INPUT = xps_bram_if_cntlr_1_bram_combined_14.mem PLACED = X4Y10;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_15 [16:16] INPUT = xps_bram_if_cntlr_1_bram_combined_15.mem PLACED = X4Y9;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_16 [15:15] INPUT = xps_bram_if_cntlr_1_bram_combined_16.mem PLACED = X4Y4;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_17 [14:14] INPUT = xps_bram_if_cntlr_1_bram_combined_17.mem PLACED = X4Y2;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_18 [13:13] INPUT = xps_bram_if_cntlr_1_bram_combined_18.mem PLACED = X3Y3;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_19 [12:12] INPUT = xps_bram_if_cntlr_1_bram_combined_19.mem PLACED = X4Y1;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_20 [11:11] INPUT = xps_bram_if_cntlr_1_bram_combined_20.mem PLACED = X2Y6;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_21 [10:10] INPUT = xps_bram_if_cntlr_1_bram_combined_21.mem PLACED = X3Y8;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_22 [9:9] INPUT = xps_bram_if_cntlr_1_bram_combined_22.mem PLACED = X3Y7;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_23 [8:8] INPUT = xps_bram_if_cntlr_1_bram_combined_23.mem PLACED = X3Y6;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_24 [7:7] INPUT = xps_bram_if_cntlr_1_bram_combined_24.mem PLACED = X3Y12;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_25 [6:6] INPUT = xps_bram_if_cntlr_1_bram_combined_25.mem PLACED = X2Y12;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_26 [5:5] INPUT = xps_bram_if_cntlr_1_bram_combined_26.mem PLACED = X4Y12;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_27 [4:4] INPUT = xps_bram_if_cntlr_1_bram_combined_27.mem PLACED = X3Y11;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_28 [3:3] INPUT = xps_bram_if_cntlr_1_bram_combined_28.mem PLACED = X1Y8;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_29 [2:2] INPUT = xps_bram_if_cntlr_1_bram_combined_29.mem PLACED = X2Y10;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_30 [1:1] INPUT = xps_bram_if_cntlr_1_bram_combined_30.mem PLACED = X2Y8;
+            xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36e1_31 [0:0] INPUT = xps_bram_if_cntlr_1_bram_combined_31.mem PLACED = X2Y9;
+        END_BUS_BLOCK;
+    END_ADDRESS_SPACE;
+
+END_ADDRESS_MAP;
+

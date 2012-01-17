@@ -126,9 +126,9 @@
      borderopacity="1"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.313708"
-     inkscape:cx="44.852371"
-     inkscape:cy="714.08036"
+     inkscape:zoom="2.828427"
+     inkscape:cx="433.87388"
+     inkscape:cy="396.30826"
      inkscape:document-units="pt"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -139,9 +139,9 @@
      fit-margin-bottom="0"
      inkscape:window-width="1920"
      inkscape:window-height="956"
-     inkscape:window-x="1"
+     inkscape:window-x="0"
      inkscape:window-y="0"
-     inkscape:window-maximized="1"
+     inkscape:window-maximized="0"
      showborder="true"
      inkscape:showpageshadow="false"
      showguides="true"
@@ -177,16 +177,16 @@
     <rect
        ry="5.1999998"
        rx="5"
-       y="-268.16592"
+       y="-280.66592"
        x="-605.71741"
-       height="707.5"
-       width="462.49994"
+       height="720"
+       width="462.49863"
        id="rect3794"
        style="fill:#f2f2f2;stroke:#000000;stroke-width:0.25;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        transform="scale(-1,1)" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none"
-       d="m 370.71739,-65.665912 0,-177.499998 17.5,0"
+       d="m 370.71739,-65.665912 0,-192.499998 17.5,0"
        id="path4244"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
@@ -194,7 +194,7 @@
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path4246"
-       d="m 383.21739,-55.665912 0,-177.499998 5,0"
+       d="m 383.21739,-55.665912 0,-192.499998 5,0"
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none" />
     <text
        xml:space="preserve"
@@ -339,7 +339,7 @@
            y="-170.66591"
            x="228.21739"
            id="tspan3170"
-           sodipodi:role="line">routingRequest</tspan></text>
+           sodipodi:role="line">headerIn</tspan></text>
       <text
          xml:space="preserve"
          style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
@@ -363,7 +363,7 @@
            id="tspan3180"
            x="320.71738"
            y="-170.46591"
-           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">header</tspan></text>
+           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">headerOut</tspan></text>
       <text
          xml:space="preserve"
          style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
@@ -385,7 +385,7 @@
     </g>
     <g
        id="g3462"
-       transform="translate(52.500009,-70.000003)">
+       transform="translate(52.500044,-85.000001)">
       <g
          transform="translate(7.5,-37.5)"
          id="g3261">
@@ -394,8 +394,8 @@
            rx="5"
            y="-155.66591"
            x="-438.21738"
-           height="42.5"
-           width="105"
+           height="50"
+           width="105.00003"
            id="rect3226"
            style="fill:#cccccc;stroke:#000000;stroke-width:0.25;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
            transform="scale(-1,1)" />
@@ -435,6 +435,12 @@
            id="path3230"
            inkscape:connector-curvature="0"
            sodipodi:nodetypes="cccccc" />
+        <path
+           style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 435.71738,-118.36591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
+           id="path5394"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccccc" />
       </g>
       <text
          sodipodi:linespacing="125%"
@@ -447,7 +453,7 @@
            y="-170.66591"
            x="345.71738"
            id="tspan3398"
-           sodipodi:role="line">header</tspan></text>
+           sodipodi:role="line">headerIn</tspan></text>
       <text
          sodipodi:linespacing="125%"
          id="text3400"
@@ -486,6 +492,18 @@
            x="440.71735"
            id="tspan3460"
            sodipodi:role="line">selectedRxPort</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5396"
+         y="-150.66591"
+         x="440.71738"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+         xml:space="preserve"><tspan
+           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
+           y="-150.66591"
+           x="440.71738"
+           id="tspan5398"
+           sodipodi:role="line">dataValid</tspan></text>
     </g>
     <g
        id="g3488"
@@ -496,15 +514,15 @@
     </g>
     <g
        id="g3573"
-       transform="translate(245.00001,12.499998)">
+       transform="translate(240.00001,12.600001)">
       <rect
          transform="scale(-1,1)"
          style="fill:#cccccc;stroke:#000000;stroke-width:0.25;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          id="rect3575"
-         width="49.999996"
-         height="50"
-         x="-315.71738"
-         y="-193.16591"
+         width="55.000004"
+         height="50.100002"
+         x="-320.71738"
+         y="-193.26591"
          rx="5"
          ry="5.1999998" />
       <path
@@ -533,21 +551,21 @@
            style="font-size:8.75px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Bold">txFifo:int0</tspan></text>
       <path
          style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 313.21738,-165.86591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
+         d="m 318.21738,-165.96591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
          id="path3585"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cccccc" />
       <text
          xml:space="preserve"
          style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-         x="308.21738"
-         y="-170.66591"
+         x="313.21738"
+         y="-170.76591"
          id="text3587"
          sodipodi:linespacing="125%"><tspan
            sodipodi:role="line"
            id="tspan3589"
-           x="308.21738"
-           y="-170.66591"
+           x="313.21738"
+           y="-170.76591"
            style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">rEn</tspan></text>
       <text
          sodipodi:linespacing="125%"
@@ -563,44 +581,44 @@
            sodipodi:role="line">wEn</tspan></text>
       <path
          style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 318.21738,-175.66591 -5,0 -2.5,2.6 2.5,2.6 5,0 z"
+         d="m 323.21738,-175.96591 -5,0 -2.5,2.6 2.5,2.6 5,0 z"
          id="path3603"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cccccc" />
       <text
          xml:space="preserve"
          style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-         x="290.71738"
-         y="-160.66591"
+         x="293.21738"
+         y="-160.76591"
          id="text3621"
          sodipodi:linespacing="125%"><tspan
            sodipodi:role="line"
            id="tspan3623"
-           x="290.71738"
-           y="-160.66591"
+           x="293.21738"
+           y="-160.76591"
            style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">rxPortNr</tspan></text>
       <path
          sodipodi:nodetypes="cccccc"
          inkscape:connector-curvature="0"
          id="path5431"
-         d="m 313.21738,-155.66591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
+         d="m 318.21738,-155.76591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
          style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
       <text
          sodipodi:linespacing="125%"
          id="text5433"
-         y="-150.66591"
-         x="308.21738"
+         y="-150.76591"
+         x="313.21738"
          style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
          xml:space="preserve"><tspan
            style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-           y="-150.66591"
-           x="308.21738"
+           y="-150.76591"
+           x="313.21738"
            id="tspan5435"
            sodipodi:role="line">empty</tspan></text>
     </g>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none"
-       d="m 503.21739,-233.16591 5,0 0,40 -25,0"
+       d="m 503.21739,-248.16591 17.5,0 0,55 -42.5,0"
        id="path3609"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc" />
@@ -942,10 +960,10 @@
           <rect
              ry="5.1999998"
              rx="5"
-             y="-193.16591"
-             x="-420.71735"
-             height="42.499893"
-             width="79.999939"
+             y="-203.16591"
+             x="-415.71738"
+             height="52.499889"
+             width="74.999977"
              id="rect4276"
              style="fill:#cccccc;stroke:#000000;stroke-width:0.25;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
              transform="scale(-1,1)" />
@@ -953,23 +971,23 @@
              sodipodi:nodetypes="cccccc"
              inkscape:connector-curvature="0"
              id="path4278"
-             d="m 418.21735,-165.86591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
+             d="m 413.21742,-165.86591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
              style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
           <text
              sodipodi:linespacing="125%"
              id="text4280"
-             y="-183.16591"
+             y="-193.16591"
              x="353.21738"
              style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
              xml:space="preserve"><tspan
                style="font-size:8.75px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Bold"
-               y="-183.16591"
+               y="-193.16591"
                x="353.21738"
                id="tspan4282"
                sodipodi:role="line">txFifoSelect</tspan></text>
           <path
              style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-             d="m 423.21732,-175.66591 -5,0 -2.5,2.6 2.5,2.6 5,0 z"
+             d="m 418.21739,-175.66591 -5,0 -2.5,2.6 2.5,2.6 5,0 z"
              id="path4284"
              inkscape:connector-curvature="0"
              sodipodi:nodetypes="cccccc" />
@@ -977,146 +995,66 @@
              sodipodi:linespacing="125%"
              id="text4300"
              y="-160.66591"
-             x="413.21732"
+             x="408.21738"
              style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
              xml:space="preserve"><tspan
                style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
                y="-160.66591"
-               x="413.21732"
+               x="408.21738"
                id="tspan4302"
                sodipodi:role="line">fifoWriteEnable</tspan></text>
           <text
              xml:space="preserve"
              style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-             x="413.21732"
+             x="408.21738"
              y="-170.66591"
              id="text4304"
              sodipodi:linespacing="125%"><tspan
                sodipodi:role="line"
                id="tspan4306"
-               x="413.21732"
+               x="408.21738"
                y="-170.66591"
                style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">selectedAddr</tspan></text>
+          <path
+             sodipodi:nodetypes="cccccc"
+             inkscape:connector-curvature="0"
+             id="path5388"
+             d="m 418.21745,-185.66591 -5,0 -2.5,2.6 2.5,2.6 5,0 z"
+             style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text5390"
+             y="-180.66591"
+             x="408.21744"
+             style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+             xml:space="preserve"><tspan
+               style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
+               y="-180.66591"
+               x="408.21744"
+               id="tspan5392"
+               sodipodi:role="line">dataValid</tspan></text>
         </g>
       </g>
     </g>
     <text
        sodipodi:linespacing="125%"
        id="text4336"
-       y="505.71738"
-       x="200.66591"
+       y="518.21741"
+       x="210.66591"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
        xml:space="preserve"
        transform="matrix(0,-1,1,0,0,0)"><tspan
          style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-         y="505.71738"
-         x="200.66591"
+         y="518.21741"
+         x="210.66591"
          id="tspan4338"
-         sodipodi:role="line">addr</tspan></text>
+         sodipodi:role="line">address</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none"
-       d="m 505.71739,-200.66591 5,2.5"
+       d="m 518.21739,-210.66591 5,2.5"
        id="path4340"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
-    <g
-       transform="translate(2.5000093,12.3)"
-       id="g4342">
-      <rect
-         transform="scale(-1,1)"
-         style="fill:#cccccc;stroke:#000000;stroke-width:0.25;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         id="rect4344"
-         width="107.49948"
-         height="42.500015"
-         x="-328.21741"
-         y="-193.16591"
-         rx="5"
-         ry="5.1999998" />
-      <path
-         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 218.21741,-175.76591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
-         id="path4346"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cccccc" />
-      <path
-         sodipodi:nodetypes="cccccc"
-         inkscape:connector-curvature="0"
-         id="path4348"
-         d="m 218.21741,-165.76591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
-         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <text
-         xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-         x="233.21739"
-         y="-183.16591"
-         id="text4350"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan4352"
-           x="233.21739"
-           y="-183.16591"
-           style="font-size:8.75px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Bold">headerFetch</tspan></text>
-      <path
-         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 325.71739,-175.66591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
-         id="path4354"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cccccc" />
-      <text
-         xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-         x="228.21739"
-         y="-170.66591"
-         id="text4356"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan4358"
-           x="228.21739"
-           y="-170.66591"
-           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">routingRequest</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text4360"
-         y="-160.66591"
-         x="228.21739"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-         xml:space="preserve"><tspan
-           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-           y="-160.66591"
-           x="228.21739"
-           id="tspan4362"
-           sodipodi:role="line">endOfRxPacket</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text4364"
-         y="-170.46591"
-         x="320.71738"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-         xml:space="preserve"><tspan
-           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-           y="-170.46591"
-           x="320.71738"
-           id="tspan4366"
-           sodipodi:role="line">header</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text4368"
-         y="-160.46591"
-         x="320.71741"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-         xml:space="preserve"><tspan
-           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-           y="-160.46591"
-           x="320.71741"
-           id="tspan4370"
-           sodipodi:role="line">selected</tspan></text>
-      <path
-         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 330.71739,-165.66591 -5,0 -2.5,2.6 2.5,2.6 5,0 z"
-         id="path4372"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cccccc" />
-    </g>
     <path
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
@@ -1261,104 +1199,6 @@
          x="383.21741"
          y="-150.86591"
          style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">[1]</tspan></text>
-    <g
-       id="g4422"
-       transform="translate(2.5000093,62.3)">
-      <rect
-         ry="5.1999998"
-         rx="5"
-         y="-193.16591"
-         x="-328.21741"
-         height="42.500015"
-         width="107.49948"
-         id="rect4424"
-         style="fill:#cccccc;stroke:#000000;stroke-width:0.25;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         transform="scale(-1,1)" />
-      <path
-         sodipodi:nodetypes="cccccc"
-         inkscape:connector-curvature="0"
-         id="path4426"
-         d="m 218.21741,-175.76591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
-         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <path
-         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 218.21741,-165.76591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
-         id="path4428"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cccccc" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text4430"
-         y="-183.16591"
-         x="233.21739"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-         xml:space="preserve"><tspan
-           style="font-size:8.75px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Bold"
-           y="-183.16591"
-           x="233.21739"
-           id="tspan4432"
-           sodipodi:role="line">headerFetch</tspan></text>
-      <path
-         sodipodi:nodetypes="cccccc"
-         inkscape:connector-curvature="0"
-         id="path4434"
-         d="m 325.71739,-175.66591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
-         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text4436"
-         y="-170.66591"
-         x="228.21739"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-         xml:space="preserve"><tspan
-           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-           y="-170.66591"
-           x="228.21739"
-           id="tspan4438"
-           sodipodi:role="line">routingRequest</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-         x="228.21739"
-         y="-160.66591"
-         id="text4440"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan4442"
-           x="228.21739"
-           y="-160.66591"
-           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">endOfRxPacket</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-         x="320.71738"
-         y="-170.46591"
-         id="text4444"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan4446"
-           x="320.71738"
-           y="-170.46591"
-           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">header</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-         x="320.71741"
-         y="-160.46591"
-         id="text4448"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan4450"
-           x="320.71741"
-           y="-160.46591"
-           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">selected</tspan></text>
-      <path
-         sodipodi:nodetypes="cccccc"
-         inkscape:connector-curvature="0"
-         id="path4452"
-         d="m 330.71739,-165.66591 -5,0 -2.5,2.6 2.5,2.6 5,0 z"
-         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-    </g>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none"
        d="m 165.71741,-105.86591 5,5 50,0"
@@ -1503,104 +1343,6 @@
          x="383.21741"
          id="tspan4500"
          sodipodi:role="line">[2]</tspan></text>
-    <g
-       transform="translate(2.499994,112.5)"
-       id="g4502">
-      <rect
-         transform="scale(-1,1)"
-         style="fill:#cccccc;stroke:#000000;stroke-width:0.25;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         id="rect4504"
-         width="107.49948"
-         height="42.500015"
-         x="-328.21741"
-         y="-193.16591"
-         rx="5"
-         ry="5.1999998" />
-      <path
-         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 218.21741,-175.76591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
-         id="path4506"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cccccc" />
-      <path
-         sodipodi:nodetypes="cccccc"
-         inkscape:connector-curvature="0"
-         id="path4508"
-         d="m 218.21741,-165.76591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
-         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <text
-         xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-         x="233.21739"
-         y="-183.16591"
-         id="text4510"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan4512"
-           x="233.21739"
-           y="-183.16591"
-           style="font-size:8.75px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Bold">headerFetch</tspan></text>
-      <path
-         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 325.71739,-175.66591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
-         id="path4514"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cccccc" />
-      <text
-         xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-         x="228.21739"
-         y="-170.66591"
-         id="text4516"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan4518"
-           x="228.21739"
-           y="-170.66591"
-           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">routingRequest</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text4520"
-         y="-160.66591"
-         x="228.21739"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-         xml:space="preserve"><tspan
-           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-           y="-160.66591"
-           x="228.21739"
-           id="tspan4522"
-           sodipodi:role="line">endOfRxPacket</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text4524"
-         y="-170.46591"
-         x="320.71738"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-         xml:space="preserve"><tspan
-           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-           y="-170.46591"
-           x="320.71738"
-           id="tspan4526"
-           sodipodi:role="line">header</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text4528"
-         y="-160.46591"
-         x="320.71741"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-         xml:space="preserve"><tspan
-           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-           y="-160.46591"
-           x="320.71741"
-           id="tspan4530"
-           sodipodi:role="line">selected</tspan></text>
-      <path
-         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 330.71739,-165.66591 -5,0 -2.5,2.6 2.5,2.6 5,0 z"
-         id="path4532"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cccccc" />
-    </g>
     <path
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
@@ -4084,314 +3826,106 @@
          sodipodi:role="line">[0]</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none"
-       d="m 490.7174,-165.66591 5,5 12.5,0"
+       d="m 485.7174,-165.56591 5,5 12.5,0"
        id="path6792"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-       x="490.71738"
-       y="-160.66591"
+       x="485.71738"
+       y="-160.5659"
        id="text6794"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6796"
-         x="490.71738"
-         y="-160.66591"
+         x="485.71738"
+         y="-160.5659"
          style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">[0]</tspan></text>
     <path
        sodipodi:nodetypes="ccccc"
        inkscape:connector-curvature="0"
        id="path6798"
-       d="m 503.21739,-243.16591 17.5,0 0,55 -20,0 0,147.499998"
+       d="m 503.21739,-258.16591 30,0 0,70 -37.5,0 0,147.499998"
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none" />
     <text
        transform="matrix(0,-1,1,0,0,0)"
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-       x="200.66591"
-       y="518.21741"
+       x="210.66591"
+       y="530.71741"
        id="text6800"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6802"
-         x="200.66591"
-         y="518.21741"
+         x="210.66591"
+         y="530.71741"
          style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">rxPortNr</tspan></text>
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path6804"
-       d="m 518.21739,-200.66591 5,2.5"
+       d="m 530.71739,-210.66591 5,2.5"
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path6806"
-       d="m 508.2174,-150.66591 -7.50001,0"
+       d="m 503.2174,-150.56591 -7.50001,0"
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-end:url(#DotL)" />
-    <g
-       transform="translate(245.00001,67.499997)"
-       id="g6808">
-      <rect
-         ry="5.1999998"
-         rx="5"
-         y="-193.16591"
-         x="-315.71738"
-         height="50"
-         width="49.999996"
-         id="rect6810"
-         style="fill:#cccccc;stroke:#000000;stroke-width:0.25;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         transform="scale(-1,1)" />
-      <path
-         sodipodi:nodetypes="cccccc"
-         inkscape:connector-curvature="0"
-         id="path6812"
-         d="m 263.21738,-175.86591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
-         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <path
-         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 263.21738,-165.86591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
-         id="path6814"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cccccc" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text6816"
-         y="-183.16591"
-         x="268.21738"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-         xml:space="preserve"><tspan
-           style="font-size:8.75px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Bold"
-           y="-183.16591"
-           x="268.21738"
-           id="tspan6818"
-           sodipodi:role="line">txFifo:int1</tspan></text>
-      <path
-         sodipodi:nodetypes="cccccc"
-         inkscape:connector-curvature="0"
-         id="path6820"
-         d="m 313.21738,-165.86591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
-         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text6822"
-         y="-170.66591"
-         x="308.21738"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-         xml:space="preserve"><tspan
-           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-           y="-170.66591"
-           x="308.21738"
-           id="tspan6824"
-           sodipodi:role="line">rEn</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-         x="273.21738"
-         y="-170.66591"
-         id="text6826"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan6828"
-           x="273.21738"
-           y="-170.66591"
-           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">wEn</tspan></text>
-      <path
-         sodipodi:nodetypes="cccccc"
-         inkscape:connector-curvature="0"
-         id="path6830"
-         d="m 318.21738,-175.66591 -5,0 -2.5,2.6 2.5,2.6 5,0 z"
-         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text6832"
-         y="-160.66591"
-         x="290.71738"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-         xml:space="preserve"><tspan
-           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-           y="-160.66591"
-           x="290.71738"
-           id="tspan6834"
-           sodipodi:role="line">rxPortNr</tspan></text>
-      <path
-         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 313.21738,-155.66591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
-         id="path6836"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cccccc" />
-      <text
-         xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-         x="308.21738"
-         y="-150.66591"
-         id="text6838"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan6840"
-           x="308.21738"
-           y="-150.66591"
-           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">empty</tspan></text>
-    </g>
     <path
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path6842"
-       d="m 490.71739,-55.66591 0,-127.5 -5,0"
+       d="m 485.71739,-55.66591 0,-127.5 -5,0"
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none" />
     <path
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path6844"
-       d="m 490.71742,-110.66591 5,5 12.5,0"
+       d="m 485.71742,-110.56591 5,5 12.5,0"
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none" />
     <text
        sodipodi:linespacing="125%"
        id="text6846"
-       y="-105.66591"
-       x="490.71738"
+       y="-105.5659"
+       x="485.71738"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
        xml:space="preserve"><tspan
          style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-         y="-105.66591"
-         x="490.71738"
+         y="-105.5659"
+         x="485.71738"
          id="tspan6848"
          sodipodi:role="line">[1]</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-end:url(#DotL)"
-       d="m 508.2174,-95.665911 -7.50001,0"
+       d="m 503.2174,-95.565908 -7.50001,0"
        id="path6850"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
-    <g
-       id="g6852"
-       transform="translate(245.00001,122.5)">
-      <rect
-         transform="scale(-1,1)"
-         style="fill:#cccccc;stroke:#000000;stroke-width:0.25;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         id="rect6854"
-         width="49.999996"
-         height="50"
-         x="-315.71738"
-         y="-193.16591"
-         rx="5"
-         ry="5.1999998" />
-      <path
-         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 263.21738,-175.86591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
-         id="path6856"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cccccc" />
-      <path
-         sodipodi:nodetypes="cccccc"
-         inkscape:connector-curvature="0"
-         id="path6858"
-         d="m 263.21738,-165.86591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
-         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <text
-         xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-         x="268.21738"
-         y="-183.16591"
-         id="text6860"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan6862"
-           x="268.21738"
-           y="-183.16591"
-           style="font-size:8.75px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Bold">txFifo:ext</tspan></text>
-      <path
-         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 313.21738,-165.86591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
-         id="path6864"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cccccc" />
-      <text
-         xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-         x="308.21738"
-         y="-170.66591"
-         id="text6866"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan6868"
-           x="308.21738"
-           y="-170.66591"
-           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">rEn</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text6870"
-         y="-170.66591"
-         x="273.21738"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-         xml:space="preserve"><tspan
-           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-           y="-170.66591"
-           x="273.21738"
-           id="tspan6872"
-           sodipodi:role="line">wEn</tspan></text>
-      <path
-         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 318.21738,-175.66591 -5,0 -2.5,2.6 2.5,2.6 5,0 z"
-         id="path6874"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cccccc" />
-      <text
-         xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-         x="290.71738"
-         y="-160.66591"
-         id="text6876"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan6878"
-           x="290.71738"
-           y="-160.66591"
-           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">rxPortNr</tspan></text>
-      <path
-         sodipodi:nodetypes="cccccc"
-         inkscape:connector-curvature="0"
-         id="path6880"
-         d="m 313.21738,-155.66591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
-         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text6882"
-         y="-150.66591"
-         x="308.21738"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-         xml:space="preserve"><tspan
-           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-           y="-150.66591"
-           x="308.21738"
-           id="tspan6884"
-           sodipodi:role="line">empty</tspan></text>
-    </g>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none"
-       d="m 490.71743,-55.665913 5,5 12.5,0"
+       d="m 485.71743,-55.56591 5,5 12.5,0"
        id="path6886"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-       x="490.71738"
-       y="-50.665909"
+       x="485.71738"
+       y="-50.565907"
        id="text6888"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6890"
-         x="490.71738"
-         y="-50.665909"
+         x="485.71738"
+         y="-50.565907"
          style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">[2]</tspan></text>
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path6892"
-       d="m 508.21741,-40.665913 -7.50001,0"
+       d="m 503.21741,-40.56591 -7.50001,0"
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-end:none" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none"
@@ -4626,7 +4160,7 @@
          y="96.834091"
          x="590.71741"
          id="tspan7168"
-         sodipodi:role="line">[0]</tspan></text>
+         sodipodi:role="line">[1]</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none"
        d="m 470.71737,86.834091 114.99994,-2e-6 5,5.000001"
@@ -4650,7 +4184,7 @@
          id="tspan7176"
          x="603.21741"
          y="86.834091"
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">[0]</tspan></text>
+         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">[1]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
@@ -4662,7 +4196,7 @@
          id="tspan7180"
          x="578.21741"
          y="106.83409"
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">[0]</tspan></text>
+         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">[1]</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none"
        d="m 473.21735,154.33409 124.99994,0 5,5"
@@ -4680,7 +4214,7 @@
          id="tspan7186"
          x="590.71741"
          y="174.33409"
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">[0]</tspan></text>
+         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">[2]</tspan></text>
     <path
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
@@ -4704,7 +4238,7 @@
          y="164.33409"
          x="603.21741"
          id="tspan7194"
-         sodipodi:role="line">[0]</tspan></text>
+         sodipodi:role="line">[2]</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text7196"
@@ -4716,7 +4250,7 @@
          y="184.33409"
          x="578.21741"
          id="tspan7198"
-         sodipodi:role="line">[0]</tspan></text>
+         sodipodi:role="line">[2]</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text7200"
@@ -5179,5 +4713,532 @@
        id="path7396"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
+    <g
+       transform="translate(2.499998,12.499999)"
+       id="g5292">
+      <rect
+         transform="scale(-1,1)"
+         style="fill:#cccccc;stroke:#000000;stroke-width:0.25;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="rect5294"
+         width="107.49948"
+         height="42.500015"
+         x="-328.21741"
+         y="-193.16591"
+         rx="5"
+         ry="5.1999998" />
+      <path
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 218.21741,-175.76591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
+         id="path5296"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccccc" />
+      <path
+         sodipodi:nodetypes="cccccc"
+         inkscape:connector-curvature="0"
+         id="path5298"
+         d="m 218.21741,-165.76591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+         x="233.21739"
+         y="-183.16591"
+         id="text5300"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5302"
+           x="233.21739"
+           y="-183.16591"
+           style="font-size:8.75px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Bold">headerFetch</tspan></text>
+      <path
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 325.71739,-175.66591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
+         id="path5304"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccccc" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+         x="228.21739"
+         y="-170.66591"
+         id="text5306"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5308"
+           x="228.21739"
+           y="-170.66591"
+           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">headerIn</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5310"
+         y="-160.66591"
+         x="228.21739"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+         xml:space="preserve"><tspan
+           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
+           y="-160.66591"
+           x="228.21739"
+           id="tspan5312"
+           sodipodi:role="line">endOfRxPacket</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5314"
+         y="-170.46591"
+         x="320.71738"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+         xml:space="preserve"><tspan
+           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
+           y="-170.46591"
+           x="320.71738"
+           id="tspan5316"
+           sodipodi:role="line">headerOut</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5318"
+         y="-160.46591"
+         x="320.71741"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+         xml:space="preserve"><tspan
+           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
+           y="-160.46591"
+           x="320.71741"
+           id="tspan5320"
+           sodipodi:role="line">selected</tspan></text>
+      <path
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 330.71739,-165.66591 -5,0 -2.5,2.6 2.5,2.6 5,0 z"
+         id="path5322"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccccc" />
+    </g>
+    <g
+       id="g5324"
+       transform="translate(2.499998,62.499999)">
+      <rect
+         ry="5.1999998"
+         rx="5"
+         y="-193.16591"
+         x="-328.21741"
+         height="42.500015"
+         width="107.49948"
+         id="rect5326"
+         style="fill:#cccccc;stroke:#000000;stroke-width:0.25;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         transform="scale(-1,1)" />
+      <path
+         sodipodi:nodetypes="cccccc"
+         inkscape:connector-curvature="0"
+         id="path5328"
+         d="m 218.21741,-175.76591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 218.21741,-165.76591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
+         id="path5330"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccccc" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5332"
+         y="-183.16591"
+         x="233.21739"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+         xml:space="preserve"><tspan
+           style="font-size:8.75px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Bold"
+           y="-183.16591"
+           x="233.21739"
+           id="tspan5334"
+           sodipodi:role="line">headerFetch</tspan></text>
+      <path
+         sodipodi:nodetypes="cccccc"
+         inkscape:connector-curvature="0"
+         id="path5336"
+         d="m 325.71739,-175.66591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5338"
+         y="-170.66591"
+         x="228.21739"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+         xml:space="preserve"><tspan
+           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
+           y="-170.66591"
+           x="228.21739"
+           id="tspan5340"
+           sodipodi:role="line">headerIn</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+         x="228.21739"
+         y="-160.66591"
+         id="text5342"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5344"
+           x="228.21739"
+           y="-160.66591"
+           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">endOfRxPacket</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+         x="320.71738"
+         y="-170.46591"
+         id="text5346"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5348"
+           x="320.71738"
+           y="-170.46591"
+           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">headerOut</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+         x="320.71741"
+         y="-160.46591"
+         id="text5350"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5352"
+           x="320.71741"
+           y="-160.46591"
+           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">selected</tspan></text>
+      <path
+         sodipodi:nodetypes="cccccc"
+         inkscape:connector-curvature="0"
+         id="path5354"
+         d="m 330.71739,-165.66591 -5,0 -2.5,2.6 2.5,2.6 5,0 z"
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+    <g
+       transform="translate(2.499998,112.5)"
+       id="g5356">
+      <rect
+         transform="scale(-1,1)"
+         style="fill:#cccccc;stroke:#000000;stroke-width:0.25;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="rect5358"
+         width="107.49948"
+         height="42.500015"
+         x="-328.21741"
+         y="-193.16591"
+         rx="5"
+         ry="5.1999998" />
+      <path
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 218.21741,-175.76591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
+         id="path5360"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccccc" />
+      <path
+         sodipodi:nodetypes="cccccc"
+         inkscape:connector-curvature="0"
+         id="path5362"
+         d="m 218.21741,-165.76591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+         x="233.21739"
+         y="-183.16591"
+         id="text5364"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5366"
+           x="233.21739"
+           y="-183.16591"
+           style="font-size:8.75px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Bold">headerFetch</tspan></text>
+      <path
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 325.71739,-175.66591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
+         id="path5368"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccccc" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+         x="228.21739"
+         y="-170.66591"
+         id="text5370"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5372"
+           x="228.21739"
+           y="-170.66591"
+           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">headerIn</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5374"
+         y="-160.66591"
+         x="228.21739"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+         xml:space="preserve"><tspan
+           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
+           y="-160.66591"
+           x="228.21739"
+           id="tspan5376"
+           sodipodi:role="line">endOfRxPacket</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5378"
+         y="-170.46591"
+         x="320.71738"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+         xml:space="preserve"><tspan
+           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
+           y="-170.46591"
+           x="320.71738"
+           id="tspan5380"
+           sodipodi:role="line">headerOut</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5382"
+         y="-160.46591"
+         x="320.71741"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+         xml:space="preserve"><tspan
+           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
+           y="-160.46591"
+           x="320.71741"
+           id="tspan5384"
+           sodipodi:role="line">selected</tspan></text>
+      <path
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 330.71739,-165.66591 -5,0 -2.5,2.6 2.5,2.6 5,0 z"
+         id="path5386"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccccc" />
+    </g>
+    <path
+       sodipodi:nodetypes="cccc"
+       inkscape:connector-curvature="0"
+       id="path5400"
+       d="m 503.21739,-238.16591 5,0 0,35 -30,0"
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none" />
+    <text
+       transform="matrix(0,-1,1,0,0,0)"
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+       x="210.66591"
+       y="505.71741"
+       id="text5402"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5404"
+         x="210.66591"
+         y="505.71741"
+         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">1</tspan></text>
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path5406"
+       d="m 505.71739,-210.66591 5,2.5"
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none" />
+    <g
+       transform="translate(240.00001,67.499999)"
+       id="g5408">
+      <rect
+         ry="5.1999998"
+         rx="5"
+         y="-193.26591"
+         x="-320.71738"
+         height="50.100002"
+         width="55.000004"
+         id="rect5410"
+         style="fill:#cccccc;stroke:#000000;stroke-width:0.25;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         transform="scale(-1,1)" />
+      <path
+         sodipodi:nodetypes="cccccc"
+         inkscape:connector-curvature="0"
+         id="path5412"
+         d="m 263.21738,-175.86591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 263.21738,-165.86591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
+         id="path5414"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccccc" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5416"
+         y="-183.16591"
+         x="268.21738"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+         xml:space="preserve"><tspan
+           style="font-size:8.75px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Bold"
+           y="-183.16591"
+           x="268.21738"
+           id="tspan5418"
+           sodipodi:role="line">txFifo:int0</tspan></text>
+      <path
+         sodipodi:nodetypes="cccccc"
+         inkscape:connector-curvature="0"
+         id="path5420"
+         d="m 318.21738,-165.96591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5422"
+         y="-170.76591"
+         x="313.21738"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+         xml:space="preserve"><tspan
+           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
+           y="-170.76591"
+           x="313.21738"
+           id="tspan5424"
+           sodipodi:role="line">rEn</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+         x="273.21738"
+         y="-170.66591"
+         id="text5426"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5428"
+           x="273.21738"
+           y="-170.66591"
+           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">wEn</tspan></text>
+      <path
+         sodipodi:nodetypes="cccccc"
+         inkscape:connector-curvature="0"
+         id="path5430"
+         d="m 323.21738,-175.96591 -5,0 -2.5,2.6 2.5,2.6 5,0 z"
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5432"
+         y="-160.76591"
+         x="293.21738"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+         xml:space="preserve"><tspan
+           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
+           y="-160.76591"
+           x="293.21738"
+           id="tspan5434"
+           sodipodi:role="line">rxPortNr</tspan></text>
+      <path
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 318.21738,-155.76591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
+         id="path5436"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccccc" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+         x="313.21738"
+         y="-150.76591"
+         id="text5438"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5440"
+           x="313.21738"
+           y="-150.76591"
+           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">empty</tspan></text>
+    </g>
+    <g
+       id="g5442"
+       transform="translate(240.00001,122.6)">
+      <rect
+         transform="scale(-1,1)"
+         style="fill:#cccccc;stroke:#000000;stroke-width:0.25;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="rect5444"
+         width="55.000004"
+         height="50.100002"
+         x="-320.71738"
+         y="-193.26591"
+         rx="5"
+         ry="5.1999998" />
+      <path
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 263.21738,-175.86591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
+         id="path5446"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccccc" />
+      <path
+         sodipodi:nodetypes="cccccc"
+         inkscape:connector-curvature="0"
+         id="path5448"
+         d="m 263.21738,-165.86591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+         x="268.21738"
+         y="-183.16591"
+         id="text5450"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5452"
+           x="268.21738"
+           y="-183.16591"
+           style="font-size:8.75px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Bold">txFifo:ext</tspan></text>
+      <path
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 318.21738,-165.96591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
+         id="path5454"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccccc" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+         x="313.21738"
+         y="-170.76591"
+         id="text5456"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5458"
+           x="313.21738"
+           y="-170.76591"
+           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">rEn</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5460"
+         y="-170.66591"
+         x="273.21738"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+         xml:space="preserve"><tspan
+           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
+           y="-170.66591"
+           x="273.21738"
+           id="tspan5462"
+           sodipodi:role="line">wEn</tspan></text>
+      <path
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 323.21738,-175.96591 -5,0 -2.5,2.6 2.5,2.6 5,0 z"
+         id="path5464"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccccc" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+         x="293.21738"
+         y="-160.76591"
+         id="text5466"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5468"
+           x="293.21738"
+           y="-160.76591"
+           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">rxPortNr</tspan></text>
+      <path
+         sodipodi:nodetypes="cccccc"
+         inkscape:connector-curvature="0"
+         id="path5470"
+         d="m 318.21738,-155.76591 5,0 2.5,2.6 -2.5,2.6 -5,0 z"
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5472"
+         y="-150.76591"
+         x="313.21738"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+         xml:space="preserve"><tspan
+           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
+           y="-150.76591"
+           x="313.21738"
+           id="tspan5474"
+           sodipodi:role="line">empty</tspan></text>
+    </g>
   </g>
 </svg>

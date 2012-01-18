@@ -39,7 +39,7 @@ begin
 		if txPortIdle = '1' and txFifoEmpty = '0' then
 			txPortWriteEnable <= '1';
 			txFifoReadEnable <= '1';
-			rxPortWriteEnable(rxPortNrIn) <= '1';
+			rxPortWriteEnable(portNrToInteger(rxPortNrIn)) <= '1';
 		end if;
 	end process nomem_output;
 

@@ -23,6 +23,14 @@ end entity txFifo;
 architecture rtl of txFifo is
 
 	subtype position is unsigned(toLog2Ceil(numPorts-1) downto 0);
+	subtype positionInteger is integer range numPorts-1 downto 0;
+	function positionToInteger(pos: position) return positionInteger is
+		variable result : positionInteger;
+	begin
+		result := to_integer(pos);
+		return result;
+	end function positionToInteger;
+	
 	signal readPosition_p, readPosition_n, writePosition_p, writePosition_n : position;
 	
 	signal fillCount_p, fillCount_n : position;
@@ -31,7 +39,7 @@ architecture rtl of txFifo is
 	
 begin
 
-	rxPortNrOut <= ringBuffer_p(readPosition_p);
+	rxPortNrOut <= ringBuffer_p(positionToInteger(readPosition_p));
 
 	nomem_output : process(fillCount_p) is
 	begin
@@ -51,11 +59,11 @@ begin
  		
  		-- writing
  		if writeEnable = '1' then
- 			ringBuffer_n(writePosition_p) <= rxPortNrIn;
+ 			ringBuffer_n(positionToInteger(writePosition_p)) <= rxPortNrIn;
  			if writePosition_p+1 < numPorts then
  				writePosition_n <= writePosition_p + 1;
  			else
- 				writePosition_n <= 0;
+ 				writePosition_n <= (others => '0');
  			end if;
  			if readEnable = '0' then
  				fillCount_n <= fillCount_p + 1;
@@ -67,7 +75,7 @@ begin
  			if readPosition_p+1 < numPorts then
  				readPosition_n <= readPosition_p + 1;
  			else
- 				readPosition_n <= 0;
+ 				readPosition_n <= (others => '0');
  			end if;
  			if writeEnable = '0' then
  				fillCount_n <= fillCount_p-1;
@@ -78,9 +86,9 @@ begin
 	mem_stateTransition : process (clk, reset) is
 	begin
 		if reset = '0' then
-			readPosition_p <= 0;
-			writePosition_p <= 0;
-			fillCount_p <= 0;
+			readPosition_p <= (others => '0');
+			writePosition_p <= (others => '0');
+			fillCount_p <= (others => '0');
 		elsif rising_edge(clk) then
 			readPosition_p <= readPosition_n;
 			writePosition_p <= writePosition_n;

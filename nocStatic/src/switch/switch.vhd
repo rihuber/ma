@@ -32,11 +32,14 @@ architecture structural of switch is
 	signal router_rxPortMap				: portNrWrapperArray(numPorts-1 downto 0);
 	signal router_txPortMap				: portNrWrapperArray(numPorts-1 downto 0);
 	
+	signal invertedOutputLinksInFull	: std_logic_vector(numPorts-1 downto 0);
+	signal invertedInputLinksInEmpty	: std_logic_vector(numPorts-1 downto 0);
+	
 begin
 
 	headerDetectorGenerate: for i in numPorts-1 downto 0 generate
 		
-		headerDetectorEntity : entity headerDetector
+		headerDetectorEntity : entity work.headerDetector
 			port map(
 				clk 		=> clk,
 				reset 		=> reset,
@@ -50,7 +53,7 @@ begin
 	
 	headerDecoderGenerate: for i in numPorts-1 downto 0 generate
 		
-		headerDecoderEntity : entity headerDecoder
+		headerDecoderEntity : entity work.headerDecoder
 			port map(
 				data		=> inputLinksIn(i).data(dataWidth-1 downto 0),
 				destAddr	=> router_routingRequest(i).addr,
@@ -61,17 +64,21 @@ begin
 	
 	endOfPacketDetectorGenerate: for i in numPorts-1 downto 0 generate
 		
-		rxEndOfPacketDetectorEntity: entity endOfPacketDetector
+		invertedInputLinksInEmpty(i) <= not inputLinksIn(i).empty;
+		
+		rxEndOfPacketDetectorEntity: entity work.endOfPacketDetector
 			port map(
-				dataValid	=> not inputLinksIn(i).empty,
+				dataValid	=> invertedInputLinksInEmpty(i),
 				flag		=> inputLinksIn(i).data(dataWidth),
 				fifoEnable	=> inputLinksOutMuxOutput(i).readEnable,
 				endOfPacket => router_endOfRxPacket(i)
 			);
 			
-		txEndOfPacketDetectorEntity: entity endOfPacketDetector
+		invertedOutputLinksInFull(i) <= not outputLinksIn(i).full;
+			
+		txEndOfPacketDetectorEntity: entity work.endOfPacketDetector
 			port map(
-				dataValid	=> not outputLinksIn(i).full,
+				dataValid	=> invertedOutputLinksInFull(i),
 				flag		=> outputLinksOutMuxOutput(i).data(dataWidth),
 				fifoEnable	=> outputLinksOutMuxOutput(i).writeEnable,
 				endOfPacket => router_endOfTxPacket(i)
@@ -79,7 +86,7 @@ begin
 		
 	end generate endOfPacketDetectorGenerate;
 	
-	routerEntity: entity router
+	routerEntity: entity work.router
 		generic map (
 			globalAddress	=> globalAddress
 		)
@@ -98,8 +105,8 @@ begin
 	begin
 		for i in numPorts-1 downto 0 loop
 			muxOutput := defaultOutputLinkInValue;
-			if router_rxPortMap(i) /= portNrUndefined then
-				muxOutput := outputLinksIn(router_rxPortMap(i));
+			if wrappedPortNrEqual(router_rxPortMap(i),portNrUndefined)='1' then
+				muxOutput := outputLinksIn(wrappedPortNrToInteger(router_rxPortMap(i)));
 			end if;
 			inputLinksOutMuxOutput(i).readEnable <= not muxOutput.full;
 		end loop;
@@ -110,8 +117,8 @@ begin
 	begin
 		for i in numPorts-1 downto 0 loop
 			muxOutput := defaultInputLinkInValue;
-			if router_rxPortMap(i) /= portNrUndefined then
-				muxOutput := inputLinksIn(router_txPortMap(i));
+			if wrappedPortNrEqual(router_rxPortMap(i),portNrUndefined)='1' then
+				muxOutput := inputLinksIn(wrappedPortNrToInteger(router_txPortMap(i)));
 			end if;
 			outputLinksOutMuxOutput(i).data <= muxOutput.data;
 			outputLinksOutMuxOutput(i).writeEnable <= not muxOutput.empty;

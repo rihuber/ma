@@ -8,10 +8,10 @@ entity rxPort is
 		clk	 		: in std_logic;
 		reset 		: in std_logic;
 		
-		txPortNrIn	: in portNr;
+		txPortNrIn	: in portNrArray(numIntPorts downto 0);
 		txPortNrOut	: out portNrWrapper;
 		
-		writeEnable	: in std_logic;
+		writeEnable	: in std_logic_vector(numIntPorts downto 0);
 		endOfPacket	: in std_logic
 	);
 end entity rxPort;
@@ -29,9 +29,13 @@ begin
 		-- default assignments
 		txPortNr_n <= txPortNr_p;
 		
-		if writeEnable = '1' then
-			txPortNr_n <= toPortNrWrapper(txPortNrIn);
-		end if;
+		for i in numIntPorts downto 0 loop
+			if writeEnable(i)='1' then
+				txPortNr_n <= toPortNrWrapper(txPortNrIn(i));
+				exit;
+			end if;
+		end loop;
+
 		if endOfPacket='1' then
 			txPortNr_n <= portNrUndefined;
 		end if;

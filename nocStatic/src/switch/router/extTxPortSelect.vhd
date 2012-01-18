@@ -25,9 +25,9 @@ architecture rtl of extTxPortSelect is
 	function selectTxPort(txPortIdle: std_logic_vector(numExtPorts-1 downto 0)) return portNrWrapper is
 		variable result : portNrWrapper;
 	begin
-		result := 0;
+		result := (others => '0');
 		while result < numExtPorts loop
-			if txPortIdle(result) = '0' then
+			if txPortIdle(wrappedPortNrToInteger(result)) = '0' then
 				return result + numIntPorts;
 			end if;
 			result := result + 1;
@@ -51,10 +51,10 @@ begin
 		if txFifoEmpty = '0' then
 			txPortNr := selectTxPort(txPortIdle);
 			if txPortNr /= portNrUndefined then
-				txPortWriteEnable(txPortNr) <= '1';
+				txPortWriteEnable(wrappedPortNrToInteger(txPortNr)) <= '1';
 				txFifoReadEnable <= '1';
 				txPortNrOut <= txPortNr;
-				rxPortWriteEnable(rxPortNrIn) <= '1';
+				rxPortWriteEnable(portNrToInteger(rxPortNrIn)) <= '1';
 			end if;
 		end if;
 			

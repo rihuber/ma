@@ -19,7 +19,6 @@ entity txFifoSelect is
 end entity txFifoSelect;
 
 architecture rtl of txFifoSelect is
-	constant externalFifoIndex : unsigned(numIntPorts downto 0) := to_unsigned(numIntPorts, toLog2Ceil(numIntPorts));
 begin
 
 	nomem_output : process (selectedAddr) is
@@ -29,9 +28,9 @@ begin
 		
 		if dataValid = '1' then
 			if selectedAddr.global = globalAddress then
-				fifoWriteEnable(selectedAddr.local) <= '1';
+				fifoWriteEnable(localAddrToInteger(selectedAddr.local)) <= '1';
 			else
-				fifoWriteEnable(externalFifoIndex) <= '1';
+				fifoWriteEnable(numIntPorts) <= '1';
 			end if;
 		end if;
 	end process nomem_output;

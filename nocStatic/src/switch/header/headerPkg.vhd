@@ -1,5 +1,6 @@
 library IEEE;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 use work.utilPkg.all;
 
@@ -15,13 +16,18 @@ package headerPkg is
 	constant numPriorities	: integer := toPow2(priorityWidth);
 	
 	subtype localAddr is std_logic_vector(localAddrWidth-1 downto 0);
+	subtype localAddrInteger is integer range toPow2(localAddrWidth) downto 0;
+	function localAddrToInteger(locAddr:localAddr) return localAddrInteger;
+	
 	subtype globalAddr is std_logic_vector(globalAddrWidth-1 downto 0);
 	type address is record
 		local	: localAddr;
 		global	: globalAddr;
 	end record;
 	
-	subtype priority is std_logic_vector(priorityWidth-1 downto 0);
+	constant dontCareAddr : address := (local => (others => '-'), global => (others => '-'));
+	
+	subtype priority is unsigned(priorityWidth-1 downto 0);
 	
 	type header is record
 		valid	: std_logic;
@@ -49,7 +55,15 @@ package body headerPkg is
 	function extractPrio(headerBits: std_logic_vector(dataWidth-1 downto 0)) return priority is
 		variable result: priority;
 	begin
-		result := headerBits(dataWidth-1 downto addressWidth);
+		result := unsigned(headerBits(dataWidth-1 downto addressWidth));
+		return result;
 	end extractPrio;
+	
+	function localAddrToInteger(locAddr:localAddr) return localAddrInteger is
+		variable result: localAddrInteger;
+	begin
+		result := to_integer(unsigned(locAddr));
+		return result;
+	end function localAddrToInteger;
 	
 end package body headerPkg;

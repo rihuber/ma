@@ -24,7 +24,7 @@ package body utilPkg is
 		variable result : integer;
 	begin
 		result := 1;
-		for result in 0 to x-1 loop
+		for i in 0 to x-1 loop
 			result := result*2;
 		end loop;
 		return result;

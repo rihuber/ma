@@ -16,6 +16,7 @@ package switchPkg is
 		empty	: std_logic;
 		data	: std_logic_vector(dataWidth downto 0);
 	end record;
+	type inputLinkInArray is array(natural range<>) of inputLinkIn;
 	
 	type inputLinkOut is record
 		readEnable	: std_logic;
@@ -25,6 +26,7 @@ package switchPkg is
 	type outputLinkIn is record
 		full	: std_logic;
 	end record;
+	type outputLinkInArray is array(natural range<>) of outputLinkIn;
 	
 	type outputLinkOut is record
 		writeEnable	: std_logic;

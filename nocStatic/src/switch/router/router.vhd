@@ -9,8 +9,8 @@ entity router is
 		globalAddress	: globalAddr
 	);
 	port (
-		clk : in std_logic;
-		reset : in std_logic;
+		clk 			: in std_logic;
+		reset 			: in std_logic;
 		
 		routingRequest	: in headerArray(numPorts-1 downto 0);
 		endOfRxPacket	: in std_logic_vector(numPorts-1 downto 0);

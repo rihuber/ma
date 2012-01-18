@@ -1,0 +1,12 @@
+
+
+Net ledIO<0> LOC=AP24;
+Net ledIO<1> LOC=AD21;
+Net ledIO<2> LOC=AH28;
+Net ledIO<3> LOC=AE21;
+Net ledIO<4> LOC=AH27;
+Net ledIO<*> IOSTANDARD=LVCMOS15;
+
+
+NET  sys_clk_p            LOC = J9  | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;
+NET  sys_clk_n            LOC = H9  | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;

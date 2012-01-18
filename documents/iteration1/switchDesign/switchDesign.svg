@@ -139,9 +139,9 @@
      borderopacity="1"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.319797"
-     inkscape:cx="204.62517"
-     inkscape:cy="248.57292"
+     inkscape:zoom="2"
+     inkscape:cx="282.58471"
+     inkscape:cy="273.50951"
      inkscape:document-units="pt"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -154,7 +154,7 @@
      inkscape:window-height="956"
      inkscape:window-x="0"
      inkscape:window-y="0"
-     inkscape:window-maximized="1"
+     inkscape:window-maximized="0"
      showborder="true"
      inkscape:showpageshadow="false"
      showguides="true"
@@ -180,7 +180,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -389,69 +389,69 @@
          y="-187.44528" /></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.3125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 525.71738,-195.46591 3e-5,95 -5,4.999999"
+       d="m 525.71739,-195.66591 10e-6,225 -5,4.999999"
        id="path4414"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       x="518.21735"
-       y="-87.965912"
+       x="518.21741"
+       y="41.834091"
        id="text4416"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4418"
-         x="518.21735"
-         y="-87.965912"
+         x="518.21741"
+         y="41.834091"
          style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">[0]</tspan></text>
+    <path
+       sodipodi:nodetypes="ccc"
+       inkscape:connector-curvature="0"
+       id="path4467"
+       d="m 490.71739,-5.66591 10,0 10e-6,14.9999998"
+       style="fill:none;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
-       id="path4467"
-       d="m 500.71738,-197.96591 -0.1,80"
-       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none" />
-    <path
-       sodipodi:nodetypes="cccc"
-       inkscape:connector-curvature="0"
        id="path4471"
-       d="m 570.71738,-112.96591 0,10 -90,0 0,220"
+       d="m 463.21739,-80.66591 0,197.5"
        style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path4473"
-       d="m 498.21742,-125.46591 5,2.5"
+       d="m 498.31744,1.8340898 5,2.5"
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     <text
        sodipodi:linespacing="125%"
        id="text4475"
-       y="-120.4659"
-       x="503.21738"
+       y="6.8341036"
+       x="503.31738"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
        xml:space="preserve"><tspan
          style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-         y="-120.4659"
-         x="503.21738"
+         y="6.8341036"
+         x="503.31738"
          id="tspan4477"
          sodipodi:role="line">1</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 498.2174,-110.46591 5.2,2.5"
+       d="m 498.31742,16.83409 5.2,2.5"
        id="path4479"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       x="503.21738"
-       y="-105.46591"
+       x="503.31738"
+       y="21.834087"
        id="text4481"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4483"
-         x="503.21738"
-         y="-105.46591"
+         x="503.31738"
+         y="21.834087"
          style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">n+1</tspan></text>
     <text
        xml:space="preserve"
@@ -468,7 +468,7 @@
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path3112"
-       d="m 143.21739,-85.66591 204.99999,0.199999 0,20"
+       d="m 143.21739,-85.66591 315,0 5,5"
        style="fill:none;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none" />
     <path
        sodipodi:nodetypes="cc"
@@ -915,7 +915,7 @@
          sodipodi:role="line">[readEnable]</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none"
-       d="m 143.21739,69.33409 204.99999,0.199999 0,20"
+       d="m 143.21739,69.33409 315,0 5,5"
        id="path7185"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
@@ -1458,7 +1458,7 @@
          y="47.034088"
          x="325.71735"
          id="tspan7389"
-         sodipodi:role="line">txPortNr</tspan></text>
+         sodipodi:role="line">portNr</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none"
        d="m 318.21738,-100.26591 0,-5 80,0 5,5"
@@ -1494,7 +1494,7 @@
          id="tspan7403"
          x="325.71735"
          y="-107.7659"
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">txPortNr</tspan></text>
+         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">portNr</tspan></text>
     <path
        style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.3125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 320.71738,-102.96591 0,14.999999 -5,-2.5 0,-9.999999 z"
@@ -1504,14 +1504,14 @@
     <text
        sodipodi:linespacing="125%"
        id="text7405"
-       y="523.21741"
-       x="105.46591"
+       y="523.31744"
+       x="-21.834087"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
        xml:space="preserve"
        transform="matrix(0,-1,1,0,0,0)"><tspan
          style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-         y="523.21741"
-         x="105.46591"
+         y="523.31744"
+         x="-21.834087"
          id="tspan7407"
          sodipodi:role="line">[full]</tspan></text>
     <g
@@ -1534,104 +1534,18 @@
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          sodipodi:type="arc" />
     </g>
-    <path
-       sodipodi:nodetypes="cccc"
-       inkscape:connector-curvature="0"
-       id="path7427"
-       d="m 348.21738,-75.465911 5,5 112.5,0 5,-5"
-       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-end:none" />
-    <text
-       sodipodi:linespacing="125%"
-       id="text7429"
-       y="-72.965912"
-       x="350.71735"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       xml:space="preserve"><tspan
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-         y="-72.965912"
-         x="350.71735"
-         id="tspan7431"
-         sodipodi:role="line">[empty]</tspan></text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-end:none"
-       d="m 348.2174,-65.465911 5,5 112.49998,0 5,-5"
-       id="path7433"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccc" />
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       x="350.71735"
-       y="-62.965916"
-       id="text7435"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan7437"
-         x="350.71735"
-         y="-62.965916"
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">[data]</tspan></text>
-    <g
-       transform="matrix(-1,0,0,1,551.43477,15.199999)"
-       id="g7439">
-      <path
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 158.21739,-85.66591 7.5,-5 0,10 z"
-         id="path7441"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cccc" />
-      <path
-         sodipodi:type="arc"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         id="path7443"
-         sodipodi:cx="-102.5"
-         sodipodi:cy="243.75"
-         sodipodi:rx="2.5"
-         sodipodi:ry="2.5"
-         d="m -100,243.75 c 0,1.38071 -1.11929,2.5 -2.5,2.5 -1.38071,0 -2.5,-1.11929 -2.5,-2.5 0,-1.38071 1.11929,-2.5 2.5,-2.5 1.38071,0 2.5,1.11929 2.5,2.5 z"
-         transform="matrix(0.5,0,0,0.5,208.21739,-207.54091)" />
-    </g>
-    <path
-       sodipodi:nodetypes="cccc"
-       inkscape:connector-curvature="0"
-       id="path7445"
-       d="m 480.71736,-80.465911 -5,5 -4.99998,0 0,10"
-       style="fill:none;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     <text
        sodipodi:linespacing="125%"
        id="text7447"
-       y="-80.465912"
-       x="480.71735"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       y="-80.665909"
+       x="463.21738"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
        xml:space="preserve"><tspan
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-         y="-80.465912"
-         x="480.71735"
+         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
+         y="-80.665909"
+         x="463.21738"
          id="tspan7449"
          sodipodi:role="line">[0]</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       x="468.21735"
-       y="-72.965912"
-       id="text7451"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan7453"
-         x="468.21735"
-         y="-72.965912"
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">[writeEnable]</tspan></text>
-    <text
-       sodipodi:linespacing="125%"
-       id="text7455"
-       y="-62.965916"
-       x="468.21735"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       xml:space="preserve"><tspan
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-         y="-62.965916"
-         x="468.21735"
-         id="tspan7457"
-         sodipodi:role="line">[data]</tspan></text>
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
@@ -1640,7 +1554,7 @@
        style="fill:none;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.3125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 495.7174,-115.46591 -5,0 0,365 -5,5"
+       d="m 495.71739,11.83409 -5,0 10e-6,237.7 -5,5"
        id="path7461"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc" />
@@ -1648,7 +1562,7 @@
        sodipodi:nodetypes="ccccc"
        inkscape:connector-curvature="0"
        id="path4469"
-       d="m 508.1174,-112.96591 -15,0 2.5,-5 10,0 z"
+       d="m 508.21742,14.33409 -15,0 2.5,-5.0000002 10,0 z"
        style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.3125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     <path
        sodipodi:nodetypes="cc"
@@ -1667,7 +1581,7 @@
          y="239.5341"
          x="493.21735"
          id="tspan7467"
-         sodipodi:role="line">rxPortNr</tspan></text>
+         sodipodi:role="line">portNr</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text7469"
@@ -1854,61 +1768,69 @@
          y="334.33408"
          style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">[writeEnable]</tspan></text>
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotL);marker-end:none"
-       d="m 500.7174,-132.96591 -10,0"
+       style="fill:none;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotM);marker-end:none"
+       d="m 500.71739,-130.66591 -10,0"
        id="path7547"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
-    <path
-       sodipodi:type="arc"
-       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       id="path7553"
-       sodipodi:cx="332.5"
-       sodipodi:cy="113.75"
-       sodipodi:rx="5"
-       sodipodi:ry="5"
-       d="m 337.5,113.75 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z"
-       transform="translate(153.2174,-246.71591)" />
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       x="485.71735"
-       y="-130.46591"
-       id="text7549"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan7551"
-         x="485.71735"
-         y="-130.46591"
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">A</tspan></text>
+    <g
+       id="g5628"
+       transform="translate(-0.10003,-125)">
+      <path
+         transform="translate(153.31742,-119.41591)"
+         d="m 337.5,113.75 c 0,2.76142 -2.23858,5 -5,5 -2.76142,0 -5,-2.23858 -5,-5 0,-2.76142 2.23858,-5 5,-5 2.76142,0 5,2.23858 5,5 z"
+         sodipodi:ry="5"
+         sodipodi:rx="5"
+         sodipodi:cy="113.75"
+         sodipodi:cx="332.5"
+         id="path7553"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         sodipodi:type="arc" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text7549"
+         y="-3.1659129"
+         x="485.81735"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
+           y="-3.1659129"
+           x="485.81735"
+           id="tspan7551"
+           sodipodi:role="line">A</tspan></text>
+    </g>
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path7555"
-       d="m 525.7174,-132.96591 -10,0"
+       d="m 525.71739,-130.66591 -10,0"
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotL);marker-end:none" />
-    <path
-       transform="translate(178.2174,-246.71591)"
-       d="m 337.5,113.75 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z"
-       sodipodi:ry="5"
-       sodipodi:rx="5"
-       sodipodi:cy="113.75"
-       sodipodi:cx="332.5"
-       id="path7557"
-       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       sodipodi:type="arc" />
-    <text
-       sodipodi:linespacing="125%"
-       id="text7559"
-       y="-130.46591"
-       x="510.71735"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       xml:space="preserve"><tspan
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-         y="-130.46591"
-         x="510.71735"
-         id="tspan7561"
-         sodipodi:role="line">B</tspan></text>
+    <g
+       id="g5633"
+       transform="translate(-0.10003,-125)">
+      <path
+         sodipodi:type="arc"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="path7557"
+         sodipodi:cx="332.5"
+         sodipodi:cy="113.75"
+         sodipodi:rx="5"
+         sodipodi:ry="5"
+         d="m 337.5,113.75 c 0,2.76142 -2.23858,5 -5,5 -2.76142,0 -5,-2.23858 -5,-5 0,-2.76142 2.23858,-5 5,-5 2.76142,0 5,2.23858 5,5 z"
+         transform="translate(178.31742,-119.41591)" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+         x="510.81735"
+         y="-3.1659129"
+         id="text7559"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan7561"
+           x="510.81735"
+           y="-3.1659129"
+           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">B</tspan></text>
+    </g>
     <g
        id="g7569"
        transform="translate(-5.090039e-5,70.000005)">
@@ -2292,112 +2214,26 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path7757"
-       d="m 413.21738,-95.465911 0,155"
+       d="m 413.2174,34.33409 177.5,0"
        style="fill:none;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotM);marker-end:none" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotS);marker-end:none"
-       d="m 500.71738,-102.96591 0,-10"
+       d="m 500.8174,24.33409 0,-10"
        id="path7955"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-end:none"
-       d="m 348.21738,79.534089 5,5 112.5,0 5,-5"
-       id="path7957"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccc" />
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       x="350.71735"
-       y="82.034081"
-       id="text7959"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan7961"
-         x="350.71735"
-         y="82.034081"
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">[empty]</tspan></text>
-    <path
-       sodipodi:nodetypes="cccc"
-       inkscape:connector-curvature="0"
-       id="path7963"
-       d="m 348.2174,89.534089 5,5 112.49998,0 5,-5"
-       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-end:none" />
-    <text
-       sodipodi:linespacing="125%"
-       id="text7965"
-       y="92.034081"
-       x="350.71735"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       xml:space="preserve"><tspan
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-         y="92.034081"
-         x="350.71735"
-         id="tspan7967"
-         sodipodi:role="line">[data]</tspan></text>
-    <g
-       id="g7969"
-       transform="matrix(-1,0,0,1,551.43477,170.2)">
-      <path
-         sodipodi:nodetypes="cccc"
-         inkscape:connector-curvature="0"
-         id="path7971"
-         d="m 158.21739,-85.66591 7.5,-5 0,10 z"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <path
-         transform="matrix(0.5,0,0,0.5,208.21739,-207.54091)"
-         d="m -100,243.75 c 0,1.38071 -1.11929,2.5 -2.5,2.5 -1.38071,0 -2.5,-1.11929 -2.5,-2.5 0,-1.38071 1.11929,-2.5 2.5,-2.5 1.38071,0 2.5,1.11929 2.5,2.5 z"
-         sodipodi:ry="2.5"
-         sodipodi:rx="2.5"
-         sodipodi:cy="243.75"
-         sodipodi:cx="-102.5"
-         id="path7973"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         sodipodi:type="arc" />
-    </g>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 480.71736,74.534089 -5,5 -4.99998,0 0,10"
-       id="path7975"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccc" />
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       x="480.71735"
-       y="74.534081"
+       x="463.21738"
+       y="74.334091"
        id="text7977"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan7979"
-         x="480.71735"
-         y="74.534081"
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">[1]</tspan></text>
-    <text
-       sodipodi:linespacing="125%"
-       id="text7981"
-       y="82.034081"
-       x="468.21735"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       xml:space="preserve"><tspan
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-         y="82.034081"
-         x="468.21735"
-         id="tspan7983"
-         sodipodi:role="line">[writeEnable]</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       x="468.21735"
-       y="92.034081"
-       id="text7985"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan7987"
-         x="468.21735"
-         y="92.034081"
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">[data]</tspan></text>
+         x="463.21738"
+         y="74.334091"
+         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">[1]</tspan></text>
     <path
        sodipodi:nodetypes="cccccc"
        inkscape:connector-curvature="0"
@@ -2426,7 +2262,7 @@
          y="573.21741"
          x="207.96591"
          id="tspan7997"
-         sodipodi:role="line">outputLinksOut[0]</tspan></text>
+         sodipodi:role="line">outputLinksOut[1]</tspan></text>
     <text
        transform="matrix(0,-1,1,0,0,0)"
        xml:space="preserve"
@@ -2439,175 +2275,95 @@
          id="tspan8001"
          x="207.96591"
          y="598.21741"
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">outputLinksIn[0]</tspan></text>
+         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">outputLinksIn[1]</tspan></text>
     <path
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path8003"
-       d="m 595.71738,-195.46591 4e-5,95 -5,4.999999"
+       d="m 595.71739,-195.66591 10e-6,225.000001 -5,4.999999"
        style="fill:none;stroke:#000000;stroke-width:0.3125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     <text
        sodipodi:linespacing="125%"
        id="text8005"
-       y="-87.965912"
+       y="41.834091"
        x="588.21741"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
        xml:space="preserve"><tspan
          style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-         y="-87.965912"
+         y="41.834091"
          x="588.21741"
          id="tspan8007"
          sodipodi:role="line">[1]</tspan></text>
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none"
-       d="m 570.71738,-197.96591 -0.1,80"
-       id="path8009"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 568.21743,-125.46591 5,2.5"
-       id="path8011"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       x="573.21741"
-       y="-120.4659"
-       id="text8013"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan8015"
-         x="573.21741"
-         y="-120.4659"
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">1</tspan></text>
-    <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path8017"
-       d="m 568.21741,-110.46591 5.2,2.5"
+       d="m 568.31743,16.83409 5.2,2.5"
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     <text
        sodipodi:linespacing="125%"
        id="text8019"
-       y="-105.46591"
-       x="573.21741"
+       y="21.834087"
+       x="573.31744"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
        xml:space="preserve"><tspan
          style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-         y="-105.46591"
-         x="573.21741"
+         y="21.834087"
+         x="573.31744"
          id="tspan8021"
          sodipodi:role="line">n+1</tspan></text>
     <text
        transform="matrix(0,-1,1,0,0,0)"
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       x="105.46591"
-       y="593.21741"
+       x="-21.834087"
+       y="593.31744"
        id="text8023"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan8025"
-         x="105.46591"
-         y="593.21741"
+         x="-21.834087"
+         y="593.31744"
          style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">[full]</tspan></text>
-    <path
-       sodipodi:nodetypes="cc"
-       inkscape:connector-curvature="0"
-       id="path8029"
-       d="m 570.71741,-132.96591 -10,0"
-       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotL);marker-end:none" />
-    <path
-       transform="translate(223.21741,-246.71591)"
-       d="m 337.5,113.75 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z"
-       sodipodi:ry="5"
-       sodipodi:rx="5"
-       sodipodi:cy="113.75"
-       sodipodi:cx="332.5"
-       id="path8031"
-       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       sodipodi:type="arc" />
-    <text
-       sodipodi:linespacing="125%"
-       id="text8033"
-       y="-130.46591"
-       x="555.71741"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       xml:space="preserve"><tspan
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-         y="-130.46591"
-         x="555.71741"
-         id="tspan8035"
-         sodipodi:role="line">C</tspan></text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotL);marker-end:none"
-       d="m 595.71741,-132.96591 -10,0"
-       id="path8037"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
-    <path
-       sodipodi:type="arc"
-       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       id="path8039"
-       sodipodi:cx="332.5"
-       sodipodi:cy="113.75"
-       sodipodi:rx="5"
-       sodipodi:ry="5"
-       d="m 337.5,113.75 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z"
-       transform="translate(248.21741,-246.71591)" />
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       x="580.71741"
-       y="-130.46591"
-       id="text8041"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan8043"
-         x="580.71741"
-         y="-130.46591"
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">D</tspan></text>
     <path
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path8439"
-       d="m 450.71738,-115.46591 4e-5,15 -5,4.999999"
+       d="m 430.71736,14.33409 4e-5,15 -5,4.999999"
        style="fill:none;stroke:#000000;stroke-width:0.3125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     <text
        sodipodi:linespacing="125%"
        id="text8441"
-       y="-87.965912"
-       x="443.21735"
+       y="41.834091"
+       x="423.21732"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
        xml:space="preserve"><tspan
          style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-         y="-87.965912"
-         x="443.21735"
+         y="41.834091"
+         x="423.21732"
          id="tspan8443"
          sodipodi:role="line">[m]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       x="450.71735"
-       y="-117.9659"
+       x="430.71732"
+       y="11.834104"
        id="text8445"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan8447"
-         x="450.71735"
-         y="-117.9659"
+         x="430.71732"
+         y="11.834104"
          style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">1</tspan></text>
     <path
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path8449"
-       d="m 415.71738,127.03409 50,0 5,-5"
+       d="m 415.71739,97.034089 32.50001,-0.2 5,-5"
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-end:none" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-end:none"
-       d="m 415.71738,137.03409 50,0 5,-5"
+       d="m 415.71739,107.03409 32.50001,-0.2 5,-5"
        id="path8451"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
@@ -2615,73 +2371,73 @@
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
        id="path8453"
-       d="m 480.71736,117.03409 -5,5 -4.99998,0 0,10"
+       d="m 463.21739,116.83409 -5,-5 -5,0 0,-20"
        style="fill:none;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     <text
        sodipodi:linespacing="125%"
        id="text8455"
-       y="117.03409"
-       x="480.71735"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       y="116.83409"
+       x="463.21738"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
        xml:space="preserve"><tspan
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-         y="117.03409"
-         x="480.71735"
+         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
+         y="116.83409"
+         x="463.21738"
          id="tspan8457"
          sodipodi:role="line">[n]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       x="468.21735"
-       y="124.53409"
+       x="445.71738"
+       y="94.334091"
        id="text8459"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan8461"
-         x="468.21735"
-         y="124.53409"
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">[writeEnable]</tspan></text>
+         x="445.71738"
+         y="94.334091"
+         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">[empty]</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text8463"
-       y="134.53409"
-       x="468.21735"
+       y="104.33409"
+       x="445.71738"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
        xml:space="preserve"><tspan
          style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-         y="134.53409"
-         x="468.21735"
+         y="104.33409"
+         x="445.71738"
          id="tspan8465"
          sodipodi:role="line">[data]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
        x="415.71735"
-       y="129.53409"
+       y="99.534088"
        id="text8467"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan8469"
          x="415.71735"
-         y="129.53409"
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">0</tspan></text>
+         y="99.534088"
+         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">1</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text8471"
-       y="139.53409"
+       y="109.53409"
        x="415.71735"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
        xml:space="preserve"><tspan
          style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-         y="139.53409"
+         y="109.53409"
          x="415.71735"
          id="tspan8473"
-         sodipodi:role="line">X</tspan></text>
+         sodipodi:role="line">-</tspan></text>
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
        id="path8475"
-       d="m 565.71738,-115.46591 -5,0 0,365 -5,5"
+       d="m 565.71739,11.83409 -5,0 -10e-6,237.7 -5,5"
        style="fill:none;stroke:#000000;stroke-width:0.3125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -2700,7 +2456,7 @@
          id="tspan8481"
          x="563.21735"
          y="239.5341"
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">rxPortNr</tspan></text>
+         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">portNr</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
@@ -2715,7 +2471,7 @@
          style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">[1]</tspan></text>
     <path
        style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.3125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 578.11741,-112.96591 -15,0 2.5,-5 10,0 z"
+       d="m 578.21743,14.33409 -15,0 2.5,-5.0000002 10,0 z"
        id="path8027"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccc" />
@@ -2732,10 +2488,10 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
-       sodipodi:nodetypes="cc"
+       sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path9865"
-       d="m 320.71738,-95.465911 270,0"
+       d="m 320.71738,-95.465911 92.50001,-0.199999 0,155"
        style="fill:none;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotM);marker-end:none"
@@ -2753,77 +2509,39 @@
        transform="matrix(0,-1,1,0,0,0)"
        sodipodi:linespacing="125%"
        id="text10853"
-       y="498.21735"
-       x="140.46593"
+       y="498.21738"
+       x="140.66591"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
        xml:space="preserve"><tspan
          style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-         y="498.21735"
-         x="140.46593"
+         y="498.21738"
+         x="140.66591"
          id="tspan10855"
          sodipodi:role="line">outputLinkOut</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 498.21738,-140.46591 5,2.5"
+       d="m 498.21739,-140.66591 5,2.5"
        id="path10857"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-       x="140.46593"
-       y="523.21735"
+       x="140.66591"
+       y="523.21741"
        id="text10859"
        sodipodi:linespacing="125%"
        transform="matrix(0,-1,1,0,0,0)"><tspan
          sodipodi:role="line"
          id="tspan10861"
-         x="140.46593"
-         y="523.21735"
+         x="140.66591"
+         y="523.21741"
          style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">outputLinkIn</tspan></text>
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path10863"
-       d="m 523.21738,-140.46591 5,2.5"
-       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-    <text
-       transform="matrix(0,-1,1,0,0,0)"
-       sodipodi:linespacing="125%"
-       id="text10865"
-       y="568.21741"
-       x="140.46593"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-       xml:space="preserve"><tspan
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
-         y="568.21741"
-         x="140.46593"
-         id="tspan10867"
-         sodipodi:role="line">outputLinkOut</tspan></text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 568.21739,-140.46591 5,2.5"
-       id="path10869"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-       x="140.46593"
-       y="593.21741"
-       id="text10871"
-       sodipodi:linespacing="125%"
-       transform="matrix(0,-1,1,0,0,0)"><tspan
-         sodipodi:role="line"
-         id="tspan10873"
-         x="140.46593"
-         y="593.21741"
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">outputLinkIn</tspan></text>
-    <path
-       sodipodi:nodetypes="cc"
-       inkscape:connector-curvature="0"
-       id="path10875"
-       d="m 593.21738,-140.46591 5,2.5"
+       d="m 523.21735,-140.66589 5,2.5"
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     <g
        id="g4413"
@@ -2963,7 +2681,7 @@
          id="tspan4288"
          sodipodi:role="line">[empty]</tspan></text>
     <g
-       transform="translate(230.00001,55.000014)"
+       transform="translate(229.99996,19.99999)"
        id="g4290">
       <path
          transform="translate(30.717434,155.5841)"
@@ -2990,7 +2708,7 @@
     </g>
     <g
        id="g4298"
-       transform="translate(229.99996,19.99999)">
+       transform="translate(230.00001,52.500014)">
       <path
          sodipodi:type="arc"
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -3236,7 +2954,7 @@
          style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotL);marker-end:none" />
       <path
          transform="matrix(0,1,-1,0,294.97744,-295.97591)"
-         d="m 337.5,113.75 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z"
+         d="m 337.5,113.75 c 0,2.76142 -2.23858,5 -5,5 -2.76142,0 -5,-2.23858 -5,-5 0,-2.76142 2.23858,-5 5,-5 2.76142,0 5,2.23858 5,5 z"
          sodipodi:ry="5"
          sodipodi:rx="5"
          sodipodi:cy="113.75"
@@ -3292,7 +3010,7 @@
          style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">[empty]</tspan></text>
     <g
        id="g4478"
-       transform="translate(230.00001,115.00001)">
+       transform="translate(229.99996,79.99999)">
       <path
          sodipodi:type="arc"
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -3317,7 +3035,7 @@
            style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">H</tspan></text>
     </g>
     <g
-       transform="translate(229.99996,79.99999)"
+       transform="translate(229.99996,112.49999)"
        id="g4486">
       <path
          transform="translate(30.717434,155.5841)"
@@ -3447,7 +3165,7 @@
          sodipodi:cy="113.75"
          sodipodi:rx="5.1690259"
          sodipodi:ry="4.8414402"
-         d="m 337.66903,113.75 a 5.1690259,4.8414402 0 1 1 -10.33806,0 5.1690259,4.8414402 0 1 1 10.33806,0 z"
+         d="m 337.66903,113.75 c 0,2.67385 -2.31426,4.84144 -5.16903,4.84144 -2.85477,0 -5.16903,-2.16759 -5.16903,-4.84144 0,-2.67385 2.31426,-4.84144 5.16903,-4.84144 2.85477,0 5.16903,2.16759 5.16903,4.84144 z"
          transform="matrix(0,1,-1,0,294.97744,-295.97591)" />
       <text
          transform="scale(-1,-1)"
@@ -3463,5 +3181,335 @@
            y="-34.272564"
            style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">F</tspan></text>
     </g>
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path4158"
+       d="m 463.2174,24.33409 107.5,0"
+       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotS);marker-end:none" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path4160"
+       d="m 570.7174,24.33409 0,-10"
+       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotS);marker-end:none" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-end:none"
+       d="m 500.71739,-110.66591 5,5 0,95 -5,5"
+       id="path5370"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+       x="8.1659107"
+       y="503.21738"
+       id="text5568"
+       sodipodi:linespacing="125%"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan5570"
+         x="8.1659107"
+         y="503.21738"
+         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">[data]</tspan></text>
+    <path
+       sodipodi:nodetypes="ccc"
+       inkscape:connector-curvature="0"
+       id="path5572"
+       d="m 495.71739,-40.66591 0,30 -5,5"
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-end:none" />
+    <text
+       transform="matrix(0,-1,1,0,0,0)"
+       sodipodi:linespacing="125%"
+       id="text5574"
+       y="493.21738"
+       x="8.1659107"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+       xml:space="preserve"><tspan
+         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
+         y="493.21738"
+         x="8.1659107"
+         id="tspan5576"
+         sodipodi:role="line">[empty]</tspan></text>
+    <g
+       transform="matrix(0,1,-1,0,410.05148,-206.3833)"
+       id="g5578">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 158.21739,-85.66591 7.5,-5 0,10 z"
+         id="path5580"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+      <path
+         sodipodi:type="arc"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="path5582"
+         sodipodi:cx="-102.5"
+         sodipodi:cy="243.75"
+         sodipodi:rx="2.5"
+         sodipodi:ry="2.5"
+         d="m -100,243.75 c 0,1.38071 -1.11929,2.5 -2.5,2.5 -1.38071,0 -2.5,-1.11929 -2.5,-2.5 0,-1.38071 1.11929,-2.5 2.5,-2.5 1.38071,0 2.5,1.11929 2.5,2.5 z"
+         transform="matrix(0.5,0,0,0.5,208.21739,-207.54091)" />
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-end:none"
+       d="m 495.71739,-50.66591 0,-55 -5,-5"
+       id="path5584"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+       x="108.16591"
+       y="493.21738"
+       id="text5586"
+       sodipodi:linespacing="125%"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan5588"
+         x="108.16591"
+         y="493.21738"
+         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">[writeEnable]</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none"
+       d="m 490.71739,-110.66591 10,0 0,-87.5"
+       id="path5590"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <text
+       transform="matrix(0,-1,1,0,0,0)"
+       sodipodi:linespacing="125%"
+       id="text5592"
+       y="503.21738"
+       x="108.16591"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+       xml:space="preserve"><tspan
+         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
+         y="503.21738"
+         x="108.16591"
+         id="tspan5594"
+         sodipodi:role="line">[data]</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none"
+       d="m 560.71737,-5.6659093 10,0 1e-5,15"
+       id="path5638"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 568.31742,1.8340905 5,2.5"
+       id="path5640"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       x="573.31738"
+       y="6.8341045"
+       id="text5642"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5644"
+         x="573.31738"
+         y="6.8341045"
+         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">1</tspan></text>
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path5646"
+       d="m 570.71737,-130.66591 -10,0"
+       style="fill:none;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotM);marker-end:none" />
+    <g
+       transform="translate(69.899953,-125)"
+       id="g5648">
+      <path
+         sodipodi:type="arc"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="path5650"
+         sodipodi:cx="332.5"
+         sodipodi:cy="113.75"
+         sodipodi:rx="5"
+         sodipodi:ry="5"
+         d="m 337.5,113.75 c 0,2.76142 -2.23858,5 -5,5 -2.76142,0 -5,-2.23858 -5,-5 0,-2.76142 2.23858,-5 5,-5 2.76142,0 5,2.23858 5,5 z"
+         transform="translate(153.31742,-119.41591)" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+         x="485.81735"
+         y="-3.1659129"
+         id="text5652"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5654"
+           x="485.81735"
+           y="-3.1659129"
+           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">C</tspan></text>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotL);marker-end:none"
+       d="m 595.71737,-130.66591 -10,0"
+       id="path5656"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <g
+       transform="translate(69.899953,-125)"
+       id="g5658">
+      <path
+         transform="translate(178.31742,-119.41591)"
+         d="m 337.5,113.75 c 0,2.76142 -2.23858,5 -5,5 -2.76142,0 -5,-2.23858 -5,-5 0,-2.76142 2.23858,-5 5,-5 2.76142,0 5,2.23858 5,5 z"
+         sodipodi:ry="5"
+         sodipodi:rx="5"
+         sodipodi:cy="113.75"
+         sodipodi:cx="332.5"
+         id="path5660"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         sodipodi:type="arc" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5662"
+         y="-3.1659129"
+         x="510.81735"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
+           y="-3.1659129"
+           x="510.81735"
+           id="tspan5664"
+           sodipodi:role="line">D</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+       x="140.66591"
+       y="568.21741"
+       id="text5666"
+       sodipodi:linespacing="125%"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan5668"
+         x="140.66591"
+         y="568.21741"
+         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">outputLinkOut</tspan></text>
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path5670"
+       d="m 568.21737,-140.66591 5,2.5"
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <text
+       transform="matrix(0,-1,1,0,0,0)"
+       sodipodi:linespacing="125%"
+       id="text5672"
+       y="593.21741"
+       x="140.66591"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+       xml:space="preserve"><tspan
+         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
+         y="593.21741"
+         x="140.66591"
+         id="tspan5674"
+         sodipodi:role="line">outputLinkIn</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 593.21733,-140.66589 5,2.5"
+       id="path5676"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cccc"
+       inkscape:connector-curvature="0"
+       id="path5678"
+       d="m 570.71737,-110.66591 5,5 0,95.000001 -5,4.9999997"
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-end:none" />
+    <text
+       transform="matrix(0,-1,1,0,0,0)"
+       sodipodi:linespacing="125%"
+       id="text5680"
+       y="573.21741"
+       x="8.1659098"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+       xml:space="preserve"><tspan
+         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
+         y="573.21741"
+         x="8.1659098"
+         id="tspan5682"
+         sodipodi:role="line">[data]</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-end:none"
+       d="m 565.71737,-40.665909 0,30 -5,4.9999997"
+       id="path5684"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+       x="8.1659098"
+       y="563.21741"
+       id="text5686"
+       sodipodi:linespacing="125%"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan5688"
+         x="8.1659098"
+         y="563.21741"
+         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">[empty]</tspan></text>
+    <g
+       id="g5690"
+       transform="matrix(0,1,-1,0,480.05146,-206.3833)">
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path5692"
+         d="m 158.21739,-85.66591 7.5,-5 0,10 z"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         transform="matrix(0.5,0,0,0.5,208.21739,-207.54091)"
+         d="m -100,243.75 c 0,1.38071 -1.11929,2.5 -2.5,2.5 -1.38071,0 -2.5,-1.11929 -2.5,-2.5 0,-1.38071 1.11929,-2.5 2.5,-2.5 1.38071,0 2.5,1.11929 2.5,2.5 z"
+         sodipodi:ry="2.5"
+         sodipodi:rx="2.5"
+         sodipodi:cy="243.75"
+         sodipodi:cx="-102.5"
+         id="path5694"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         sodipodi:type="arc" />
+    </g>
+    <path
+       sodipodi:nodetypes="ccc"
+       inkscape:connector-curvature="0"
+       id="path5696"
+       d="m 565.71737,-50.665909 0,-55.000001 -5,-5"
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-end:none" />
+    <text
+       transform="matrix(0,-1,1,0,0,0)"
+       sodipodi:linespacing="125%"
+       id="text5698"
+       y="563.21741"
+       x="108.16591"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+       xml:space="preserve"><tspan
+         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium"
+         y="563.21741"
+         x="108.16591"
+         id="tspan5700"
+         sodipodi:role="line">[writeEnable]</tspan></text>
+    <path
+       sodipodi:nodetypes="ccc"
+       inkscape:connector-curvature="0"
+       id="path5702"
+       d="m 560.71737,-110.66591 10,0 0,-87.5"
+       style="fill:none;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+       x="108.16591"
+       y="573.21741"
+       id="text5704"
+       sodipodi:linespacing="125%"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan5706"
+         x="108.16591"
+         y="573.21741"
+         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:end;text-anchor:end;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text Medium">[data]</tspan></text>
   </g>
 </svg>

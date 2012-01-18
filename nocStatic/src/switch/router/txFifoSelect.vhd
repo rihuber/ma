@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 use work.utilPkg.all;
 use work.headerPkg.all;
-use work.routerPkg.all;
+use work.switchPkg.all;
 
 entity txFifoSelect is
 	generic(

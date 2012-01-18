@@ -1,13 +1,36 @@
 library ieee;
+use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 use work.utilPkg.all;
+use work.headerPkg.all;
 
-package routerPkg is
+package switchPkg is
 	
 	constant numPorts 		: integer := 6;
 	constant numIntPorts	: integer := 2;
 	constant numExtPorts	: integer := numPorts - numIntPorts;
+	
+	
+	type inputLinkIn is record
+		empty	: std_logic;
+		data	: std_logic_vector(dataWidth downto 0);
+	end record;
+	
+	type inputLinkOut is record
+		readEnable	: std_logic;
+	end record;
+	type inputLinkOutArray is array(natural range<>) of inputLinkOut;
+	
+	type outputLinkIn is record
+		full	: std_logic;
+	end record;
+	
+	type outputLinkOut is record
+		writeEnable	: std_logic;
+		data		: std_logic_vector(dataWidth downto 0);
+	end record;
+	type outputLinkOutArray is array(natural range<>) of outputLinkOut;
 					 
 	subtype portNr is unsigned(toLog2Ceil(numPorts-1) downto 0);
 	type portNrArray is array(natural range<>) of portNr;
@@ -19,9 +42,9 @@ package routerPkg is
 	function toPortNr(wrappedPortNr: portNrWrapper) return portNr;
 	function toPortNrWrapper(unwrappedPortNr: portNr) return portNrWrapper;
 	
-end package routerPkg;
+end package switchPkg;
 
-package body routerPkg is
+package body switchPkg is
 	
 	function toPortNr(wrappedPortNr: portNrWrapper) return portNr is
 	begin
@@ -36,4 +59,4 @@ package body routerPkg is
 		return result;
 	end toPortNrWrapper;
 	
-end package body routerPkg;
+end package body switchPkg;

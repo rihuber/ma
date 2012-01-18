@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 use work.headerPkg.all;
-use work.routerPkg.all;
+use work.switchPkg.all;
 
 entity router is
 	generic(

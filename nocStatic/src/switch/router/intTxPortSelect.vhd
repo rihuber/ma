@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-use work.routerPkg.all;
+use work.switchPkg.all;
 
 entity intTxPortSelect is
 	generic(

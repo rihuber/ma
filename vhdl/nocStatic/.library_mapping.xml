@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.sigasi.hdt.vhdl.scoping.librarymapping.model:LibraryMappings xmlns:com.sigasi.hdt.vhdl.scoping.librarymapping.model="com.sigasi.hdt.vhdl.scoping.librarymapping" Version="2" LastModified="2012-01-25T13:06:40.114+0100">
+  <Mappings Location="Common Libraries/IEEE" Library="ieee"/>
+  <Mappings Location="Common Libraries/IEEE Synopsys" Library="ieee"/>
+  <Mappings Location="Common Libraries" Library="not mapped"/>
+  <Mappings Location="simulation/namedPipes" Library="not mapped"/>
+  <Mappings Location="simulation/work" Library="not mapped"/>
+  <Mappings Location="Common Libraries/STD" Library="std"/>
+  <Mappings Location="" Library="work"/>
+</com.sigasi.hdt.vhdl.scoping.librarymapping.model:LibraryMappings>

@@ -37,19 +37,18 @@ architecture behavioral of switchTb is
 	-- Stimuli and response files
 	constant stimuli_filename : string := "namedPipes/stimuli";
 	constant response_filename : string := "namedPipes/response";
-	file responseFile : text open write_mode is response_filename;
 	
-	procedure setNewStimulus(stimulus: out mutInputType) is
+	procedure setNewStimulus(stimulus: out mutInputType; errorCode: out integer) is
 	begin
-		readValue(stimulus.reset);
-		readValue(stimulus.data);
+		readValue(stimulus.reset, errorCode);
+		readValue(stimulus.data, errorCode);
 	end procedure setNewStimulus;
 	
-	procedure writeResponse(response: in mutOutputType; file responseFile: text) is
+	procedure writeResponse(response: in mutOutputType) is
 		variable out_line : line;
 	begin
-		writeValue(out_line, response.data);
-		writeline(responseFile, out_line);
+		writeValue(response.data);
+		writeEndOfLine;
 	end procedure writeResponse;
 	
 begin
@@ -66,12 +65,14 @@ begin
 	-- Stimuli application
 	stimuliApplication: process
 		variable mutInputVar: mutInputType;
+		variable errorCode: integer;
 	begin
 		initPipes(stimuli_filename, response_filename);
 		while moreStimuliAvailable loop
 			wait until clk'event and clk = '1';
 			wait for stimuli_application_time;
-			setNewStimulus(mutInputVar);
+			setNewStimulus(mutInputVar, errorCode);
+			exit when errorCode < 0;
 			mutInput <= mutInputVar;
 		end loop;
 		endOfSimulation <= true;
@@ -85,9 +86,9 @@ begin
 		while endOfSimulation = false loop
 			wait until clk'event and clk = '1';
 			wait for response_acquisition_time;
-			writeResponse(mutOutput, responseFile);
+			writeResponse(mutOutput);
 		end loop;
-		file_close(responseFile);
+		closeResponseFile;
 		report "Simulation run completed!";
 		wait; -- forever
 	end process responseAcquisition;

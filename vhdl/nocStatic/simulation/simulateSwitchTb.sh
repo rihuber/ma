@@ -34,15 +34,15 @@ vcom simulationPkg/simulationPkg.vhd
 vcom switchTb.vhd
 
 # create fifos
-#mkfifo namedPipes/stimuli
-#mkfifo namedPipes/response
+mkdir namedPipes
+mkfifo namedPipes/stimuli
+mkfifo namedPipes/response
+
+# start java model
+java -classpath ../../../java/SwitchModel/bin/ ch.rihuber.switchModel.SwitchModel stimuliFileName=namedPipes/stimuli responseFileName=namedPipes/response &
 
 # start simulation
 vsim work.switchTb
 
-# start java model
-#java -classpath ../../../java/SwitchModel/bin/ ch.rihuber.switchModel.SwitchModel namedPipes/stimuli namedPipes/response &
-
 # remove fifos
-#rm namedPipes/stimuli
-#rm namedPipes/response
+rm -r namedPipes

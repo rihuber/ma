@@ -5,15 +5,17 @@ import java.io.*;
 public class SwitchModel 
 {
 	
-	private BufferedReader in;
-	private PrintWriter out;
+	private BufferedReader in = null;
+	private PrintWriter out = null;
 	private boolean hasNextStimulus = true;
 	private int cycles = 0;
+	private String responseFileName;
+	private String stimuliFileName;
 	
 	public SwitchModel(String stimuliFileName, String responseFileName) throws FileNotFoundException 
 	{
-		createStimuliWriter(stimuliFileName);
-		createResponseReader(responseFileName);
+		this.stimuliFileName = stimuliFileName;
+		this.responseFileName = responseFileName;
 	}
 	
 	public static void main(String[] args) throws Exception 
@@ -52,6 +54,9 @@ public class SwitchModel
 	
 	private void applyNextStimulus() throws FileNotFoundException 
 	{
+		if(out == null)
+			createStimuliWriter();
+
 		String outLine = "0 1";
 		out.write(outLine+"\n");
 		out.flush();
@@ -63,19 +68,22 @@ public class SwitchModel
 	
 	private void fetchResponse() throws IOException 
 	{
+		if(in == null)
+			createResponseReader();
+		
 		String inLine = in.readLine();
 		if(inLine == null)
 			hasNextStimulus = false;
 		System.out.println("Fetched response: "+inLine);
 	}
 	
-	private void createStimuliWriter(String stimuliFileName) throws FileNotFoundException 
+	private void createStimuliWriter() throws FileNotFoundException 
 	{
 		out = new PrintWriter(new BufferedOutputStream(new FileOutputStream(stimuliFileName)));
 		System.out.println("Opened stimuli file");
 	}
 	
-	private void createResponseReader(String responseFileName) throws FileNotFoundException 
+	private void createResponseReader() throws FileNotFoundException 
 	{
 		in = new BufferedReader(new InputStreamReader(new FileInputStream(responseFileName)));
 		System.out.println("Opened response file");

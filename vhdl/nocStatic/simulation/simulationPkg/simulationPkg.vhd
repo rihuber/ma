@@ -19,13 +19,24 @@ package simulationPkg is
 		constant clkphasehigh	: in  time
 	);
 	
-	-- opens stimuli and response files
+	-- init stimuli and response file names
 	procedure initPipes(stimuliFilename: in string; responseFileName: in string);
-	attribute foreign of initPipes : procedure is "initPipes simulationPkg/fileiopatch.so";
+	
+	-- init stimuli file name
+	procedure initStimuli(stimuliFilename: in string);
+	attribute foreign of initStimuli : procedure is "initStimuli simulationPkg/stimuli.so";
+	
+	-- init response file name
+	procedure initResponse(responseFilename: in string);
+	attribute foreign of initResponse : procedure is "initResponse simulationPkg/response.so";
 	
 	-- reads a string of (stimulus'lenth) characters form the stimuli file
-	procedure readNextStimulusString(stimulus: out string; errorCode: out integer);
-	attribute foreign of readNextStimulusString : procedure is "readNextStimulusString simulationPkg/fileiopatch.so";
+	procedure readNextString(stimulus: out string; errorCode: out integer);
+	attribute foreign of readNextString : procedure is "readNextTestString simulationPkg/stimuli.so";
+	
+	-- writes a string of (response'length) characters to the response file
+	procedure writeString(response: in string; errorCode: out integer);
+	attribute foreign of writeString : procedure is "writeString simulationPkg/response.so";
 	
 	-- returns 'false' if the stimuli file has reached EOF, 'true' otherwise 
 	function moreStimuliAvailable return boolean;
@@ -33,16 +44,23 @@ package simulationPkg is
 	-- helper function for 'moreStimuliAvailable'
 	-- needed because nli does only support integer data types
 	function checkEndOfStimuliFile return integer;
-	attribute foreign of checkEndOfStimuliFile : function is "checkEndOfStimuliFile simulationPkg/fileiopatch.so";
+	attribute foreign of checkEndOfStimuliFile : function is "checkEndOfFile simulationPkg/stimuli.so";
 	
 	-- read 1 character from stimuli file and cast it to a std_logic variable
-	procedure readValue(value: out std_logic);
+	procedure readValue(value: out std_logic; errorCode: out integer);
 	
-	procedure writeValue(outLine: inout line; value: in std_logic);
+	procedure writeValue(value: in std_logic);
+	
+	procedure writeEndOfLine;
+	attribute foreign of writeEndOfLine : procedure is "writeEndOfLine simulationPkg/response.so";
 	
 	-- close stimuli file
 	procedure closeStimuliFile;
-	attribute foreign of closeStimuliFile : procedure is "closeStimuliFile simulationPkg/fileiopatch.so";
+	attribute foreign of closeStimuliFile : procedure is "closeStimuli simulationPkg/stimuli.so";
+	
+	-- close response file
+	procedure closeResponseFile;
+	attribute foreign of closeResponseFile : procedure is "closeResponse simulationPkg/response.so";
 	
 end package simulationPkg;
 
@@ -67,29 +85,38 @@ package body simulationPkg is
 	wait; -- forever
 	end procedure clkGenerator;
 	
-	procedure readValue(value: out std_logic) is
-		variable stringValue: string(1 to 1);
-		variable errorCode: integer;
+	procedure initPipes(stimuliFilename: in string; responseFileName: in string) is
 	begin
-		readNextStimulusString(stringValue, errorCode);
-		if errorCode <= 0 then
-			report "Error while fetching std_logic value. Error code: " & integer'image(errorCode) severity ERROR;
-		end if;
+		initStimuli(stimuliFilename);
+		initResponse(responseFilename);
+	end procedure initPipes;
+	
+	procedure readValue(value: out std_logic; errorCode: out integer) is
+		variable stringValue: string(1 to 1);
+	begin
+		readNextString(stringValue, errorCode);
 		value := '0';
 		if stringValue = "1" then
 			value := '1';
 		end if; 
 	end procedure readValue;
 	
-	procedure writeValue(outLine: inout line; value: in std_logic) is
+	procedure writeValue(value: in std_logic) is
+		variable outString: string(1 to 2);
+		variable errorCode: integer;
 	begin
-		write(outLine, value);
-		write(outLine, string'(" "));
+		if value = '0' then
+			outString(1) := '0';
+		else
+			outString(1) := '1';
+		end if;
+		outString(2) := ' '; 
+		writeString(outString, errorCode);
 	end procedure writeValue;
 	
 	function moreStimuliAvailable return boolean is
 	begin
-		if checkEndOfStimuliFile > 0 then
+		if checkEndOfStimuliFile = 0 then
 			return true;
 		end if;
 		return false;
@@ -101,12 +128,17 @@ package body simulationPkg is
 		return 0;
 	end;
 	
-	procedure initPipes(stimuliFilename: in string; responseFileName: in string) is
+	procedure initStimuli(stimuliFilename: in string) is
 	begin
-		report "Foreign subprogram initPipes not called" severity error;
+		report "Foreign subprogram initStimuli not called" severity error;
 	end;
 	
-	procedure readNextStimulusString(stimulus: out string; errorCode: out integer) is
+	procedure initResponse(responseFilename: in string) is
+	begin
+		report "Foreign subprogram initResponse not called" severity error;
+	end;
+	
+	procedure readNextString(stimulus: out string; errorCode: out integer) is
 	begin
 		report "Foreign subprogram readNextStimulusString not called" severity error;
 	end;
@@ -114,6 +146,21 @@ package body simulationPkg is
 	procedure closeStimuliFile is
 	begin
 		report "Foreign subprogram closeStimuliFile not called" severity error;
+	end;
+	
+	procedure closeResponseFile is
+	begin
+		report "Foreign subprogram closeResponseFile not called" severity error;
+	end;
+	
+	procedure writeString(response: in string; errorCode: out integer) is
+	begin
+		report "Foreign subprogram writeString not called" severity error;
+	end;
+	
+	procedure writeEndOfLine is
+	begin
+		report "Foreign subprogram writeEndOfLine not called" severity error;
 	end;
 	
 end package body simulationPkg;

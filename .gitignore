@@ -2,3 +2,4 @@
 *.class
 vhdl/*/simulation/work
 *.o
+*transcript

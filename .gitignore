@@ -1,3 +1,4 @@
 .DS_Store
 *.class
-vhdl/*/work
+vhdl/*/simulation/work
+*.o

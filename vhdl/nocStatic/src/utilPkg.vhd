@@ -13,7 +13,7 @@ package body utilPkg is
 	begin
 	  y := 1;
 	  z := 2;
-	  while x < z loop
+	  while x > z loop
 	  	y := y + 1;
 	  	z := z * 2;
 	  end loop;

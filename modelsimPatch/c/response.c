@@ -56,7 +56,7 @@ void writeString(mtiVariableIdT response, int* errorCode)
 	}
 
 	int numCharacters = mti_TickLength(mti_GetVarType(response));
-	write(pipeHandle, get_string(response), numCharacters+1);
+	write(pipeHandle, get_string(response), numCharacters);
 }
 
 void writeEndOfLine()
@@ -67,10 +67,9 @@ void writeEndOfLine()
 	{
 		return;
 	}
-	static char newLine[2];
+	static char newLine[1];
 	newLine[0] = '\n';
-	newLine[1] = '\0';
-	write(pipeHandle, newLine, 2);
+	write(pipeHandle, newLine, 1);
 }
 
 void closeResponse()

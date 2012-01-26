@@ -57,7 +57,16 @@ public class SwitchModel
 		if(out == null)
 			createStimuliWriter();
 
-		String outLine = "0 1";
+		String outLine = "1 "; // reset
+		for(int i=0; i<6; i++) // for all input ports
+		{
+			outLine += "1 "; // empty
+			outLine += "010010010 "; // 9 data bits
+		}
+		for(int i=0; i<6; i++) // for all output ports
+		{
+			outLine += "0 "; // full
+		}
 		out.write(outLine+"\n");
 		out.flush();
 		System.out.println("Written stimulus: "+outLine);

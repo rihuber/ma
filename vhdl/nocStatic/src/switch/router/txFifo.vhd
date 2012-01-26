@@ -33,53 +33,36 @@ architecture rtl of txFifo is
 	
 	signal readPosition_p, readPosition_n, writePosition_p, writePosition_n : position;
 	
-	signal fillCount_p, fillCount_n : position;
-	
 	signal ringBuffer_p, ringBuffer_n : portNrArray(numPorts-1 downto 0);
 	
 begin
 
 	rxPortNrOut <= ringBuffer_p(positionToInteger(readPosition_p));
 
-	nomem_output : process(fillCount_p) is
+	nomem_output : process(readPosition_p, writePosition_p) is
 	begin
 		empty <= '0';
-		if fillCount_p = 0 then
+		if readPosition_p = writePosition_p then
 			empty <= '1';
 		end if;
 	end process nomem_output;
  
- 	nomem_nextState : process(readPosition_p, writePosition_p, fillCount_p, ringBuffer_p, writeEnable, readEnable, rxPortNrIn) is
+ 	nomem_nextState : process(readPosition_p, writePosition_p, ringBuffer_p, writeEnable, readEnable, rxPortNrIn) is
  	begin
  		-- default assignments
  		readPosition_n <= readPosition_p;
  		writePosition_n <= writePosition_p;
- 		fillCount_n <= fillCount_p;
  		ringBuffer_n <= ringBuffer_p;
  		
  		-- writing
  		if writeEnable = '1' then
  			ringBuffer_n(positionToInteger(writePosition_p)) <= rxPortNrIn;
- 			if writePosition_p+1 < numPorts then
- 				writePosition_n <= writePosition_p + 1;
- 			else
- 				writePosition_n <= (others => '0');
- 			end if;
- 			if readEnable = '0' then
- 				fillCount_n <= fillCount_p + 1;
- 			end if;
+ 			writePosition_n <= (writePosition_p + 1) mod numPorts;
  		end if;
  		
  		-- reading
- 		if readEnable = '1' and fillCount_p > 0 then
- 			if readPosition_p+1 < numPorts then
- 				readPosition_n <= readPosition_p + 1;
- 			else
- 				readPosition_n <= (others => '0');
- 			end if;
- 			if writeEnable = '0' then
- 				fillCount_n <= fillCount_p-1;
- 			end if;
+ 		if readEnable = '1' then
+ 			readPosition_n <= (readPosition_p + 1) mod numPorts;
  		end if;
  	end process nomem_nextState;
 
@@ -88,11 +71,9 @@ begin
 		if reset = '0' then
 			readPosition_p <= (others => '0');
 			writePosition_p <= (others => '0');
-			fillCount_p <= (others => '0');
 		elsif rising_edge(clk) then
 			readPosition_p <= readPosition_n;
 			writePosition_p <= writePosition_n;
-			fillCount_p <= fillCount_n;
 		end if;
 	end process mem_stateTransition;
 	

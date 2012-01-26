@@ -3,8 +3,10 @@ use std.textio.all;
 library ieee;
 use ieee.std_logic_1164.all;
 
-
 use work.simulationPkg.all;
+
+use work.switchPkg.all;
+use work.headerPkg.all;
 
 entity switchTb is
   -- a testbench does not connect to any higher level of hierarchy
@@ -21,13 +23,15 @@ architecture behavioral of switchTb is
 	
 	-- Input type
 	type mutInputType is record
-		reset	: std_logic;
-		data	: std_logic;
+		reset			: std_logic;
+		inputLinksIn	: inputLinkInArray(numPorts-1 downto 0);
+		outputLinksIn	: outputLinkInArray(numPorts-1 downto 0);
 	end record mutInputType;
 	
 	-- Output type
 	type mutOutputType is record
-		data	: std_logic;
+		inputLinksOut	: inputlinkOutArray(numPorts-1 downto 0);
+		outputLinksOut	: outputLinkOutArray(numPorts-1 downto 0);
 	end record MutOutputType;
 	
 	-- Signals for input and output
@@ -41,25 +45,42 @@ architecture behavioral of switchTb is
 	procedure setNewStimulus(stimulus: out mutInputType; errorCode: out integer) is
 	begin
 		readValue(stimulus.reset, errorCode);
-		readValue(stimulus.data, errorCode);
+		for i in 0 to numPorts-1 loop
+			readValue(stimulus.inputLinksIn(i).empty, errorCode);
+			readValue(stimulus.inputLinksIn(i).data, errorCode);
+		end loop;
+		for i in 0 to numPorts-1 loop
+			readValue(stimulus.outputLinksIn(i).full, errorCode);
+		end loop;
 	end procedure setNewStimulus;
 	
 	procedure writeResponse(response: in mutOutputType) is
 		variable out_line : line;
 	begin
-		writeValue(response.data);
+		for i in 0 to numPorts-1 loop
+			writeValue(response.inputLinksOut(i).readEnable);
+			writeValue(response.outputLinksOut(i).writeEnable);
+			writeValue(response.outputLinksOut(i).data);
+		end loop;
 		writeEndOfLine;
 	end procedure writeResponse;
+	
+	constant mutGlobalAddress: globalAddr := "0001";
 	
 begin
 
 	-- The MUT
-	mut: entity work.dummy
-	    port map (
-	      clk		=> clk,
-	      reset		=> mutInput.reset,
-	      input		=> mutInput.data,
-	      output	=> mutOutput.data
+	mut: entity work.switch
+		generic map(
+			globalAddress => mutGlobalAddress
+		)
+		port map (
+			clk				=> clk,
+			reset			=> mutInput.reset,
+			inputLinksIn	=> mutInput.inputLinksIn,
+			inputLinksOut	=> mutOutput.inputLinksOut,
+			outputLinksIn	=> mutInput.outputLinksIn,
+			outputLinksOut	=> mutOutput.outputLinksOut
 		);
 
 	-- Stimuli application
@@ -67,6 +88,7 @@ begin
 		variable mutInputVar: mutInputType;
 		variable errorCode: integer;
 	begin
+		mutInput.reset <= '0';
 		initPipes(stimuli_filename, response_filename);
 		while moreStimuliAvailable loop
 			wait until clk'event and clk = '1';

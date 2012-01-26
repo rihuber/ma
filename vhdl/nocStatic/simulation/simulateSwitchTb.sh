@@ -39,7 +39,7 @@ mkfifo namedPipes/stimuli
 mkfifo namedPipes/response
 
 # start java model
-java -classpath ../../../java/SwitchModel/bin/ ch.rihuber.switchModel.SwitchModel stimuliFileName=namedPipes/stimuli responseFileName=namedPipes/response &
+#java -classpath ../../../java/SwitchModel/bin/ ch.rihuber.switchModel.SwitchModel stimuliFileName=namedPipes/stimuli responseFileName=namedPipes/response &
 
 # start simulation
 vsim work.switchTb

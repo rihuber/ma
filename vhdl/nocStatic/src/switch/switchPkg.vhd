@@ -49,7 +49,7 @@ package switchPkg is
 	function wrappedPortNrToInteger(wrappedPortNr: portNrWrapper) return portNrWrapperInteger;
 	function portNrToInteger(portNr: portNr) return portNrInteger;
 	function integerToPortNr(intPortNr:portNrInteger) return portNr;
-	function wrappedPortNrEqual(wrappedPortNr1, wrappedPortNr2:portNrWrapper) return std_logic;
+	function wrappedPortNrEqual(wrappedPortNr1, wrappedPortNr2:portNrWrapper) return boolean;
 	
 end package switchPkg;
 
@@ -89,14 +89,14 @@ package body switchPkg is
 		return result;
 	end function integerToPortNr;
 	
-	function wrappedPortNrEqual(wrappedPortNr1, wrappedPortNr2:portNrWrapper) return std_logic is
+	function wrappedPortNrEqual(wrappedPortNr1, wrappedPortNr2:portNrWrapper) return boolean is
 	begin
-		for i in numPorts downto 0 loop
+		for i in toLog2Ceil(numPorts+1)-1 downto 0 loop
 			if wrappedPortNr1(i) /= wrappedPortNr2(i) then
-				return '0';
+				return false;
 			end if;
 		end loop;
-		return '1';
+		return true;
 	end function wrappedPortNrEqual;
 	
 end package body switchPkg;

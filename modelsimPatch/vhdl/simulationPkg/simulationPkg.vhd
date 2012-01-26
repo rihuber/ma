@@ -46,10 +46,19 @@ package simulationPkg is
 	function checkEndOfStimuliFile return integer;
 	attribute foreign of checkEndOfStimuliFile : function is "checkEndOfFile simulationPkg/stimuli.so";
 	
-	-- read 1 character from stimuli file and cast it to a std_logic variable
+	-- read 1 character from stimuli file and cast it to a std_logic
 	procedure readValue(value: out std_logic; errorCode: out integer);
 	
+	-- read value'length characters from stimuli file and cast it to a std_logic_vector
+	procedure readValue(value: out std_logic_vector; errorCode: out integer);
+	
 	procedure writeValue(value: in std_logic);
+	
+	procedure writeValue(value: in std_logic_vector);
+	
+	function getString(value: std_logic) return string;
+	
+	procedure writeSpaceTerminatedString(value: in string; errorCode: out integer);
 	
 	procedure writeEndOfLine;
 	attribute foreign of writeEndOfLine : procedure is "writeEndOfLine simulationPkg/response.so";
@@ -101,18 +110,49 @@ package body simulationPkg is
 		end if; 
 	end procedure readValue;
 	
+	procedure readValue(value: out std_logic_vector; errorCode: out integer) is
+	begin
+		for i in value'length - 1 downto 0 loop
+			readValue(value(i), errorCode);
+		end loop;
+	end procedure readValue;
+	
+	function getString(value: std_logic) return string is
+		variable result: string(1 to 1);
+	begin
+		if value='0' then
+			result := "0";
+		elsif value='1' then
+			result := "1";
+		elsif value='-' then
+			result := "-";
+		else
+			result := "U";
+		end if;
+		return result;
+	end function getString;
+	
 	procedure writeValue(value: in std_logic) is
-		variable outString: string(1 to 2);
 		variable errorCode: integer;
 	begin
-		if value = '0' then
-			outString(1) := '0';
-		else
-			outString(1) := '1';
-		end if;
-		outString(2) := ' '; 
-		writeString(outString, errorCode);
+		writeSpaceTerminatedString(getString(value), errorCode);
 	end procedure writeValue;
+	
+	procedure writeValue(value: in std_logic_vector) is
+		variable errorCode: integer;
+	begin
+		for i in value'length -1 downto 1 loop
+			writeString(getString(value(i)), errorCode);
+		end loop;
+		writeSpaceTerminatedString(getString(value(0)), errorCode);
+	end procedure writeValue;
+	
+	procedure writeSpaceTerminatedString(value: in string; errorCode: out integer) is
+		constant spaceString: string(1 to 1) := " ";
+	begin
+		writeString(value, errorCode);
+		writeString(spaceString, errorCode);
+	end procedure writeSpaceTerminatedString;
 	
 	function moreStimuliAvailable return boolean is
 	begin

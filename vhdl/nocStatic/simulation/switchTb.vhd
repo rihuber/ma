@@ -94,8 +94,9 @@ begin
 			wait until clk'event and clk = '1';
 			wait for stimuli_application_time;
 			setNewStimulus(mutInputVar, errorCode);
-			exit when errorCode < 0;
-			mutInput <= mutInputVar;
+			if errorCode > 0 then
+				mutInput <= mutInputVar;
+			end if;
 		end loop;
 		endOfSimulation <= true;
 		closeStimuliFile;

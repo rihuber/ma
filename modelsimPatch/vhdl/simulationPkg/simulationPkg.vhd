@@ -102,12 +102,26 @@ package body simulationPkg is
 	
 	procedure readValue(value: out std_logic; errorCode: out integer) is
 		variable stringValue: string(1 to 1);
+		variable stdLogicValue: std_logic;
+		variable errorCodeVariable: integer;
 	begin
-		readNextString(stringValue, errorCode);
-		value := '0';
-		if stringValue = "1" then
-			value := '1';
-		end if; 
+		readNextString(stringValue, errorCodeVariable);
+		if(errorCodeVariable > 0) then
+			if stringValue = "1" then
+				stdLogicValue := '1';
+			elsif stringValue = "0" then
+				stdLogicValue := '0';
+			elsif stringValue = "-" then
+				stdLogicValue := '-';
+			else
+				stdLogicValue := 'U';
+				report "Unable to fetch string " & stringValue & " to std_logic" severity error;
+			end if;
+		else
+			stdLogicValue := 'U';
+		end if;
+		value := stdLogicValue;
+		errorCode := errorCodeVariable; 
 	end procedure readValue;
 	
 	procedure readValue(value: out std_logic_vector; errorCode: out integer) is

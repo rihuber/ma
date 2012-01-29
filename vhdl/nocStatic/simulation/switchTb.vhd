@@ -59,6 +59,8 @@ architecture behavioral of switchTb is
 	begin
 		for i in 0 to numPorts-1 loop
 			writeValue(response.inputLinksOut(i).readEnable);
+		end loop;
+		for i in 0 to numPorts-1 loop
 			writeValue(response.outputLinksOut(i).writeEnable);
 			writeValue(response.outputLinksOut(i).data);
 		end loop;

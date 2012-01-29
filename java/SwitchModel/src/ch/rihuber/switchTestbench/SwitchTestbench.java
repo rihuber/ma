@@ -1,4 +1,4 @@
-package ch.rihuber.switchModel;
+package ch.rihuber.switchTestbench;
 
 import java.io.*;
 import java.util.LinkedList;
@@ -6,12 +6,12 @@ import java.util.LinkedList;
 import ch.rihuber.vhdl.DefaultReset;
 import ch.rihuber.vhdl.VhdlDataType;
 
-public class SwitchModel 
+public class SwitchTestbench 
 {
 	
 	private BufferedReader in = null;
 	private PrintWriter out = null;
-	private boolean hasNextStimulus = true;
+	
 	private String responseFileName;
 	private String stimuliFileName;
 	
@@ -20,7 +20,7 @@ public class SwitchModel
 	private LinkedList<OutputFifo> outputFifos;
 	private DefaultReset reset;
 	
-	public SwitchModel(String stimuliFileName, String responseFileName) throws FileNotFoundException 
+	public SwitchTestbench(String stimuliFileName, String responseFileName) throws FileNotFoundException 
 	{
 		this.stimuliFileName = stimuliFileName;
 		this.responseFileName = responseFileName;
@@ -49,7 +49,7 @@ public class SwitchModel
 		if(responseFileName == null)
 			throw new Exception("No response file specified");
 		
-		new SwitchModel(stimuliFileName, responseFileName).run();
+		new SwitchTestbench(stimuliFileName, responseFileName).run();
 	}
 	
 	private void run() throws Exception 
@@ -71,16 +71,6 @@ public class SwitchModel
 		} finally {
 			closeFiles();
 		}
-	}
-	
-	private boolean allFifosEmpty() 
-	{
-		for(InputFifo currentInputFifo : inputFifos)
-		{
-			if(!currentInputFifo.isEmpty())
-				return false;
-		}
-		return true;
 	}
 
 	private void applyNextStimulus() throws Exception 

@@ -1,4 +1,4 @@
-package ch.rihuber.switchModel;
+package ch.rihuber.switchTestbench;
 
 import java.util.LinkedList;
 import java.util.Random;
@@ -21,7 +21,7 @@ public class Packet
 		this.localAddress = localAddress;
 		this.globalAddress = globalAddress;
 		
-		createRandomPayload(size);
+		createPayload(size);
 	}
 	
 	public Packet(LinkedList<Integer> payload)
@@ -80,22 +80,25 @@ public class Packet
 		this.priority = (headerByte & getPriorityMask()) >> (ADDRESS_WIDTH);
 	}
 
-	private void createRandomPayload(int size) throws Exception
+	private void createPayload(int size) throws Exception
 	{
-		if(size < 1)
-			throw new Exception("Unable to create packet with size " + size);
-		
+		int currentByte = 0;
 		payload = new LinkedList<Integer>();
-		payload.add(createHeader());
 		
-		if(size <= 4)
-			return;
+		// the header is required, since it contains the routing information
+		if(currentByte++ < size)
+			payload.add(createHeader());
+		else
+			throw new Exception("Packet size " + size + " is not valid");
 		
-		for(int i=3; i>=0; i--)
-			payload.add(id >> (8*i));
+		// add the id to the packet if there is enough space
+		if(size-currentByte >= 4)
+			for(int i=3; i>=0; i--)
+				payload.add(id >> (8*i));
 		
+		// fill the rest of the packet with random data
 		Random rand = new Random();
-		for(int i=5; i<size; i++)
+		while(currentByte < size)
 			payload.add(rand.nextInt(255));
 	}
 

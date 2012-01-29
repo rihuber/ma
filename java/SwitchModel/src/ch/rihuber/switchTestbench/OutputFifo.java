@@ -1,4 +1,4 @@
-package ch.rihuber.switchModel;
+package ch.rihuber.switchTestbench;
 
 import java.util.LinkedList;
 import java.util.List;

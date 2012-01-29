@@ -12,7 +12,7 @@ public class Packet
 	public static final int PRIORITY_WIDTH = DATA_WIDTH - ADDRESS_WIDTH;
 	
 	private int id, priority, localAddress, globalAddress;
-	private LinkedList<Character> payload;
+	private LinkedList<Integer> payload;
 	
 	public Packet(int id, int priority, int localAddress, int globalAddress, int size) throws Exception
 	{
@@ -24,7 +24,7 @@ public class Packet
 		createRandomPayload(size);
 	}
 	
-	public Packet(LinkedList<Character> payload)
+	public Packet(LinkedList<Integer> payload)
 	{
 		this.payload = payload;
 		extractHeader();
@@ -37,12 +37,16 @@ public class Packet
 		result += "\tGlobalAddress: " + globalAddress + "\n";
 		result += "\tLocalAddress: " + localAddress + "\n";
 		result += "\tPriority: " + priority + "\n";
+		result += "\tOverall packet size: " + payload.size() + "\n";
+		result += "\tPayload:\n";
+		for(int i=0; i<payload.size(); i++)
+			result += "\t\t" + Integer.toString(payload.get(i), 2) + "\n";
 		return result;
 	}
 	
-	public LinkedList<Character> getPayload()
+	public LinkedList<Integer> getPayload()
 	{
-		LinkedList<Character> payloadClone = new LinkedList<Character>(payload);
+		LinkedList<Integer> payloadClone = new LinkedList<Integer>(payload);
 		return payloadClone;
 	}
 
@@ -55,7 +59,7 @@ public class Packet
 		}
 		for(int i=0; i<4; i++)
 		{
-			char currentByte = payload.get(i+1);
+			int currentByte = payload.get(i+1);
 			id = id | (currentByte << ((3-i)*8));
 		}
 	}
@@ -70,7 +74,7 @@ public class Packet
 			return;
 		}
 		
-		char headerByte = payload.getFirst();
+		int headerByte = payload.getFirst();
 		this.globalAddress = headerByte & getGlobalAddressMask();
 		this.localAddress = (headerByte & getLocalAddressMask()) >> GLOBAL_ADDRESS_WIDTH;
 		this.priority = (headerByte & getPriorityMask()) >> (ADDRESS_WIDTH);
@@ -81,26 +85,26 @@ public class Packet
 		if(size < 1)
 			throw new Exception("Unable to create packet with size " + size);
 		
-		payload = new LinkedList<Character>();
+		payload = new LinkedList<Integer>();
 		payload.add(createHeader());
 		
 		if(size <= 4)
 			return;
 		
 		for(int i=3; i>=0; i--)
-			payload.add((char)(id >> (8*i)));
+			payload.add(id >> (8*i));
 		
 		Random rand = new Random();
-		for(int i=6; i<size; i++)
-			payload.add((char)rand.nextInt());
+		for(int i=5; i<size; i++)
+			payload.add(rand.nextInt(255));
 	}
 
-	private char createHeader() 
+	private int createHeader() 
 	{
 		int header = globalAddress;
 		header = header | (localAddress << GLOBAL_ADDRESS_WIDTH);
 		header = header | (priority << (GLOBAL_ADDRESS_WIDTH + LOCAL_ADDRESS_WIDTH));
-		return (char)header;
+		return header;
 	}
 	
 	private static int getGlobalAddressMask()

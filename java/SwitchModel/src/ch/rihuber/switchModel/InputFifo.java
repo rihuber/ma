@@ -1,17 +1,26 @@
 package ch.rihuber.switchModel;
 
 import java.util.LinkedList;
+import java.util.List;
 
-public class InputFifo 
+import ch.rihuber.vhdl.Model;
+import ch.rihuber.vhdl.StdLogic;
+import ch.rihuber.vhdl.StdLogicVector;
+import ch.rihuber.vhdl.VhdlDataType;
+
+public class InputFifo implements Model
 {
 	
-	LinkedList<Packet> waitingPackets;
-	LinkedList<Character> currentPayload;
+	private LinkedList<Packet> waitingPackets;
+	private LinkedList<Integer> currentPayload;
+	
+	private StdLogic readEnable;
 	
 	public InputFifo()
 	{
 		waitingPackets = new LinkedList<Packet>();
-		currentPayload = new LinkedList<Character>();
+		currentPayload = null;
+		readEnable = StdLogic.ZERO;
 	}
 	
 	public void addPacket(Packet newPacket)
@@ -19,65 +28,68 @@ public class InputFifo
 		waitingPackets.add(newPacket);
 	}
 	
-	public LinkedList<String> getNextStimulus(String[] lastResponse) throws Exception
+	@Override
+	public LinkedList<VhdlDataType> getNextStimulus() throws Exception
 	{
-		boolean readEnable;
-		if(lastResponse == null)
-			readEnable = fetchStdLogic("0");
-		else
-			readEnable = fetchStdLogic(lastResponse[0]);
+		fetchWaitingPacket();
 		
-		int payloadByte = 0;
+		LinkedList<VhdlDataType> result = new LinkedList<VhdlDataType>();
+		result.add(StdLogic.create(isEmpty()));
+		
+		StdLogicVector data;
 		if(!isEmpty())
 		{
-			if(currentPayload.size() == 0)
-				currentPayload = waitingPackets.poll().getPayload();
-			payloadByte = currentPayload.getFirst();
+			if(readEnable.toBoolean())
+				currentPayload.poll();
+			
+			data = new StdLogicVector(currentPayload.getFirst(), 9);
+
+			if(currentPayload.size() == 1)
+			{
+				data.setValueAt(8, StdLogic.ONE);
+				if(readEnable == StdLogic.ONE)
+					currentPayload = null;
+			}
+			else
+				data.setValueAt(8, StdLogic.ZERO);
 		}
+		else
+		{
+			data = new StdLogicVector(StdLogic.DONT_CARE, 9);
+		}
+		result.add(data);
 		
-		LinkedList<String> result = new LinkedList<String>();
-		result.add(toStdLogic(isEmpty()));
-		result.add(toStdLogic(isCurrentPayloadEmpty()) + toStdLogicVector(payloadByte, Packet.DATA_WIDTH));
 		return result;
 	}
 	
-	private boolean isCurrentPayloadEmpty()
+	private void fetchWaitingPacket()
 	{
-		return (currentPayload.size() == 0);
+		if(currentPayload == null)
+		{
+			Packet nextPacket = waitingPackets.poll();
+			if(nextPacket != null)
+			{
+				System.out.println("Starting to transmit a new packet:\n" + nextPacket);
+				currentPayload = nextPacket.getPayload();
+			}
+		}
+	}
+	
+	@Override
+	public void applyResponse(List<String> response) throws Exception 
+	{
+		readEnable = StdLogic.create(response.get(0));
 	}
 	
 	boolean isEmpty()
 	{
 		if(waitingPackets.size() > 0)
 			return false;
-		return isCurrentPayloadEmpty();
-	}
-	
-	private boolean fetchStdLogic(String value) throws Exception
-	{
-		if(value.equals("1"))
-			return true;
-		if(value.equals("0"))
+		
+		if(currentPayload != null)
 			return false;
 		
-		throw new Exception("Unable to interprete string '" + value + "' as a std_logic");
-	}
-	
-	private String toStdLogic(boolean value)
-	{
-		return (value) ? "1" : "0";
-	}
-	
-	private String toStdLogicVector(int value, int size) throws Exception
-	{
-		if(value > (Math.pow(2, size)-1))
-			throw new Exception("Unable to represent value " + value + " in a std_logic_vector of length " + size);
-		String result = Integer.toString(value, 2);
-		for(int i=result.length(); i<size; i++)
-		{
-			result = "0" + result;
-		}
-		return result;
+		return true;
 	}
 
 }

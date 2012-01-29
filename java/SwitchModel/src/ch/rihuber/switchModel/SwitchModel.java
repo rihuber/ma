@@ -3,6 +3,9 @@ package ch.rihuber.switchModel;
 import java.io.*;
 import java.util.LinkedList;
 
+import ch.rihuber.vhdl.DefaultReset;
+import ch.rihuber.vhdl.VhdlDataType;
+
 public class SwitchModel 
 {
 	
@@ -14,9 +17,8 @@ public class SwitchModel
 	
 	private int numPorts = 6;
 	private LinkedList<InputFifo> inputFifos;
-	
-	private String reset = "0";
-	private String[] lastResponse;
+	private LinkedList<OutputFifo> outputFifos;
+	private DefaultReset reset;
 	
 	public SwitchModel(String stimuliFileName, String responseFileName) throws FileNotFoundException 
 	{
@@ -26,6 +28,10 @@ public class SwitchModel
 		inputFifos = new LinkedList<InputFifo>();
 		for(int i=0; i<numPorts; i++)
 			inputFifos.add(new InputFifo());
+		
+		outputFifos = new LinkedList<OutputFifo>();
+		for(int i=0; i<numPorts; i++)
+			outputFifos.add(new OutputFifo());
 	}
 	
 	public static void main(String[] args) throws Exception 
@@ -50,14 +56,15 @@ public class SwitchModel
 	{
 		try 
 		{
+			// reset cycle
+			reset = new DefaultReset();
 			applyNextStimulus();
-			lastResponse = fetchResponse();
-			reset = "1";
+			fetchResponse();
 			inputFifos.getFirst().addPacket(new Packet(1, 1, 1, 2, 20));
-			for(int i=0; i<9; i++)//while(!allFifosEmpty())
+			for(int i=0; i<30; i++)//while(!allFifosEmpty())
 			{
 				applyNextStimulus();
-				lastResponse = fetchResponse();
+				fetchResponse();
 			}
 		} catch (Exception e) {
 			throw e;
@@ -81,33 +88,28 @@ public class SwitchModel
 		if(out == null)
 			createStimuliWriter();
 
-		LinkedList<String> nextStimulus = new LinkedList<String>();
-		nextStimulus.add(reset);
-		for(int i=0; i<inputFifos.size(); i++)
+		LinkedList<VhdlDataType> nextStimulus = new LinkedList<VhdlDataType>();
+		
+		nextStimulus.addAll(reset.getNextStimulus());
+		
+		for(InputFifo currentInputFifo : inputFifos)
+			nextStimulus.addAll(currentInputFifo.getNextStimulus());
+		
+		for(OutputFifo currentOutputFifo : outputFifos)
+			nextStimulus.addAll(currentOutputFifo.getNextStimulus());
+		
+		String outLine = "";
+		for(VhdlDataType currentSignal : nextStimulus)
 		{
-			InputFifo currentInputFifo = inputFifos.get(i);
-			String[] correspondingResponseEntries = null;
-			if(lastResponse != null)
-			{
-				correspondingResponseEntries = new String[1];
-				correspondingResponseEntries[0] = lastResponse[i*3];
-			}
-			nextStimulus.addAll(currentInputFifo.getNextStimulus(correspondingResponseEntries));
+			outLine += " " + currentSignal.toString();
 		}
-		for(int i=0; i<6; i++) // for all output ports
-		{
-			nextStimulus.add("0"); // full
-		}
-		String outLine = nextStimulus.get(0);
-		for(int i=1; i<nextStimulus.size(); i++)
-			outLine += " " + nextStimulus.get(i);
 		
 		out.write(outLine+"\n");
 		out.flush();
 		System.out.println("Written stimulus: "+outLine);
 	}
 	
-	private String[] fetchResponse() throws Exception 
+	private void fetchResponse() throws Exception 
 	{
 		if(in == null)
 			createResponseReader();
@@ -116,7 +118,23 @@ public class SwitchModel
 		if(inLine == null)
 			throw new Exception("Unable to read response line.");
 		System.out.println("Fetched response: "+inLine);
-		return inLine.split("\\s");
+		
+		String[] responseElements = inLine.split("\\s");
+		LinkedList<String> response = new LinkedList<String>();
+		for(int i=0; i<responseElements.length; i++)
+			response.add(responseElements[i]);
+		
+		int i = 0;
+		for(InputFifo currentInputFifo : inputFifos)
+		{
+			currentInputFifo.applyResponse(response.subList(i, i+1)); // read enable
+			i++;
+		}
+		for(OutputFifo currentOutputFifo : outputFifos)
+		{
+			currentOutputFifo.applyResponse(response.subList(i, i+2)); // write enable, data
+			i += 2;
+		}
 	}
 	
 	private void createStimuliWriter() throws FileNotFoundException, UnsupportedEncodingException 

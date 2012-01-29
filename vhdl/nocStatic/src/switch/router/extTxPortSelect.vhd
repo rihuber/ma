@@ -51,7 +51,7 @@ begin
 		if txFifoEmpty = '0' then
 			txPortNr := selectTxPort(txPortIdle);
 			if txPortNr /= portNrUndefined then
-				txPortWriteEnable(wrappedPortNrToInteger(txPortNr)) <= '1';
+				txPortWriteEnable(wrappedPortNrToInteger(txPortNr-numIntPorts)) <= '1';
 				txFifoReadEnable <= '1';
 				txPortNrOut <= txPortNr;
 				rxPortWriteEnable(portNrToInteger(rxPortNrIn)) <= '1';

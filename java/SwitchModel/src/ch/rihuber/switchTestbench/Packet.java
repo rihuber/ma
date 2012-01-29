@@ -1,5 +1,6 @@
 package ch.rihuber.switchTestbench;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Random;
 
@@ -13,8 +14,48 @@ public class Packet
 	
 	private int id, priority, localAddress, globalAddress;
 	private LinkedList<Integer> payload;
+	private int packetReadyTime, packetArrivalTime, inputFifoIndex, outputFifoIndex;
 	
-	public Packet(int id, int priority, int localAddress, int globalAddress, int size) throws Exception
+	private static int nextId = 1;
+	private static LinkedList<Packet> packets;
+	
+	public static Packet generatePacket(int priority, int localAddress, int globalAddress, int size) throws Exception
+	{
+		Packet newPacket = new Packet(nextId++, priority, localAddress, globalAddress, size);
+		
+		if(packets == null)
+			packets = new LinkedList<Packet>();
+		
+		packets.add(newPacket);
+		return newPacket;
+	}
+	
+	public static Packet findPacket(LinkedList<Integer> payload) 
+	{
+		for(Packet currentPacket : packets)
+		{
+			if(currentPacket.isPayloadEqual(payload))
+				return currentPacket;
+		}
+		return null;
+	}
+	
+	private boolean isPayloadEqual(LinkedList<Integer> payloadToCompare)
+	{
+		if(payload.size() != payloadToCompare.size())
+			return false;
+		
+		Iterator<Integer> payloadToCompareIterator = payloadToCompare.iterator();
+		for(Integer nextByte : payload)
+		{
+			if(!payloadToCompareIterator.next().equals(nextByte))
+				return false;
+		}
+		
+		return true;
+	}
+	
+	private Packet(int id, int priority, int localAddress, int globalAddress, int size) throws Exception
 	{
 		this.id = id;
 		this.priority = priority;
@@ -24,12 +65,12 @@ public class Packet
 		createPayload(size);
 	}
 	
-	public Packet(LinkedList<Integer> payload)
-	{
-		this.payload = payload;
-		extractHeader();
-		extractId();
-	}
+//	public Packet(LinkedList<Integer> payload)
+//	{
+//		this.payload = payload;
+//		extractHeader();
+//		extractId();
+//	}
 	
 	public String toString()
 	{
@@ -38,9 +79,13 @@ public class Packet
 		result += "\tLocalAddress: " + localAddress + "\n";
 		result += "\tPriority: " + priority + "\n";
 		result += "\tOverall packet size: " + payload.size() + "\n";
-		result += "\tPayload:\n";
-		for(int i=0; i<payload.size(); i++)
-			result += "\t\t" + Integer.toString(payload.get(i), 2) + "\n";
+		if(packetReadyTime != 0)
+			result += "\tReady to transmit in cycle " + packetReadyTime + " at input fifo " + inputFifoIndex + "\n";
+		if(packetArrivalTime != 0)
+			result += "\tTransmission completed in cycle " + packetArrivalTime + " at output fifo " + outputFifoIndex + "\n";
+//		result += "\tPayload:\n";
+//		for(int i=0; i<payload.size(); i++)
+//			result += "\t\t" + Integer.toString(payload.get(i), 2) + "\n";
 		return result;
 	}
 	
@@ -48,36 +93,6 @@ public class Packet
 	{
 		LinkedList<Integer> payloadClone = new LinkedList<Integer>(payload);
 		return payloadClone;
-	}
-
-	private void extractId() 
-	{
-		if(payload.size() < 5)
-		{
-			id = 0;
-			return;
-		}
-		for(int i=0; i<4; i++)
-		{
-			int currentByte = payload.get(i+1);
-			id = id | (currentByte << ((3-i)*8));
-		}
-	}
-
-	private void extractHeader() 
-	{
-		if(payload.size() < 1)
-		{
-			globalAddress = 0;
-			localAddress = 0;
-			priority = 0;
-			return;
-		}
-		
-		int headerByte = payload.getFirst();
-		this.globalAddress = headerByte & getGlobalAddressMask();
-		this.localAddress = (headerByte & getLocalAddressMask()) >> GLOBAL_ADDRESS_WIDTH;
-		this.priority = (headerByte & getPriorityMask()) >> (ADDRESS_WIDTH);
 	}
 
 	private void createPayload(int size) throws Exception
@@ -93,12 +108,15 @@ public class Packet
 		
 		// add the id to the packet if there is enough space
 		if(size-currentByte >= 4)
+		{
 			for(int i=3; i>=0; i--)
 				payload.add(id >> (8*i));
+			currentByte += 4;
+		}
 		
 		// fill the rest of the packet with random data
 		Random rand = new Random();
-		while(currentByte < size)
+		while(currentByte++ < size)
 			payload.add(rand.nextInt(255));
 	}
 
@@ -110,28 +128,16 @@ public class Packet
 		return header;
 	}
 	
-	private static int getGlobalAddressMask()
+	public void setPacketReady(int cycle, int fifoIndex) 
 	{
-		int mask = 0;
-		for(int i=0; i<GLOBAL_ADDRESS_WIDTH; i++)
-			mask = mask | (1<<i);
-		return mask;
+		packetReadyTime = cycle;
+		inputFifoIndex = fifoIndex;
 	}
-	
-	private static int getLocalAddressMask()
+
+	public void setPacketArrival(int cycle, int fifoIndex) 
 	{
-		int mask = 0;
-		for(int i=GLOBAL_ADDRESS_WIDTH; i<ADDRESS_WIDTH; i++)
-			mask = mask | (1<<i);
-		return mask;
+		packetArrivalTime = cycle;
+		outputFifoIndex = fifoIndex;
 	}
-	
-	private static int getPriorityMask()
-	{
-		int mask = 0;
-		for(int i=ADDRESS_WIDTH; i<ADDRESS_WIDTH + PRIORITY_WIDTH; i++)
-			mask = mask | (1<<i);
-		return mask;
-	}
-	
+
 }

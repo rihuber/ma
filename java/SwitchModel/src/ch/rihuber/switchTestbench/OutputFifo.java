@@ -13,11 +13,14 @@ public class OutputFifo implements Model
 	
 	private LinkedList<Packet> receivedPackets;
 	private LinkedList<Integer> currentPacket;
+	private int cycle = 0;
+	private int fifoIndex;
 	
 	private boolean full;
 	
-	public OutputFifo()
+	public OutputFifo(int fifoIndex)
 	{
+		this.fifoIndex = fifoIndex;
 		currentPacket = new LinkedList<Integer>();
 		receivedPackets = new LinkedList<Packet>();
 		full = false;
@@ -26,6 +29,7 @@ public class OutputFifo implements Model
 	@Override
 	public void applyResponse(List<String> response) throws Exception
 	{
+		cycle++;
 		StdLogic writeEnable = StdLogic.create(response.get(0));
 		StdLogicVector data = new StdLogicVector(response.get(1));
 		
@@ -38,9 +42,16 @@ public class OutputFifo implements Model
 			if(endOfPacket.toBoolean())
 			{
 				LinkedList<Integer> payloadCopy = new LinkedList<Integer>(currentPacket);
-				Packet completedPacket = new Packet(payloadCopy);
-				receivedPackets.add(completedPacket);
-				System.out.println("Received packet completely:\n"+completedPacket);
+				Packet completedPacket = Packet.findPacket(payloadCopy);
+				if(completedPacket == null)
+					System.out.println("Unable to find packet. Packet broken on transmission?");
+				else
+				{
+					completedPacket.setPacketArrival(cycle, fifoIndex);
+					receivedPackets.add(completedPacket);
+					System.out.println("Received packet completely:\n"+completedPacket);
+				}
+				currentPacket = new LinkedList<Integer>();
 			}
 		}
 	}

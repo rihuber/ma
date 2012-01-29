@@ -20,6 +20,8 @@ public class SwitchTestbench
 	private LinkedList<OutputFifo> outputFifos;
 	private DefaultReset reset;
 	
+	private int cycle = 0;
+	
 	public SwitchTestbench(String stimuliFileName, String responseFileName) throws FileNotFoundException 
 	{
 		this.stimuliFileName = stimuliFileName;
@@ -27,11 +29,11 @@ public class SwitchTestbench
 		
 		inputFifos = new LinkedList<InputFifo>();
 		for(int i=0; i<numPorts; i++)
-			inputFifos.add(new InputFifo());
+			inputFifos.add(new InputFifo(i));
 		
 		outputFifos = new LinkedList<OutputFifo>();
 		for(int i=0; i<numPorts; i++)
-			outputFifos.add(new OutputFifo());
+			outputFifos.add(new OutputFifo(i));
 	}
 	
 	public static void main(String[] args) throws Exception 
@@ -60,8 +62,11 @@ public class SwitchTestbench
 			reset = new DefaultReset();
 			applyNextStimulus();
 			fetchResponse();
-			inputFifos.getFirst().addPacket(new Packet(1, 1, 1, 2, 20));
-			for(int i=0; i<30; i++)//while(!allFifosEmpty())
+			for(InputFifo currentInputFifo : inputFifos)
+			{
+				currentInputFifo.addPacket(Packet.generatePacket(1, 1, 2, 20));
+			}
+			for(int i=0; i<300; i++)//while(!allFifosEmpty())
 			{
 				applyNextStimulus();
 				fetchResponse();
@@ -71,6 +76,7 @@ public class SwitchTestbench
 		} finally {
 			closeFiles();
 		}
+		System.out.println("...done!");
 	}
 
 	private void applyNextStimulus() throws Exception 
@@ -96,7 +102,7 @@ public class SwitchTestbench
 		
 		out.write(outLine+"\n");
 		out.flush();
-		System.out.println("Written stimulus: "+outLine);
+		//System.out.println("Written stimulus: "+outLine);
 	}
 	
 	private void fetchResponse() throws Exception 
@@ -107,7 +113,7 @@ public class SwitchTestbench
 		String inLine = in.readLine();
 		if(inLine == null)
 			throw new Exception("Unable to read response line.");
-		System.out.println("Fetched response: "+inLine);
+		//System.out.println("Fetched response: "+inLine);
 		
 		String[] responseElements = inLine.split("\\s");
 		LinkedList<String> response = new LinkedList<String>();

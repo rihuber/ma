@@ -24,7 +24,7 @@ architecture rtl of headerSelect is
 		variable rxPortNr : portNrWrapper;
 	begin
 		rxPortNr := (others => '0');
-		while rxPortNr<numPorts-1 loop
+		while rxPortNr<numPorts loop
 			if headers(wrappedPortNrToInteger(rxPortNr)).valid='1' then
 				if headers(wrappedPortNrToInteger(rxPortNr)).prio = searchedPrio then
 					return rxPortNr;

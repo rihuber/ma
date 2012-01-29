@@ -13,11 +13,14 @@ public class InputFifo implements Model
 	
 	private LinkedList<Packet> waitingPackets;
 	private LinkedList<Integer> currentPayload;
+	private int cycle = 0;
+	private int fifoIndex;
 	
 	private StdLogic readEnable;
 	
-	public InputFifo()
+	public InputFifo(int fifoIndex)
 	{
+		this.fifoIndex = fifoIndex;
 		waitingPackets = new LinkedList<Packet>();
 		currentPayload = null;
 		readEnable = StdLogic.ZERO;
@@ -31,6 +34,7 @@ public class InputFifo implements Model
 	@Override
 	public LinkedList<VhdlDataType> getNextStimulus() throws Exception
 	{
+		cycle++;
 		fetchWaitingPacket();
 		
 		LinkedList<VhdlDataType> result = new LinkedList<VhdlDataType>();
@@ -69,6 +73,7 @@ public class InputFifo implements Model
 			Packet nextPacket = waitingPackets.poll();
 			if(nextPacket != null)
 			{
+				nextPacket.setPacketReady(cycle, fifoIndex);
 				System.out.println("Starting to transmit a new packet:\n" + nextPacket);
 				currentPayload = nextPacket.getPayload();
 			}

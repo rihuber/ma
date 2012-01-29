@@ -46,7 +46,7 @@ architecture rtl of headerSelect is
 				return rxPortNr;
 			end if;
 			pri := pri+1;
-			exit when pri = to_unsigned(numPriorities, toLog2Ceil(numPriorities)); 
+			exit when pri = to_unsigned(numPriorities-1, priorityWidth); 
 		end loop;
 		return portNrUndefined;
 	end selectHeader;	

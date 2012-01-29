@@ -20,7 +20,8 @@ end entity switch;
 
 architecture structural of switch is
 
-	constant defaultInputLinkInValue 	: inputLinkIn := (empty => '1', data => (others => '-'));
+	constant defaultInputLinkInValue 	: inputLinkIn := (empty => '1',
+														  data => (others => '-'));
 	constant defaultOutputLinkInValue 	: outputLinkIn := (full => '1');
 	
 	signal inputLinksOutMuxOutput		: inputLinkOutArray(numPorts-1 downto 0);

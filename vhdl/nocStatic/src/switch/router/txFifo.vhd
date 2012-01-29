@@ -74,6 +74,7 @@ begin
 		elsif rising_edge(clk) then
 			readPosition_p <= readPosition_n;
 			writePosition_p <= writePosition_n;
+			ringBuffer_p <= ringBuffer_n;
 		end if;
 	end process mem_stateTransition;
 	

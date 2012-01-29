@@ -118,7 +118,7 @@ begin
 	begin
 		for i in numPorts-1 downto 0 loop
 			muxOutput := defaultInputLinkInValue;
-			if wrappedPortNrEqual(router_rxPortMap(i),portNrUndefined) = false then
+			if wrappedPortNrEqual(router_txPortMap(i),portNrUndefined) = false then
 				muxOutput := inputLinksIn(wrappedPortNrToInteger(router_txPortMap(i)));
 			end if;
 			outputLinksOutMuxOutput(i).data <= muxOutput.data;

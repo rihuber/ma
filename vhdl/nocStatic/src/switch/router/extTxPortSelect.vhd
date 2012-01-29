@@ -27,7 +27,7 @@ architecture rtl of extTxPortSelect is
 	begin
 		result := (others => '0');
 		while result < numExtPorts loop
-			if txPortIdle(wrappedPortNrToInteger(result)) = '0' then
+			if txPortIdle(wrappedPortNrToInteger(result)) = '1' then
 				return result + numIntPorts;
 			end if;
 			result := result + 1;

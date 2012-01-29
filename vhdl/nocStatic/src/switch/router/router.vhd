@@ -159,7 +159,7 @@ begin
 	
 	extTxPortGenerate: for i in numExtPorts-1 downto 0 generate
 		
-		intTxPortEntity: entity work.txPort
+		extTxPortEntity: entity work.txPort
 			port map(
 				clk			=> clk,
 				reset		=> reset,

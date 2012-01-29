@@ -54,7 +54,7 @@ public class SwitchModel
 			lastResponse = fetchResponse();
 			reset = "1";
 			inputFifos.getFirst().addPacket(new Packet(1, 1, 1, 2, 20));
-			for(int i=0; i<3; i++)//while(!allFifosEmpty())
+			for(int i=0; i<9; i++)//while(!allFifosEmpty())
 			{
 				applyNextStimulus();
 				lastResponse = fetchResponse();

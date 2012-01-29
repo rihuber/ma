@@ -79,7 +79,7 @@ int readOneCharacter(char* result)
 	int errorCode;
 	do {
 		errorCode = read(pipeHandle, result, 1);
-	} while((*result == 63 || *result == 10) && errorCode > 0);
+	} while((*result == 32 || *result == 10) && errorCode > 0);
 
 	return errorCode;
 }

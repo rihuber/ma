@@ -16,8 +16,10 @@ public class SwitchTestbench
 	private String stimuliFileName;
 	
 	private int numPorts = 6;
+	private int numInternalPorts = 2;
 	private LinkedList<InputFifo> inputFifos;
 	private LinkedList<OutputFifo> outputFifos;
+	private LinkedList<OutputFifo> externalOutputFifos;
 	private DefaultReset reset;
 	
 	private int cycle = 0;
@@ -32,8 +34,16 @@ public class SwitchTestbench
 			inputFifos.add(new InputFifo(i));
 		
 		outputFifos = new LinkedList<OutputFifo>();
+		externalOutputFifos = new LinkedList<OutputFifo>();
 		for(int i=0; i<numPorts; i++)
-			outputFifos.add(new OutputFifo(i));
+		{
+			OutputFifo newOutputFifo = new OutputFifo(i);
+			outputFifos.add(newOutputFifo);
+			if(i >= numInternalPorts)
+				externalOutputFifos.add(newOutputFifo);
+		}
+
+		reset = new DefaultReset();
 	}
 	
 	public static void main(String[] args) throws Exception 
@@ -58,19 +68,21 @@ public class SwitchTestbench
 	{
 		try 
 		{
-			// reset cycle
-			reset = new DefaultReset();
-			applyNextStimulus();
-			fetchResponse();
-			for(InputFifo currentInputFifo : inputFifos)
-			{
-				currentInputFifo.addPacket(Packet.generatePacket(1, 1, 2, 20));
-			}
-			for(int i=0; i<300; i++)//while(!allFifosEmpty())
-			{
-				applyNextStimulus();
-				fetchResponse();
-			}
+			runInitProcedure();
+			
+			sendOnePacketToExternalPort(20);
+			
+			runReset();
+			sendMultiplePacketsToExternalPort(3, 20);
+			
+			runReset();
+			sendOnePacketToInternalPort(20);
+			
+			runReset();
+			sendMultiplePacketsToInternalPort(3, 20);
+			
+			
+			Packet.printReport();
 		} catch (Exception e) {
 			throw e;
 		} finally {
@@ -78,9 +90,91 @@ public class SwitchTestbench
 		}
 		System.out.println("...done!");
 	}
+	
+
+	private void sendMultiplePacketsToInternalPort(int numPacketsPerLink, int packetLength) throws Exception 
+	{
+		for(InputFifo currentInputFifo : inputFifos)
+		{
+			for(int i=0; i<numPacketsPerLink; i++)
+			{
+				Packet newPacket = Packet.generatePacket(1, 0, 1, packetLength);
+				newPacket.addAllowedOutputFifos(outputFifos.get(0));
+				currentInputFifo.addPacket(newPacket);
+			}
+		}
+		runUntilAllPacketsReceived();
+	}
+
+	private void sendOnePacketToInternalPort(int packetLength) throws Exception 
+	{
+		Packet newPacket = Packet.generatePacket(1, 0, 1, packetLength);
+		newPacket.addAllowedOutputFifos(outputFifos.get(0));
+		inputFifos.getFirst().addPacket(newPacket);
+		runUntilAllPacketsReceived();
+	}
+
+	private void runInitProcedure() throws Exception
+	{
+		// fetch initial state
+		fetchResponse();
+		
+		runReset();
+	}
+	
+	private void runReset() throws Exception
+	{
+		// two reset cycles
+		reset.on();
+		runCycles(2);
+		reset.off();
+		
+		// two idle cycles
+		runCycles(2);
+	}
+	
+	private void sendOnePacketToExternalPort(int packetLength) throws Exception
+	{
+		Packet newPacket = Packet.generatePacket(1, 1, 2, packetLength);
+		newPacket.setAllowedOutputFifos(externalOutputFifos);
+		inputFifos.getFirst().addPacket(newPacket);
+		runUntilAllPacketsReceived();
+	}
+	
+	private void sendMultiplePacketsToExternalPort(int numPacketsPerLink, int packetLength) throws Exception
+	{
+		for(InputFifo currentInputFifo : inputFifos)
+		{
+			for(int i=0; i<numPacketsPerLink; i++)
+			{
+				Packet newPacket = Packet.generatePacket(1, 1, 2, packetLength);
+				newPacket.setAllowedOutputFifos(externalOutputFifos);
+				currentInputFifo.addPacket(newPacket);
+			}
+		}
+		runUntilAllPacketsReceived();
+	}
+	
+	private void runUntilAllPacketsReceived() throws Exception 
+	{
+		while(!Packet.allPacketsReceived())
+		{
+			runCycles(1);
+		}
+	}
+
+	private void runCycles(int numCycles) throws Exception
+	{
+		for(int i=0; i<numCycles; i++)
+		{
+			applyNextStimulus();
+			fetchResponse();
+		}
+	}
 
 	private void applyNextStimulus() throws Exception 
 	{
+		System.out.println("Cycle " + cycle++);
 		if(out == null)
 			createStimuliWriter();
 

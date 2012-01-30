@@ -14,7 +14,8 @@ public class Packet
 	
 	private int id, priority, localAddress, globalAddress;
 	private LinkedList<Integer> payload;
-	private int packetReadyTime, packetArrivalTime, inputFifoIndex, outputFifoIndex;
+	private int packetReadyTime = 0, packetArrivalTime = 0, inputFifoIndex, outputFifoIndex;
+	private LinkedList<OutputFifo> allowedOutputFifos;
 	
 	private static int nextId = 1;
 	private static LinkedList<Packet> packets;
@@ -32,6 +33,9 @@ public class Packet
 	
 	public static Packet findPacket(LinkedList<Integer> payload) 
 	{
+		if(packets == null)
+			return null;
+		
 		for(Packet currentPacket : packets)
 		{
 			if(currentPacket.isPayloadEqual(payload))
@@ -64,13 +68,6 @@ public class Packet
 		
 		createPayload(size);
 	}
-	
-//	public Packet(LinkedList<Integer> payload)
-//	{
-//		this.payload = payload;
-//		extractHeader();
-//		extractId();
-//	}
 	
 	public String toString()
 	{
@@ -130,14 +127,67 @@ public class Packet
 	
 	public void setPacketReady(int cycle, int fifoIndex) 
 	{
+		System.out.println("Starting to transmit packet " + id + " on fifo " + fifoIndex + " at cycle " + cycle + " with payload " + payload);
 		packetReadyTime = cycle;
 		inputFifoIndex = fifoIndex;
 	}
 
-	public void setPacketArrival(int cycle, int fifoIndex) 
+	public void setPacketArrival(int cycle, int fifoIndex) throws Exception 
 	{
 		packetArrivalTime = cycle;
 		outputFifoIndex = fifoIndex;
+		if(!isCorrectReceived())
+			throw new Exception("Packet not correct received: outputFifo " + outputFifoIndex);
+	}
+
+	public static void printReport() 
+	{
+		String result = "\n\n\n\nTest Report:\n------------\n\n";
+		result += "Packets generated: " + packets.size() + "\n";
+		
+		result += "Packets correclty received: ";
+		int i=0;
+		for(Packet currentPacket : packets)
+		{
+			if(currentPacket.isCorrectReceived())
+				i++;
+		}
+		result += i+"\n";
+		System.out.println(result);
+	}
+
+	private boolean isCorrectReceived() 
+	{
+		if(packetArrivalTime > 0 && packetArrivalTime > packetReadyTime)
+		{
+			for(OutputFifo currentOutputFifo : allowedOutputFifos)
+				if(currentOutputFifo.getFifoIndex() == outputFifoIndex)
+					return true;
+		}
+		return false;
+	}
+
+	public static boolean allPacketsReceived() 
+	{
+		for(Packet currentPacket : packets)
+		{
+			if(!currentPacket.isCorrectReceived())
+				return false;
+		}
+		return true;
+	}
+
+	public void setAllowedOutputFifos(LinkedList<OutputFifo> allowedOutputFifos) 
+	{
+		this.allowedOutputFifos = allowedOutputFifos;
+	}
+
+	public void addAllowedOutputFifos(OutputFifo outputFifo) 
+	{
+		if(allowedOutputFifos == null)
+			allowedOutputFifos = new LinkedList<OutputFifo>();
+		
+		allowedOutputFifos.add(outputFifo);
 	}
 
 }

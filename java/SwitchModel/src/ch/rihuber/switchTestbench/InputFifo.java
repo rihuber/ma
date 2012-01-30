@@ -35,63 +35,53 @@ public class InputFifo implements IVhdlModel
 	public LinkedList<VhdlDataType> getNextStimulus() throws Exception
 	{
 		cycle++;
-		fetchWaitingPacket();
 		
 		LinkedList<VhdlDataType> result = new LinkedList<VhdlDataType>();
-		result.add(StdLogic.create(isEmpty()));
 		
-		StdLogicVector data;
-		if(!isEmpty())
-		{
-			if(readEnable.toBoolean())
-				currentPayload.poll();
-			
-			data = new StdLogicVector(currentPayload.getFirst(), 9);
-
-			if(currentPayload.size() == 1)
-			{
-				data.setValueAt(8, StdLogic.ONE);
-				if(readEnable == StdLogic.ONE)
-					currentPayload = null;
-			}
-			else
-				data.setValueAt(8, StdLogic.ZERO);
-		}
-		else
-		{
-			data = new StdLogicVector(StdLogic.DONT_CARE, 9);
-		}
-		result.add(data);
+		StdLogic empty = StdLogic.ONE;
+		StdLogic endOfPacket = StdLogic.DONT_CARE;
+		StdLogicVector data = new StdLogicVector(StdLogic.DONT_CARE, 9);
 		
-		return result;
-	}
-	
-	private void fetchWaitingPacket()
-	{
-		if(currentPayload == null)
+		if(currentPayload != null && readEnable == StdLogic.ONE)
+			currentPayload.poll();
+		
+		if(currentPayload == null || currentPayload.size() == 0)
 		{
 			Packet nextPacket = waitingPackets.poll();
-			if(nextPacket != null)
+			if(nextPacket == null)
+				currentPayload = null;
+			else
 			{
 				nextPacket.setPacketReady(cycle, fifoIndex);
-				System.out.println("Starting to transmit a new packet:\n" + nextPacket);
 				currentPayload = nextPacket.getPayload();
 			}
 		}
+		
+		if(currentPayload != null)
+		{
+			empty = StdLogic.ZERO;
+			int nextPayloadByte = currentPayload.getFirst();
+			data = new StdLogicVector(nextPayloadByte, 9);
+			endOfPacket = (currentPayload.size() == 1) ? StdLogic.ONE : StdLogic.ZERO;
+		}
+		data.setValueAt(8, endOfPacket);
+		result.add(empty);
+		result.add(data);
+
+//		System.out.println("Fifo "+fifoIndex+" writes stimulus "+data.toString());
+		return result;
 	}
 	
 	@Override
 	public void applyResponse(List<String> response) throws Exception 
 	{
 		readEnable = StdLogic.create(response.get(0));
+//		System.out.println("inputFifo " + fifoIndex+" readEnable: " + readEnable.toString());
 	}
 	
 	boolean isEmpty()
 	{
-		if(waitingPackets.size() > 0)
-			return false;
-		
-		if(currentPayload != null)
+		if(currentPayload != null && currentPayload.size() > 0)
 			return false;
 		
 		return true;

@@ -2,6 +2,7 @@ package ch.rihuber.switchTestbench;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 
 import ch.rihuber.vhdl.IVhdlModel;
 import ch.rihuber.vhdl.StdLogic;
@@ -33,7 +34,7 @@ public class OutputFifo implements IVhdlModel
 		StdLogic writeEnable = StdLogic.create(response.get(0));
 		StdLogicVector data = new StdLogicVector(response.get(1));
 		
-		if(writeEnable.toBoolean())
+		if(writeEnable == StdLogic.ONE && !full)
 		{
 			int payload = data.subVector(7, 0).toInteger();
 			currentPacket.add(payload);
@@ -44,7 +45,7 @@ public class OutputFifo implements IVhdlModel
 				LinkedList<Integer> payloadCopy = new LinkedList<Integer>(currentPacket);
 				Packet completedPacket = Packet.findPacket(payloadCopy);
 				if(completedPacket == null)
-					System.out.println("Unable to find packet. Packet broken on transmission?");
+					System.err.println("Broken packet arrived on output fifo "+fifoIndex+". Received payload is: " + payloadCopy);
 				else
 				{
 					completedPacket.setPacketArrival(cycle, fifoIndex);
@@ -53,14 +54,27 @@ public class OutputFifo implements IVhdlModel
 				}
 				currentPacket = new LinkedList<Integer>();
 			}
+			if(new Random().nextInt(2) == 0)
+				full = true;
+				
 		}
 	}
 	
 	public LinkedList<VhdlDataType> getNextStimulus()
 	{
 		LinkedList<VhdlDataType> result = new LinkedList<VhdlDataType>();
-		result.add(StdLogic.ZERO); //full
+		if(full)
+		{
+			if(new Random().nextInt(2) > 0)
+				full = false;
+		}
+		result.add(StdLogic.create(full)); //full
 		return result;
+	}
+
+	public int getFifoIndex() 
+	{
+		return fifoIndex;
 	}
 
 }

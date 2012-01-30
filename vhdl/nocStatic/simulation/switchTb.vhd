@@ -90,8 +90,6 @@ begin
 		variable mutInputVar: mutInputType;
 		variable errorCode: integer;
 	begin
-		mutInput.reset <= '0';
-		initPipes(stimuli_filename, response_filename);
 		while moreStimuliAvailable loop
 			wait until clk'event and clk = '1';
 			wait for stimuli_application_time;
@@ -108,6 +106,8 @@ begin
 	-- Response acquisition
 	responseAcquisition: process
     begin
+    	initPipes(stimuli_filename, response_filename);
+    	writeResponse(mutOutput); -- initial state response
 		while endOfSimulation = false loop
 			wait until clk'event and clk = '1';
 			wait for response_acquisition_time;

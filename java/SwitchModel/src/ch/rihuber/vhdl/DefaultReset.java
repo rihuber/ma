@@ -6,7 +6,7 @@ import java.util.List;
 public class DefaultReset implements IVhdlModel 
 {
 	
-	boolean firstInvocation = true;
+	private boolean doReset = true;
 	
 	@Override
 	public void applyResponse(List<String> response) throws Exception 
@@ -19,14 +19,20 @@ public class DefaultReset implements IVhdlModel
 	{
 		LinkedList<VhdlDataType> result = new LinkedList<VhdlDataType>();
 		
-		if(firstInvocation)
-			result.add(StdLogic.ZERO);
-		else
-			result.add(StdLogic.ONE);
-		
-		firstInvocation = false;
+		StdLogic reset = (doReset) ? StdLogic.ZERO:StdLogic.ONE;
+		result.add(reset);
 		
 		return result;
+	}
+
+	public void off() 
+	{
+		doReset = false;
+	}
+	
+	public void on()
+	{
+		doReset = true;
 	}
 
 }

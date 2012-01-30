@@ -3,12 +3,12 @@ package ch.rihuber.switchTestbench;
 import java.util.LinkedList;
 import java.util.List;
 
-import ch.rihuber.vhdl.Model;
+import ch.rihuber.vhdl.IVhdlModel;
 import ch.rihuber.vhdl.StdLogic;
 import ch.rihuber.vhdl.StdLogicVector;
 import ch.rihuber.vhdl.VhdlDataType;
 
-public class OutputFifo implements Model
+public class OutputFifo implements IVhdlModel
 {
 	
 	private LinkedList<Packet> receivedPackets;

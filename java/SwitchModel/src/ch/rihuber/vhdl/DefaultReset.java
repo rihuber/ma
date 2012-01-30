@@ -3,7 +3,7 @@ package ch.rihuber.vhdl;
 import java.util.LinkedList;
 import java.util.List;
 
-public class DefaultReset implements Model 
+public class DefaultReset implements IVhdlModel 
 {
 	
 	boolean firstInvocation = true;

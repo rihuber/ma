@@ -2,6 +2,7 @@ package ch.rihuber.switchTestbench;
 
 import java.io.*;
 import java.util.LinkedList;
+import java.util.Random;
 
 import ch.rihuber.vhdl.DefaultReset;
 import ch.rihuber.vhdl.VhdlDataType;
@@ -15,14 +16,20 @@ public class SwitchTestbench
 	private String responseFileName;
 	private String stimuliFileName;
 	
-	private int numPorts = 6;
-	private int numInternalPorts = 2;
+	private final int dataWidth = 8;
+	private final int numPorts = 6;
+	private final int numInternalPorts = 2;
+	private final int numPriorities = 4;
+	private final int numGlobalAddr = 5;
+	
 	private LinkedList<InputFifo> inputFifos;
 	private LinkedList<OutputFifo> outputFifos;
 	private LinkedList<OutputFifo> externalOutputFifos;
 	private DefaultReset reset;
 	
 	private int cycle = 0;
+	
+	
 	
 	public SwitchTestbench(String stimuliFileName, String responseFileName) throws FileNotFoundException 
 	{
@@ -81,6 +88,11 @@ public class SwitchTestbench
 			runReset();
 			sendMultiplePacketsToInternalPort(3, 20);
 			
+			runReset();
+			sendDifferentPriorityPackets();
+			
+			runReset();
+			sendRandomPackets(2000);
 			
 			Packet.printReport();
 		} catch (Exception e) {
@@ -90,7 +102,29 @@ public class SwitchTestbench
 		}
 		System.out.println("...done!");
 	}
-	
+
+	private void sendRandomPackets(int numOfRandomPackets) throws Exception 
+	{
+		Random rand = new Random();
+		
+		for(int i=0; i<numOfRandomPackets; i++)
+		{
+			int priority = rand.nextInt(numPriorities);
+			int localAddress = rand.nextInt(numInternalPorts);
+			int globalAddress = rand.nextInt(numGlobalAddr);
+			int packetLength = rand.nextInt(10)+2; // packet length range is [2..12]
+			
+			Packet newPacket = Packet.generatePacket(priority, localAddress, globalAddress, packetLength);
+			if(globalAddress == 1)
+				newPacket.addAllowedOutputFifos(outputFifos.get(localAddress));
+			else
+				newPacket.setAllowedOutputFifos(externalOutputFifos);
+			
+			// add packet to a randomly selected input fifo
+			inputFifos.get(rand.nextInt(inputFifos.size())).addPacket(newPacket);
+		}
+		runUntilAllPacketsReceived();
+	}
 
 	private void sendMultiplePacketsToInternalPort(int numPacketsPerLink, int packetLength) throws Exception 
 	{
@@ -153,6 +187,31 @@ public class SwitchTestbench
 			}
 		}
 		runUntilAllPacketsReceived();
+	}
+	
+	private void sendDifferentPriorityPackets() throws Exception 
+	{
+		int prio = 1;
+		for(InputFifo currentInputFifo : inputFifos)
+		{
+			Packet newPacket = Packet.generatePacket(prio, 0, 1, 15);
+			newPacket.addAllowedOutputFifos(outputFifos.get(0));
+			currentInputFifo.addPacket(newPacket);
+			prio = (prio + 1) % numPriorities;
+		}
+		runUntilAllPacketsReceived();
+	}
+	
+	private void runUntilAllPacketsReceived(int maxCyles) throws Exception 
+	{
+		while(!Packet.allPacketsReceived())
+		{
+			if(maxCyles-- == 0)
+			{
+				throw new Exception("Simulation stopped with " + Packet.numPacketsStillToTransmit() + " packets still to transmit");
+			}
+			runCycles(1);
+		}
 	}
 	
 	private void runUntilAllPacketsReceived() throws Exception 

@@ -31,13 +31,16 @@ public class Packet
 		return newPacket;
 	}
 	
-	public static Packet findPacket(LinkedList<Integer> payload) 
+	public static Packet findPacket(LinkedList<Integer> payload, boolean onlyUnreceivedPackets) 
 	{
 		if(packets == null)
 			return null;
 		
 		for(Packet currentPacket : packets)
 		{
+			if(onlyUnreceivedPackets)
+				if(currentPacket.isCorrectReceived())
+					continue;
 			if(currentPacket.isPayloadEqual(payload))
 				return currentPacket;
 		}
@@ -61,6 +64,8 @@ public class Packet
 	
 	private Packet(int id, int priority, int localAddress, int globalAddress, int size) throws Exception
 	{
+		if(localAddress > 1)
+			throw new Exception("Local Address " + localAddress + " out of range (0 to 1)");
 		this.id = id;
 		this.priority = priority;
 		this.localAddress = localAddress;
@@ -80,6 +85,7 @@ public class Packet
 			result += "\tReady to transmit in cycle " + packetReadyTime + " at input fifo " + inputFifoIndex + "\n";
 		if(packetArrivalTime != 0)
 			result += "\tTransmission completed in cycle " + packetArrivalTime + " at output fifo " + outputFifoIndex + "\n";
+		result += "\tPayload: " + payload;
 //		result += "\tPayload:\n";
 //		for(int i=0; i<payload.size(); i++)
 //			result += "\t\t" + Integer.toString(payload.get(i), 2) + "\n";
@@ -107,7 +113,7 @@ public class Packet
 		if(size-currentByte >= 4)
 		{
 			for(int i=3; i>=0; i--)
-				payload.add(id >> (8*i));
+				payload.add(255 & (id >> (8*i)));
 			currentByte += 4;
 		}
 		
@@ -127,9 +133,10 @@ public class Packet
 	
 	public void setPacketReady(int cycle, int fifoIndex) 
 	{
-		System.out.println("Starting to transmit packet " + id + " on fifo " + fifoIndex + " at cycle " + cycle + " with payload " + payload);
 		packetReadyTime = cycle;
 		inputFifoIndex = fifoIndex;
+		System.out.println("Starting to transmit packet:");
+		System.out.println(toString());
 	}
 
 	public void setPacketArrival(int cycle, int fifoIndex) throws Exception 
@@ -188,6 +195,17 @@ public class Packet
 			allowedOutputFifos = new LinkedList<OutputFifo>();
 		
 		allowedOutputFifos.add(outputFifo);
+	}
+
+	public static int numPacketsStillToTransmit() 
+	{
+		int i = 0;
+		for(Packet currentPacket : packets)
+		{
+			if(!currentPacket.isCorrectReceived())
+				i++;
+		}
+		return i;
 	}
 
 }

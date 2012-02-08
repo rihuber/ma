@@ -42,6 +42,7 @@ mkfifo namedPipes/response
 #java -classpath ../../../java/SwitchModel/bin/ ch.rihuber.switchModel.SwitchModel stimuliFileName=namedPipes/stimuli responseFileName=namedPipes/response &
 
 # start simulation
+# vsim -do "run -all" work.switchTb
 vsim work.switchTb
 
 # remove fifos

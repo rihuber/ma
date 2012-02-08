@@ -43,15 +43,14 @@ public class OutputFifo implements IVhdlModel
 			if(endOfPacket.toBoolean())
 			{
 				LinkedList<Integer> payloadCopy = new LinkedList<Integer>(currentPacket);
-				Packet completedPacket = Packet.findPacket(payloadCopy);
+				Packet completedPacket = Packet.findPacket(payloadCopy, true);
 				if(completedPacket == null)
-					System.err.println("Broken packet arrived on output fifo "+fifoIndex+". Received payload is: " + payloadCopy);
-				else
-				{
-					completedPacket.setPacketArrival(cycle, fifoIndex);
-					receivedPackets.add(completedPacket);
-					System.out.println("Received packet completely:\n"+completedPacket);
-				}
+					throw new Exception("Broken packet arrived on output fifo "+fifoIndex+". Received payload is: " + payloadCopy);
+				
+				completedPacket.setPacketArrival(cycle, fifoIndex);
+				receivedPackets.add(completedPacket);
+				System.out.println("Received packet completely:\n"+completedPacket);
+			
 				currentPacket = new LinkedList<Integer>();
 			}
 			if(new Random().nextInt(2) == 0)
@@ -65,10 +64,10 @@ public class OutputFifo implements IVhdlModel
 		LinkedList<VhdlDataType> result = new LinkedList<VhdlDataType>();
 		if(full)
 		{
-			if(new Random().nextInt(2) > 0)
+			if(new Random().nextInt(7) > 5)
 				full = false;
 		}
-		result.add(StdLogic.create(full)); //full
+		result.add(StdLogic.create(full));
 		return result;
 	}
 

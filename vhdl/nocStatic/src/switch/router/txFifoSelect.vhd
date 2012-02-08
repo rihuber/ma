@@ -21,14 +21,15 @@ end entity txFifoSelect;
 architecture rtl of txFifoSelect is
 begin
 
-	nomem_output : process (selectedAddr) is
+	nomem_output : process (selectedAddr, dataValid) is
 	begin
 		-- default assignment
 		fifoWriteEnable <= (others => '0');
 		
 		if dataValid = '1' then
-			if selectedAddr.global = globalAddress then
-				fifoWriteEnable(localAddrToInteger(selectedAddr.local)) <= '1';
+			-- second condition required because of possible inconsistent transient state
+			if selectedAddr.global = globalAddress and unsigned(selectedAddr.local) < numIntPorts then
+					fifoWriteEnable(localAddrToInteger(selectedAddr.local)) <= '1';
 			else
 				fifoWriteEnable(numIntPorts) <= '1';
 			end if;

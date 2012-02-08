@@ -39,14 +39,14 @@ architecture rtl of headerSelect is
 		variable rxPortNr : portNrWrapper;
 		variable pri : priority;
 	begin
-		pri := (others => '0');
+		pri := to_unsigned(numPriorities-1, priorityWidth);
 		loop
 			rxPortNr := selectHeaderWithPrio(headers,pri);
 			if rxPortNr /= portNrUndefined then
 				return rxPortNr;
 			end if;
-			pri := pri+1;
-			exit when pri = to_unsigned(numPriorities-1, priorityWidth); 
+			exit when pri = to_unsigned(0, priorityWidth);
+			pri := pri-1; 
 		end loop;
 		return portNrUndefined;
 	end selectHeader;	

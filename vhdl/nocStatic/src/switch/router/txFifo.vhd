@@ -22,7 +22,7 @@ end entity txFifo;
 
 architecture rtl of txFifo is
 
-	subtype position is unsigned(toLog2Ceil(numPorts-1) downto 0);
+	subtype position is unsigned(toLog2Ceil(numPorts)-1 downto 0);
 	subtype positionInteger is integer range numPorts-1 downto 0;
 	function positionToInteger(pos: position) return positionInteger is
 		variable result : positionInteger;
@@ -57,12 +57,20 @@ begin
  		-- writing
  		if writeEnable = '1' then
  			ringBuffer_n(positionToInteger(writePosition_p)) <= rxPortNrIn;
- 			writePosition_n <= (writePosition_p + 1) mod numPorts;
+ 			if writePosition_p < numPorts-1 then
+ 				writePosition_n <= writePosition_p + 1;
+ 			else
+ 				writePosition_n <= (others => '0');
+ 			end if;
  		end if;
  		
  		-- reading
  		if readEnable = '1' then
- 			readPosition_n <= (readPosition_p + 1) mod numPorts;
+ 			if readPosition_p < numPorts-1 then
+ 				readPosition_n <= readPosition_p + 1;
+ 			else
+ 				readPosition_n <= (others => '0');
+ 			end if;
  		end if;
  	end process nomem_nextState;
 

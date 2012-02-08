@@ -1,0 +1,8 @@
+Welcome to Xilinx CORE Generator.
+Help system initialized.
+Opening project file /home/rihuber/ma/coregen/interSwitchFifo.cgp.
+INFO:sim:760 - You can use the CORE Generator IP upgrade flow to upgrade the
+   selected IP Fifo_Generator v6.2 to a more recent version.
+Project, 'interSwitchFifo', initialised from file
+'/home/rihuber/ma/coregen/interSwitchFifo.cgp'.
+Closed project file.

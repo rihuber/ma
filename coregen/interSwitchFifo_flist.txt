@@ -1,0 +1,14 @@
+# Output products list for <interSwitchFifo>
+_xmsgs/pn_parser.xmsgs
+fifo_generator_readme.txt
+fifo_generator_ug175.pdf
+interSwitchFifo.asy
+interSwitchFifo.gise
+interSwitchFifo.ngc
+interSwitchFifo.sym
+interSwitchFifo.vhd
+interSwitchFifo.vho
+interSwitchFifo.xco
+interSwitchFifo.xise
+interSwitchFifo_flist.txt
+interSwitchFifo_xmdf.tcl

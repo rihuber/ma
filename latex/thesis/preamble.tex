@@ -1,0 +1,127 @@
+%****************************************************************************
+%** Copyright 2001, 2002, 2003, 2004 by Lukas Ruf, <lukas.ruf@lpr.ch>
+%** Information is provided under the terms of the
+%** GNU Free Documentation License <http://www.gnu.org/copyleft/fdl.html>
+%** Fairness: Cite the source of information, visit <http://www.topsy.net>
+%****************************************************************************
+%** Last Modification: 2005-07-11 1600
+%** 2004-02-17: Lukas Ruf
+%**             Added recommendation by Thomas Duebendorfer
+%**             Added different babel languages
+%**             Added more comments
+%** 2004-10-16: Lukas Ruf
+%**             More comments
+%**             Added subfigure
+%** 2005-07-11	Bernhard Tellenbach
+%**							Added \abbrev command to generate a list of abbrevations
+%**							Removed support for psfig and epsfig (old)
+%** 						Adapted syntax for new nomencl packet version
+%****************************************************************************
+
+\RequirePackage{times}
+
+\usepackage[english]{babel}
+%-% \usepackage[german]{babel}
+%-% \usepackage[ngerman]{babel}
+
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{type1cm}
+
+\usepackage{a4}
+
+\usepackage[dvips]{graphicx}
+\graphicspath{{Figures/},{Pictures/}}
+\usepackage{subfigure}
+
+\usepackage{fancyhdr}
+\usepackage{fancybox}
+
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{paralist}
+\usepackage{url}
+\usepackage{portland}
+\usepackage{lscape}
+\usepackage{moreverb}
+
+\usepackage{nomencl}
+  \let\abbrev\nomenclature
+  \renewcommand{\nomname}{List of Abbrevations}
+  \setlength{\nomlabelwidth}{.25\hsize}
+  \renewcommand{\nomlabel}[1]{#1 \dotfill}
+  \setlength{\nomitemsep}{-\parsep}
+  %For old nomencl package, uncomment this:
+  \makeglossary 
+  %For new nomencl package, uncomment this:
+  %\makenomenclature
+
+\usepackage[normalem]{ulem}
+  \newcommand{\markup}[1]{\uline{#1}}
+  
+   
+%% Thanks to Thomas Duebendorfer: Should create smoother fonts
+\usepackage{ae,aecompl}
+
+
+\usepackage[first,bottomafter,light,dvips]{draftcopy}
+\draftcopyName{Draft v0.1}{120}
+
+\addtolength{\textwidth}{2cm}
+\addtolength{\textheight}{2cm}
+\addtolength{\oddsidemargin}{-1.0cm}
+\addtolength{\evensidemargin}{-1.0cm}
+\addtolength{\topmargin}{-1.5cm}
+
+%% No Serifs: Put comment markers in front of the next three lines otherwise
+\renewcommand{\ttdefault}{cmtt}
+\renewcommand{\rmdefault}{phv}  % Helvetica for roman type as well as sf
+\renewcommand{\ttdefault}{pcr}  % use Courier for fixed pitch, if needed
+
+\newcommand{\?}{\discretionary{/}{}{/}}
+\newcommand{\liter}[0]{/home/ruf/Lib/Bibl/}
+\newcommand{\fref}[1]{\mbox{Figur~\ref{#1}}}
+
+\pagestyle{fancy}
+%%-lpr Note: 'chapters' are defined for 'book's only
+%%-lpr       in articles, we make use of sections only
+%%-lpr \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{}
+\fancyhead[LE,RO]{\bfseries\thepage}
+\fancyhead[LO]{\bfseries\rightmark}
+\fancyhead[RE]{\bfseries\leftmark}
+\renewcommand{\headrulewidth}{0.5pt}
+\addtolength{\headheight}{0.5pt}
+\fancypagestyle{plain}{%
+   \fancyhf{}
+   \fancyfoot[C]{\bfseries \thepage}
+   \fancyhead{}%get rid of headers on plain pages
+   \renewcommand{\headrulewidth}{0pt} % an the line
+}
+\newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}}
+
+\setlength{\parindent}{0in}
+
+\hyphenation{Lukas not-to-hyphen-else-where}
+
+\newcommand{\Appendix}[2][?]
+{
+  \refstepcounter{section}
+  \addcontentsline{toc}{appendix}
+  {
+    \protect\numberline{\appendixname~\thesection} %1
+  }
+  {
+    \flushright\large\bfseries\appendixname\ \thesection\par
+    \nohypens\centering#1\par
+  }
+  \vspace{\baselineskip}
+}
+
+\let\margin\marginpar
+\newcommand\myMargin[1]{\margin{\raggedright\scriptsize #1}}
+\renewcommand{\marginpar}[1]{\myMargin{#1}}
+
+\newcommand\CHECK{\myMargin{CHECK}}
+\newcommand\NEW{\myMargin{NEW}}

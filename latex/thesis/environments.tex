@@ -1,0 +1,19 @@
+%****************************************************************************
+%** Copyright 2002 by Lukas Ruf, ruf@topsy.net
+%** Information is provided under the terms of the
+%** GNU Free Documentation License http://www.gnu.org/copyleft/fdl.html
+%** Fairness: Cite the source of information, visit http://www.topsy.net
+%****************************************************************************
+
+\newenvironment{sourcecode}%
+{\vspace{0.5 cm} \footnotesize \verbatim}%
+{\endverbatim \normalsize \vspace{0.5 cm}}
+
+\newenvironment{inputverb}[1]%
+{\vspace{0.5 cm} \footnotesize \verbatiminput{#1}}%
+{\normalsize \vspace{0.5 cm}}
+
+\newenvironment{inputverb_nospace}[1]%
+{\footnotesize \verbatiminput{#1}}%
+{\normalsize}
+

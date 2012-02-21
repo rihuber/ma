@@ -26,8 +26,8 @@
 --     (c) Copyright 1995-2009 Xilinx, Inc.                                   --
 --     All rights reserved.                                                   --
 --------------------------------------------------------------------------------
--- You must compile the wrapper file interSwitchFifo.vhd when simulating
--- the core, interSwitchFifo. When compiling the wrapper file, be sure to
+-- You must compile the wrapper file interSwitchFifoDistRam.vhd when simulating
+-- the core, interSwitchFifoDistRam. When compiling the wrapper file, be sure to
 -- reference the XilinxCoreLib VHDL simulation library. For detailed
 -- instructions, please refer to the "CORE Generator Help".
 
@@ -40,7 +40,7 @@ USE ieee.std_logic_1164.ALL;
 -- synthesis translate_off
 Library XilinxCoreLib;
 -- synthesis translate_on
-ENTITY interSwitchFifo IS
+ENTITY interSwitchFifoDistRam IS
 	port (
 	clk: IN std_logic;
 	rst: IN std_logic;
@@ -50,11 +50,11 @@ ENTITY interSwitchFifo IS
 	dout: OUT std_logic_VECTOR(8 downto 0);
 	full: OUT std_logic;
 	empty: OUT std_logic);
-END interSwitchFifo;
+END interSwitchFifoDistRam;
 
-ARCHITECTURE interSwitchFifo_a OF interSwitchFifo IS
+ARCHITECTURE interSwitchFifoDistRam_a OF interSwitchFifoDistRam IS
 -- synthesis translate_off
-component wrapped_interSwitchFifo
+component wrapped_interSwitchFifoDistRam
 	port (
 	clk: IN std_logic;
 	rst: IN std_logic;
@@ -67,7 +67,7 @@ component wrapped_interSwitchFifo
 end component;
 
 -- Configuration specification 
-	for all : wrapped_interSwitchFifo use entity XilinxCoreLib.fifo_generator_v6_2(behavioral)
+	for all : wrapped_interSwitchFifoDistRam use entity XilinxCoreLib.fifo_generator_v6_2(behavioral)
 		generic map(
 			c_has_int_clk => 0,
 			c_wr_response_latency => 1,
@@ -77,7 +77,7 @@ end component;
 			c_has_rd_data_count => 0,
 			c_din_width => 9,
 			c_has_wr_data_count => 0,
-			c_full_flags_rst_val => 0,
+			c_full_flags_rst_val => 1,
 			c_implementation_type => 0,
 			c_family => "virtex6",
 			c_use_embedded_reg => 0,
@@ -90,7 +90,7 @@ end component;
 			c_preload_latency => 0,
 			c_dout_width => 9,
 			c_msgon_val => 1,
-			c_rd_depth => 16,
+			c_rd_depth => 1024,
 			c_default_value => "BlankString",
 			c_mif_file_name => "BlankString",
 			c_error_injection_type => 0,
@@ -98,42 +98,42 @@ end component;
 			c_has_rd_rst => 0,
 			c_has_almost_full => 0,
 			c_has_rst => 1,
-			c_data_count_width => 5,
+			c_data_count_width => 11,
 			c_has_wr_ack => 0,
 			c_use_ecc => 0,
 			c_wr_ack_low => 0,
 			c_common_clock => 1,
-			c_rd_pntr_width => 4,
+			c_rd_pntr_width => 10,
 			c_use_fwft_data_count => 1,
 			c_has_almost_empty => 0,
-			c_rd_data_count_width => 5,
+			c_rd_data_count_width => 11,
 			c_enable_rlocs => 0,
-			c_wr_pntr_width => 4,
+			c_wr_pntr_width => 10,
 			c_overflow_low => 0,
 			c_prog_empty_type => 0,
 			c_optimization_mode => 0,
-			c_wr_data_count_width => 5,
+			c_wr_data_count_width => 11,
 			c_preload_regs => 1,
 			c_dout_rst_val => "0",
 			c_has_data_count => 0,
-			c_prog_full_thresh_negate_val => 14,
-			c_wr_depth => 16,
+			c_prog_full_thresh_negate_val => 1022,
+			c_wr_depth => 1024,
 			c_prog_empty_thresh_negate_val => 5,
 			c_prog_empty_thresh_assert_val => 4,
 			c_has_valid => 0,
 			c_init_wr_pntr_val => 0,
-			c_prog_full_thresh_assert_val => 15,
+			c_prog_full_thresh_assert_val => 1023,
 			c_use_fifo16_flags => 0,
 			c_has_backup => 0,
 			c_valid_low => 0,
-			c_prim_fifo_type => "512x36",
+			c_prim_fifo_type => "1kx18",
 			c_count_type => 0,
 			c_prog_full_type => 0,
-			c_memory_type => 1);
+			c_memory_type => 2);
 -- synthesis translate_on
 BEGIN
 -- synthesis translate_off
-U0 : wrapped_interSwitchFifo
+U0 : wrapped_interSwitchFifoDistRam
 		port map (
 			clk => clk,
 			rst => rst,
@@ -145,5 +145,5 @@ U0 : wrapped_interSwitchFifo
 			empty => empty);
 -- synthesis translate_on
 
-END interSwitchFifo_a;
+END interSwitchFifoDistRam_a;
 

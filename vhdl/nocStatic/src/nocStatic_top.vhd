@@ -237,7 +237,7 @@ begin
 	-----------------------------------------------------------------
 	fb_3 : entity work.simpleFB
 		generic map(
-			headerValue => "00000001",
+			headerValue => "00000000",
 			resetWithToken => false
 		)
 		port map(

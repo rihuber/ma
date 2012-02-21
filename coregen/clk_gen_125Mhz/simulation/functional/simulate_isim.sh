@@ -49,12 +49,13 @@
 
 # lin
 # create the project
-vhpcomp -work work ../../../clk_gen_125Mhz.vhd
-vhpcomp -work work ../../example_design/clk_gen_125Mhz_exdes.vhd
-vhpcomp -work work ../clk_gen_125Mhz_tb.vhd
+vlogcomp -work work ${XILINX}/verilog/src/glbl.v
+vlogcomp -work work ../../../clk_gen_125Mhz.v
+vlogcomp -work work ../../example_design/clk_gen_125Mhz_exdes.v
+vlogcomp -work work ../clk_gen_125Mhz_tb.v
 
 # compile the project
-fuse work.clk_gen_125Mhz_tb  -L unisim -o clk_gen_125Mhz_isim.exe
+fuse work.clk_gen_125Mhz_tb work.glbl -L unisims_ver -o clk_gen_125Mhz_isim.exe
 
 # run the simulation script
 ./clk_gen_125Mhz_isim.exe -gui -tclbatch simcmds.tcl

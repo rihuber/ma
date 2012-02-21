@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 12.3
-# Date: Wed Feb  8 18:51:00 2012
+# Date: Thu Feb  9 10:36:31 2012
 #
 ##############################################################
 #
@@ -28,7 +28,7 @@ SET package = ff1156
 SET removerpms = false
 SET simulationfiles = Behavioral
 SET speedgrade = -1
-SET verilogsim = false
+SET verilogsim = true
 SET vhdlsim = true
 # END Project Options
 # BEGIN Select
@@ -219,4 +219,4 @@ CSET use_spread_spectrum=false
 CSET use_status=false
 # END Parameters
 GENERATE
-# CRC:  9eff091
+# CRC: 6ebf9e38

@@ -52,12 +52,13 @@ set work work
 vlib work
 
 # compile all of the files
-vcom -work work ../../../clk_gen_125Mhz.vhd
-vcom -work work ../../example_design/clk_gen_125Mhz_exdes.vhd
-vcom -work work ../clk_gen_125Mhz_tb.vhd
+vlog -work work $env(XILINX)/verilog/src/glbl.v
+vlog -work work ../../../clk_gen_125Mhz.v
+vlog -work work ../../example_design/clk_gen_125Mhz_exdes.v
+vlog -work work ../clk_gen_125Mhz_tb.v
 
 # run the simulation
-vsim  -voptargs="+acc" -L unisim work.clk_gen_125Mhz_tb 
+vsim  -voptargs="+acc" -L unisims_ver work.clk_gen_125Mhz_tb work.glbl
 do wave.do
 log clk_gen_125Mhz_tb/dut/counter
 log -r /*

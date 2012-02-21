@@ -38,6 +38,6 @@ echo 'Running design through bitgen'
 bitgen -w routed
 
 echo 'Running netgen to create gate level model for the clocking wizard example design'
-netgen -ofmt vhdl -sim -tm clk_gen_125Mhz_exdes -w routed.ncd routed.vhd
+netgen -ofmt verilog -sim -tm clk_gen_125Mhz_exdes -w routed.ncd routed.v
 cd ..
 

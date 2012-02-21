@@ -46,6 +46,7 @@
 # THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
 # PART OF THIS FILE AT ALL TIMES.
 # 
+add wave -noupdate -format Literal -radix ascii /clk_gen_125Mhz_tb/test_phase
 add wave -noupdate -divider {Input clocks}
 add wave -noupdate -format Logic /clk_gen_125Mhz_tb/CLK_IN1
 add wave -noupdate -divider {Output clocks}

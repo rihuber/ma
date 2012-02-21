@@ -25,7 +25,7 @@ end entity simpleFB;
 
 architecture rtl of simpleFB is
 
-	constant counterWidth : integer := 4;
+	constant counterWidth : integer := 28;
 	
 	type state is (IDLE, RECEIVING_TOKEN, HOLDING_TOKEN, SENDING_TOKEN);
 	signal state_p, state_n : state;

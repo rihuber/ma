@@ -1,0 +1,2 @@
+verilog work ../../clk_gen_125Mhz.v
+verilog work ../example_design/clk_gen_125Mhz_exdes.v

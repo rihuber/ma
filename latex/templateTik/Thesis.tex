@@ -1,0 +1,108 @@
+%%****************************************************************************
+%** Copyright 2002, 2003 by Lukas Ruf, <ruf@topsy.net>
+%** Information is provided under the terms of the
+%** GNU Free Documentation License <http://www.gnu.org/copyleft/fdl.html>
+%** Fairness: Cite the source of information, visit <http://www.topsy.net>
+%****************************************************************************
+%** Last Modification: 2005-07-11 1600
+%** 2005-07-11	Bernhard Tellenbach
+%**							Switched default document class to: book
+%**							Added \include{appendix.tex}
+%****************************************************************************
+
+\documentclass[10pt,final,a4paper,twoside]{book}
+%\documentclass[10pt,draft,a4paper,oneside]{report}
+%\documentclass[10pt,draft,a4paper,oneside]{article}
+
+%**Latex Master Document*********
+
+%** preamble.tex: here all the document-wide settings
+%                 are defined
+\input{preamble}
+
+%********************************
+
+%** begin the document environment
+\begin{document}
+
+\frenchspacing
+\sloppy
+
+%** Title.tex: Title page to be printed first
+\input{Title}
+
+%** environments.tex: Predefined Environments
+\include{environments}
+
+%**Documentation****************
+
+%** Abstract.tex: Contains a brief description
+%                 of what the reader may expect
+\include{Abstract}
+
+%** Table of Contents
+\tableofcontents
+
+%** Table of Figures
+\listoffigures
+
+%** Table of Figures
+\listoftables
+
+%** Introduction.tex: Contains an introduction to
+%                     the topic and motivates the work.
+%                     State what the reader can find where.
+\include{Introduction}
+
+%** Problem.tex: Documentation in own words of the problem to
+%                be addressed in this document:
+%                What is the challenge, why is it useful what you
+%                plan to do.
+\include{Problem}
+
+%** Design.tex: How was the problem attacked, what was the design
+%               the architecture 
+\include{Design}
+
+%** Results.tex: What were the results achieved including an evaluation
+%
+\include{Results}
+
+%** Outlook.tex: What needs to be done further, what is planed
+%
+\include{Outlook}
+
+%** Summary.tex: What have you achieved, what have you presented in this
+%                document.  What are the highlights of your work.
+%                It should conclude by a conclusion.
+\include{Summary}
+
+%** Switch to appendix-mode in Latex.
+%
+\appendix
+
+%** I would like to have the appendices enumerated by Alphabetical
+%   characters.
+\renewcommand{\thepart}{\Alph{part}}
+
+%** appendix.tex: Install instructions, configurations, test results,
+%		simulation data, additional theoretical disquisitions, ...
+%
+\include{appendix}
+
+%** Timetable.tex: Timetable you worked out.
+%
+\include{Timetable}
+
+%** Originalproblem.tex: The problem statement you received.
+%
+\include{Originalproblem}
+
+
+%** Bibliography.tex: All cited documents are stored in here.
+%                     Of course, we could work with bibtex too.
+%                     Bur for a short thesis, this style is ok.
+\include{Bibliography}
+
+%** end the document environment
+\end{document}

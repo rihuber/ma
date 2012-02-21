@@ -1,0 +1,42 @@
+%%****************************************************************************
+%** Copyright 2005 by Bernhard Tellenbach, <bernhard.tellenbach@airmail.ch>
+%** Information is provided under the terms of the
+%** GNU Free Documentation License <http://www.gnu.org/copyleft/fdl.html>
+%****************************************************************************
+%****************************************************************************
+%** Last Modification: 2005-07-11 1600
+%** 2005-07-11	Updated the syntax to match the current nomencl packet
+%****************************************************************************
+
+\chapter{\label{appendixA}Title}
+
+
+\section{\label{chapterA:section1}Section 1}
+
+\begin{verbatim}
+All is presented exactely the way you write it.
+
+Page boundaries are not checked.....................................................................................
+
+\end{verbatim}
+
+\chapter{\label{appendixB}Title}
+
+
+%Entries for the list of abbrevations:
+%
+%To generate the list of abbrevations, execute:
+%makeindex Thesis.nlo -s nomencl.ist -o Thesis.nls
+%
+%If you are using TeXniCenter, specify:
+%"%bm.nlo" -s nomencl.ist -o "%bm.nls"
+%as beeing the argument list for makeindex.
+%---------------------------------------------------------------------------------------------------------
+%For old nomencl package uncomment this:
+%\printglossary
+%For new nomencl package uncomment this:
+\printnomenclature
+
+\abbrev{XCA}{\markup{X}tremely \markup{C}ool \markup{A}bbrevations}
+
+

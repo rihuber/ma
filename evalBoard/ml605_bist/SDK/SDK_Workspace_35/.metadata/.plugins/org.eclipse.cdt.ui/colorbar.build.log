@@ -1,0 +1,38 @@
+
+**** Build of configuration Debug for project colorbar ****
+
+make all 
+Building file: ../src/colorbar.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../ml605_bist_bsp_0/microblaze_0/include -mxl-pattern-compare -mcpu=v8.20.a -mno-xl-soft-mul -MMD -MP -MF"src/colorbar.d" -MT"src/colorbar.d" -o"src/colorbar.o" "../src/colorbar.c"
+Finished building: ../src/colorbar.c
+' '
+Building file: ../src/xtmrctr_udelay.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../ml605_bist_bsp_0/microblaze_0/include -mxl-pattern-compare -mcpu=v8.20.a -mno-xl-soft-mul -MMD -MP -MF"src/xtmrctr_udelay.d" -MT"src/xtmrctr_udelay.d" -o"src/xtmrctr_udelay.o" "../src/xtmrctr_udelay.c"
+Finished building: ../src/xtmrctr_udelay.c
+' '
+Building target: colorbar.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ml605_bist_bsp_0/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.20.a -mno-xl-soft-mul -o"colorbar.elf"  ./src/colorbar.o ./src/xtmrctr_udelay.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -lxilflash
+Finished building target: colorbar.elf
+' '
+Invoking: MicroBlaze Print Size
+mb-size colorbar.elf  |tee "colorbar.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  14838	   1576	   2154	  18568	   4888	colorbar.elf
+Finished building: colorbar.elf.size
+' '
+Invoking: Xilinx ELF Check
+elfcheck colorbar.elf -hw ../../ml605_bist_hw_platform/system.xml -pe microblaze_0  |tee "colorbar.elf.elfcheck"
+elfcheck
+Xilinx EDK 13.3 Build EDK_O.76xd
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../ml605_bist_hw_platform/system.xml -pe
+microblaze_0 colorbar.elf 
+
+ELF file	: colorbar.elf
+elfcheck passed.
+Finished building: colorbar.elf.elfcheck
+' '

@@ -1,0 +1,33 @@
+
+**** Build of configuration Debug for project hello_gpio ****
+
+make all 
+Building file: ../src/hello_gpio.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../ml605_bist_bsp_0/microblaze_0/include -mxl-pattern-compare -mcpu=v8.20.a -mno-xl-soft-mul -MMD -MP -MF"src/hello_gpio.d" -MT"src/hello_gpio.d" -o"src/hello_gpio.o" "../src/hello_gpio.c"
+Finished building: ../src/hello_gpio.c
+' '
+Building target: hello_gpio.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ml605_bist_bsp_0/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.20.a -mno-xl-soft-mul -o"hello_gpio.elf"  ./src/hello_gpio.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -lxilflash
+Finished building target: hello_gpio.elf
+' '
+Invoking: MicroBlaze Print Size
+mb-size hello_gpio.elf  |tee "hello_gpio.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7862	    472	   2114	  10448	   28d0	hello_gpio.elf
+Finished building: hello_gpio.elf.size
+' '
+Invoking: Xilinx ELF Check
+elfcheck hello_gpio.elf -hw ../../ml605_bist_hw_platform/system.xml -pe microblaze_0  |tee "hello_gpio.elf.elfcheck"
+elfcheck
+Xilinx EDK 13.3 Build EDK_O.76xd
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../ml605_bist_hw_platform/system.xml -pe
+microblaze_0 hello_gpio.elf 
+
+ELF file	: hello_gpio.elf
+elfcheck passed.
+Finished building: hello_gpio.elf.elfcheck
+' '

@@ -1,0 +1,48 @@
+
+**** Build of configuration Debug for project hello_lcd ****
+
+make all 
+Building file: ../src/lcd.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../ml605_bist_bsp_0/microblaze_0/include -mxl-pattern-compare -mcpu=v8.20.a -mno-xl-soft-mul -MMD -MP -MF"src/lcd.d" -MT"src/lcd.d" -o"src/lcd.o" "../src/lcd.c"
+Finished building: ../src/lcd.c
+' '
+Building file: ../src/lcd_test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../ml605_bist_bsp_0/microblaze_0/include -mxl-pattern-compare -mcpu=v8.20.a -mno-xl-soft-mul -MMD -MP -MF"src/lcd_test.d" -MT"src/lcd_test.d" -o"src/lcd_test.o" "../src/lcd_test.c"
+Finished building: ../src/lcd_test.c
+' '
+Building file: ../src/sleep.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../ml605_bist_bsp_0/microblaze_0/include -mxl-pattern-compare -mcpu=v8.20.a -mno-xl-soft-mul -MMD -MP -MF"src/sleep.d" -MT"src/sleep.d" -o"src/sleep.o" "../src/sleep.c"
+Finished building: ../src/sleep.c
+' '
+Building file: ../src/xil_sprintf.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../ml605_bist_bsp_0/microblaze_0/include -mxl-pattern-compare -mcpu=v8.20.a -mno-xl-soft-mul -MMD -MP -MF"src/xil_sprintf.d" -MT"src/xil_sprintf.d" -o"src/xil_sprintf.o" "../src/xil_sprintf.c"
+Finished building: ../src/xil_sprintf.c
+' '
+Building target: hello_lcd.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ml605_bist_bsp_0/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.20.a -mno-xl-soft-mul -o"hello_lcd.elf"  ./src/lcd.o ./src/lcd_test.o ./src/sleep.o ./src/xil_sprintf.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -lxilflash
+Finished building target: hello_lcd.elf
+' '
+Invoking: MicroBlaze Print Size
+mb-size hello_lcd.elf  |tee "hello_lcd.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10074	    388	   2094	  12556	   310c	hello_lcd.elf
+Finished building: hello_lcd.elf.size
+' '
+Invoking: Xilinx ELF Check
+elfcheck hello_lcd.elf -hw ../../ml605_bist_hw_platform/system.xml -pe microblaze_0  |tee "hello_lcd.elf.elfcheck"
+elfcheck
+Xilinx EDK 13.3 Build EDK_O.76xd
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../ml605_bist_hw_platform/system.xml -pe
+microblaze_0 hello_lcd.elf 
+
+ELF file	: hello_lcd.elf
+elfcheck passed.
+Finished building: hello_lcd.elf.elfcheck
+' '

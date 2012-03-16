@@ -1,0 +1,33 @@
+
+**** Build of configuration Debug for project hello_mem ****
+
+make all 
+Building file: ../src/mpmc_mem_test_example.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../ml605_bist_bsp_0/microblaze_0/include -mxl-pattern-compare -mcpu=v8.20.a -mno-xl-soft-mul -MMD -MP -MF"src/mpmc_mem_test_example.d" -MT"src/mpmc_mem_test_example.d" -o"src/mpmc_mem_test_example.o" "../src/mpmc_mem_test_example.c"
+Finished building: ../src/mpmc_mem_test_example.c
+' '
+Building target: hello_mem.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ml605_bist_bsp_0/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.20.a -mno-xl-soft-mul -o"hello_mem.elf"  ./src/mpmc_mem_test_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -lxilflash
+Finished building target: hello_mem.elf
+' '
+Invoking: MicroBlaze Print Size
+mb-size hello_mem.elf  |tee "hello_mem.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  14694	    440	   2274	  17408	   4400	hello_mem.elf
+Finished building: hello_mem.elf.size
+' '
+Invoking: Xilinx ELF Check
+elfcheck hello_mem.elf -hw ../../ml605_bist_hw_platform/system.xml -pe microblaze_0  |tee "hello_mem.elf.elfcheck"
+elfcheck
+Xilinx EDK 13.3 Build EDK_O.76xd
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../ml605_bist_hw_platform/system.xml -pe
+microblaze_0 hello_mem.elf 
+
+ELF file	: hello_mem.elf
+elfcheck passed.
+Finished building: hello_mem.elf.elfcheck
+' '

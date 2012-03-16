@@ -1,0 +1,33 @@
+
+**** Build of configuration Debug for project hello_switch ****
+
+make all 
+Building file: ../src/xgpio_tapp_example.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../ml605_bist_bsp_0/microblaze_0/include -mxl-pattern-compare -mcpu=v8.20.a -mno-xl-soft-mul -MMD -MP -MF"src/xgpio_tapp_example.d" -MT"src/xgpio_tapp_example.d" -o"src/xgpio_tapp_example.o" "../src/xgpio_tapp_example.c"
+Finished building: ../src/xgpio_tapp_example.c
+' '
+Building target: hello_switch.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ml605_bist_bsp_0/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.20.a -mno-xl-soft-mul -o"hello_switch.elf"  ./src/xgpio_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -lxilflash
+Finished building target: hello_switch.elf
+' '
+Invoking: MicroBlaze Print Size
+mb-size hello_switch.elf  |tee "hello_switch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7998	    472	   2130	  10600	   2968	hello_switch.elf
+Finished building: hello_switch.elf.size
+' '
+Invoking: Xilinx ELF Check
+elfcheck hello_switch.elf -hw ../../ml605_bist_hw_platform/system.xml -pe microblaze_0  |tee "hello_switch.elf.elfcheck"
+elfcheck
+Xilinx EDK 13.3 Build EDK_O.76xd
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../ml605_bist_hw_platform/system.xml -pe
+microblaze_0 hello_switch.elf 
+
+ELF file	: hello_switch.elf
+elfcheck passed.
+Finished building: hello_switch.elf.elfcheck
+' '

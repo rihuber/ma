@@ -1,5 +1,5 @@
 *******************************************************************************
-** © Copyright 2010 Xilinx, Inc. All rights reserved.
+** © Copyright 2011 Xilinx, Inc. All rights reserved.
 ** This file contains confidential and proprietary information of Xilinx, Inc. and 
 ** is protected under U.S. and international copyright and other intellectual property laws.
 *******************************************************************************

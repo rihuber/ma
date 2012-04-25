@@ -1,0 +1,33 @@
+
+**** Build of configuration Debug for project hello_sysace ****
+
+make all 
+Building file: ../src/testfatfs.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../ml605_bist_bsp_0/microblaze_0/include -mxl-pattern-compare -mcpu=v8.20.a -mno-xl-soft-mul -MMD -MP -MF"src/testfatfs.d" -MT"src/testfatfs.d" -o"src/testfatfs.o" "../src/testfatfs.c"
+Finished building: ../src/testfatfs.c
+' '
+Building target: hello_sysace.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ml605_bist_bsp_0/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.20.a -mno-xl-soft-mul -o"hello_sysace.elf"  ./src/testfatfs.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -lxilflash
+Finished building target: hello_sysace.elf
+' '
+Invoking: MicroBlaze Print Size
+mb-size hello_sysace.elf  |tee "hello_sysace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25410	    488	  14950	  40848	   9f90	hello_sysace.elf
+Finished building: hello_sysace.elf.size
+' '
+Invoking: Xilinx ELF Check
+elfcheck hello_sysace.elf -hw ../../ml605_bist_hw_platform/system.xml -pe microblaze_0  |tee "hello_sysace.elf.elfcheck"
+elfcheck
+Xilinx EDK 13.3 Build EDK_O.76xd
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../ml605_bist_hw_platform/system.xml -pe
+microblaze_0 hello_sysace.elf 
+
+ELF file	: hello_sysace.elf
+elfcheck passed.
+Finished building: hello_sysace.elf.elfcheck
+' '

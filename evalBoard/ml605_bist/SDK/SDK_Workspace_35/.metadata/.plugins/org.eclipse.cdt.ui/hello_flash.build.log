@@ -1,0 +1,38 @@
+
+**** Build of configuration Debug for project hello_flash ****
+
+make all 
+Building file: ../src/hello_flash.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../ml605_bist_bsp_0/microblaze_0/include -mxl-pattern-compare -mcpu=v8.20.a -mno-xl-soft-mul -MMD -MP -MF"src/hello_flash.d" -MT"src/hello_flash.d" -o"src/hello_flash.o" "../src/hello_flash.c"
+Finished building: ../src/hello_flash.c
+' '
+Building file: ../src/xilflash_protection_example.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../ml605_bist_bsp_0/microblaze_0/include -mxl-pattern-compare -mcpu=v8.20.a -mno-xl-soft-mul -MMD -MP -MF"src/xilflash_protection_example.d" -MT"src/xilflash_protection_example.d" -o"src/xilflash_protection_example.o" "../src/xilflash_protection_example.c"
+Finished building: ../src/xilflash_protection_example.c
+' '
+Building target: hello_flash.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ml605_bist_bsp_0/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.20.a -mno-xl-soft-mul -o"hello_flash.elf"  ./src/hello_flash.o ./src/xilflash_protection_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -lxilflash
+Finished building target: hello_flash.elf
+' '
+Invoking: MicroBlaze Print Size
+mb-size hello_flash.elf  |tee "hello_flash.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  18700	    388	   3060	  22148	   5684	hello_flash.elf
+Finished building: hello_flash.elf.size
+' '
+Invoking: Xilinx ELF Check
+elfcheck hello_flash.elf -hw ../../ml605_bist_hw_platform/system.xml -pe microblaze_0  |tee "hello_flash.elf.elfcheck"
+elfcheck
+Xilinx EDK 13.3 Build EDK_O.76xd
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../ml605_bist_hw_platform/system.xml -pe
+microblaze_0 hello_flash.elf 
+
+ELF file	: hello_flash.elf
+elfcheck passed.
+Finished building: hello_flash.elf.elfcheck
+' '

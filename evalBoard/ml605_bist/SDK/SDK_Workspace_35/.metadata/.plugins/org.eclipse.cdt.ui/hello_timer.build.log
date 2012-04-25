@@ -1,0 +1,33 @@
+
+**** Build of configuration Debug for project hello_timer ****
+
+make all 
+Building file: ../src/xtmrctr_intr_example.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../ml605_bist_bsp_0/microblaze_0/include -mxl-pattern-compare -mcpu=v8.20.a -mno-xl-soft-mul -MMD -MP -MF"src/xtmrctr_intr_example.d" -MT"src/xtmrctr_intr_example.d" -o"src/xtmrctr_intr_example.o" "../src/xtmrctr_intr_example.c"
+Finished building: ../src/xtmrctr_intr_example.c
+' '
+Building target: hello_timer.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ml605_bist_bsp_0/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.20.a -mno-xl-soft-mul -o"hello_timer.elf"  ./src/xtmrctr_intr_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -lxilflash
+Finished building target: hello_timer.elf
+' '
+Invoking: MicroBlaze Print Size
+mb-size hello_timer.elf  |tee "hello_timer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12454	    404	   2178	  15036	   3abc	hello_timer.elf
+Finished building: hello_timer.elf.size
+' '
+Invoking: Xilinx ELF Check
+elfcheck hello_timer.elf -hw ../../ml605_bist_hw_platform/system.xml -pe microblaze_0  |tee "hello_timer.elf.elfcheck"
+elfcheck
+Xilinx EDK 13.3 Build EDK_O.76xd
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../ml605_bist_hw_platform/system.xml -pe
+microblaze_0 hello_timer.elf 
+
+ELF file	: hello_timer.elf
+elfcheck passed.
+Finished building: hello_timer.elf.elfcheck
+' '

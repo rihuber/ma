@@ -3,6 +3,7 @@
 	<name>nocStatic</name>
 	<comment></comment>
 	<projects>
+		<project>CommonLibraries</project>
 		<project>External Files</project>
 	</projects>
 	<buildSpec>

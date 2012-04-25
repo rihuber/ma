@@ -1,7 +1,7 @@
-Release 12.3 - par M.70d (nt)
-Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+Release 13.3 - par O.76xd (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-Mon Sep 27 10:59:56 2010
+Thu Oct 13 15:19:59 2011
 
 
 # NOTE: This file is designed to be imported into a spreadsheet program
@@ -336,7 +336,7 @@ AJ8|||VCCO_34|||34|||||2.50||||
 AJ9||IOBS|IO_L11N_SRCC_34|UNUSED||34|||||||||
 AJ10|fpga_0_Hard_Ethernet_MAC_GMII_TX_EN_0_pin|IOB|IO_L8P_SRCC_33|OUTPUT|LVCMOS25*|33|12|SLOW||||LOCATED|YES|NONE|
 AJ11|lcd_gpio_GPIO_IO<4>|IOB|IO_L1P_33|BIDIR|LVCMOS25*|33|12|SLOW||NONE||LOCATED|YES|NONE|
-AJ12|fpga_0_FLASH_Mem_CEN_pin|IOB|IO_L3N_33|OUTPUT|LVCMOS25*|33|12|SLOW||||LOCATED|NO|NONE|
+AJ12|fpga_0_FLASH_Mem_CEN_pin|IOB|IO_L3N_33|OUTPUT|LVCMOS25*|33|12|SLOW||||LOCATED|YES|NONE|
 AJ13|||GND||||||||||||
 AJ14|fpga_0_SysACE_CompactFlash_SysACE_CEN_pin|IOB|IO_L1N_32|OUTPUT|LVCMOS25*|32|12|SLOW||||LOCATED|YES|NONE|
 AJ15||IOBM|IO_L2P_32|UNUSED||32|||||||||
@@ -617,7 +617,7 @@ D17||IOBS|IO_L1N_36|UNUSED||36|||||||||
 D18|||GND||||||||||||
 D19||IOBS|IO_L13N_26|UNUSED||26|||||||||
 D20||IOBS|IO_L0N_26|UNUSED||26|||||||||
-D21||IOBM|IO_L12P_VRN_26|UNUSED||26|||TERMINATION||||||
+D21||IOBM|IO_L12P_VRN_26|Termination Required||26|||TERMINATION||||||
 D22|fpga_0_DIP_Switches_8Bit_GPIO_IO_I_pin<0>|IOB|IO_L19N_26|INPUT|SSTL15|26||||NONE||LOCATED|NO|NONE|
 D23|||VCCO_26|||26|||||1.50||||
 D24||IOBM|IO_L8P_SRCC_25|UNUSED||25|||||||||
@@ -651,7 +651,7 @@ E17||IOBS|IO_L0N_36|UNUSED||36|||||||||
 E18|fpga_0_DDR3_SDRAM_DDR3_Reset_n_pin|IOB|IO_L1P_36|OUTPUT|SSTL15|36||||||LOCATED|YES|NONE|
 E19||IOBM|IO_L13P_26|UNUSED||26|||||||||
 E20|||VCCO_26|||26|||||1.50||||
-E21||IOBS|IO_L12N_VRP_26|UNUSED||26|||TERMINATION||||||
+E21||IOBS|IO_L12N_VRP_26|Termination Required||26|||TERMINATION||||||
 E22||IOBM|IO_L6P_26|UNUSED||26|||||||||
 E23||IOBS|IO_L6N_26|UNUSED||26|||||||||
 E24||IOBS|IO_L8N_SRCC_25|UNUSED||25|||||||||
@@ -659,7 +659,7 @@ E25|||GND||||||||||||
 E26|fpga_0_DDR3_SDRAM_DDR3_DQ_pin<27>|IOB|IO_L2P_25|BIDIR|SSTL15_T_DCI|25||||NONE||LOCATED|NO|SPLIT|
 E27||IOBS|IO_L4N_VREF_25|VREF Required||25|||||0.75||||
 E28||IOBS|IO_L14N_VREF_25|VREF Required||25|||||0.75||||
-E29||IOBM|IO_L16P_VRN_25|UNUSED||25|||TERMINATION||||||
+E29||IOBM|IO_L16P_VRN_25|UNUSED||25|||||||||
 E30|||VCCO_25|||25|||||1.50||||
 E31||IOBS|IO_L11N_SRCC_16|UNUSED||16|||||||||
 E32||IOBM|IO_L2P_16|UNUSED||16|||||||||
@@ -680,7 +680,7 @@ F12|||GND||||||||||||
 F13|fpga_0_DDR3_SDRAM_DDR3_DQ_pin<2>|IOB|IO_L15N_SM7N_35|BIDIR|SSTL15_T_DCI|35||||NONE||LOCATED|NO|SPLIT|
 F14|fpga_0_DDR3_SDRAM_DDR3_DQ_pin<22>|IOB|IO_L5P_SM2P_35|BIDIR|SSTL15_T_DCI|35||||NONE||LOCATED|NO|SPLIT|
 F15|fpga_0_DDR3_SDRAM_DDR3_Addr_pin<9>|IOB|IO_L16N_36|OUTPUT|SSTL15|36||||||LOCATED|NO|NONE|
-F16||IOBM|IO_L12P_VRN_36|UNUSED||36|||TERMINATION||||||
+F16||IOBM|IO_L12P_VRN_36|Termination Required||36|||TERMINATION||||||
 F17|||VCCO_36|||36|||||1.50||||
 F18|fpga_0_DDR3_SDRAM_DDR3_ODT_pin<0>|IOB|IO_L0P_36|OUTPUT|SSTL15|36||||||LOCATED|NO|NONE|
 F19||IOBM|IO_L8P_SRCC_26|UNUSED||26|||||||||
@@ -693,7 +693,7 @@ F25||IOBM|IO_L11P_SRCC_25|UNUSED||25|||||||||
 F26|fpga_0_DDR3_SDRAM_DDR3_DQ_pin<25>|IOB|IO_L2N_25|BIDIR|SSTL15_T_DCI|25||||NONE||LOCATED|NO|SPLIT|
 F27|||VCCO_25|||25|||||1.50||||
 F28||IOBM|IO_L14P_25|UNUSED||25|||||||||
-F29||IOBS|IO_L16N_VRP_25|UNUSED||25|||TERMINATION||||||
+F29||IOBS|IO_L16N_VRP_25|UNUSED||25|||||||||
 F30||IOBM|IO_L3P_16|UNUSED||16|||||||||
 F31||IOBM|IO_L11P_SRCC_16|UNUSED||16|||||||||
 F32|||GND||||||||||||
@@ -714,7 +714,7 @@ G12|fpga_0_DDR3_SDRAM_DDR3_DQ_pin<20>|IOB|IO_L4P_35|BIDIR|SSTL15_T_DCI|35||||NON
 G13|fpga_0_DDR3_SDRAM_DDR3_DQ_pin<21>|IOB|IO_L0P_35|BIDIR|SSTL15_T_DCI|35||||NONE||LOCATED|NO|SPLIT|
 G14|||VCCO_35|||35|||||1.50||||
 G15|fpga_0_DDR3_SDRAM_DDR3_Addr_pin<8>|IOB|IO_L16P_36|OUTPUT|SSTL15|36||||||LOCATED|NO|NONE|
-G16||IOBS|IO_L12N_VRP_36|UNUSED||36|||TERMINATION||||||
+G16||IOBS|IO_L12N_VRP_36|Termination Required||36|||TERMINATION||||||
 G17|fpga_0_Push_Buttons_5Bit_GPIO_IO_pin<3>|IOB|IO_L3N_36|BIDIR|SSTL15_T_DCI|36||||NONE||LOCATED|YES|SPLIT|
 G18|fpga_0_DDR3_SDRAM_DDR3_Clk_pin<0>|IOBM|IO_L8P_SRCC_36|OUTPUT|DIFF_SSTL15|36||||||LOCATED|NO|NONE|
 G19|||GND||||||||||||
@@ -1184,10 +1184,4 @@ All RSVD_0 pins must be tied to GROUND.
 ****** Special VCCO requirements may apply. Please consult the device 
        family datasheet for specific guideline on VCCO requirements. 
 
-GT NOTE: In order to insure a successful multi-gigabit transceiver design, 
-please review the Xilinx RocketIO Transceiver User Guide, UG024. The user guide 
-contains detailed information on digital and analog design considerations, 
-including board level design guidelines to facilitate your system design. 
-The user guide is available on the Xilinx website, http://www.xilinx.com, 
-in the Documentation category under the Products and Services heading. 
 

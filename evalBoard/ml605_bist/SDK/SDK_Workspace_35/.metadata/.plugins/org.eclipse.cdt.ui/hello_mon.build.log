@@ -1,0 +1,28 @@
+
+**** Build of configuration Debug for project hello_mon ****
+
+make all 
+Building target: hello_mon.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ml605_bist_bsp_0/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.20.a -mno-xl-soft-mul -o"hello_mon.elf"  ./src/xsysmon_polled_printf_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -lxilflash
+Finished building target: hello_mon.elf
+' '
+Invoking: MicroBlaze Print Size
+mb-size hello_mon.elf  |tee "hello_mon.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24594	    404	   2118	  27116	   69ec	hello_mon.elf
+Finished building: hello_mon.elf.size
+' '
+Invoking: Xilinx ELF Check
+elfcheck hello_mon.elf -hw ../../ml605_bist_hw_platform/system.xml -pe microblaze_0  |tee "hello_mon.elf.elfcheck"
+elfcheck
+Xilinx EDK 13.3 Build EDK_O.76xd
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../ml605_bist_hw_platform/system.xml -pe
+microblaze_0 hello_mon.elf 
+
+ELF file	: hello_mon.elf
+elfcheck passed.
+Finished building: hello_mon.elf.elfcheck
+' '

@@ -1,0 +1,33 @@
+
+**** Build of configuration Debug for project hello_uart ****
+
+make all 
+Building file: ../src/hello_uart.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../ml605_bist_bsp_0/microblaze_0/include -mxl-pattern-compare -mcpu=v8.20.a -mno-xl-soft-mul -MMD -MP -MF"src/hello_uart.d" -MT"src/hello_uart.d" -o"src/hello_uart.o" "../src/hello_uart.c"
+Finished building: ../src/hello_uart.c
+' '
+Building target: hello_uart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ml605_bist_bsp_0/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.20.a -mno-xl-soft-mul -o"hello_uart.elf"  ./src/hello_uart.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -lxilflash
+Finished building target: hello_uart.elf
+' '
+Invoking: MicroBlaze Print Size
+mb-size hello_uart.elf  |tee "hello_uart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5674	    388	   2094	   8156	   1fdc	hello_uart.elf
+Finished building: hello_uart.elf.size
+' '
+Invoking: Xilinx ELF Check
+elfcheck hello_uart.elf -hw ../../ml605_bist_hw_platform/system.xml -pe microblaze_0  |tee "hello_uart.elf.elfcheck"
+elfcheck
+Xilinx EDK 13.3 Build EDK_O.76xd
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../ml605_bist_hw_platform/system.xml -pe
+microblaze_0 hello_uart.elf 
+
+ELF file	: hello_uart.elf
+elfcheck passed.
+Finished building: hello_uart.elf.elfcheck
+' '

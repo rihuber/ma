@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="244" delta="old" >"./tmp/_cg/_bbx/interSwitchFifoDistRam_fifo_generator_v6_2_xst_1.vhd" Line 59: Binding entity <arg fmt="%s" index="1">fifo_generator_v6_2_xst</arg> does not have generic <arg fmt="%s" index="2">c_fifo_type</arg>
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="244" delta="old" >"./tmp/_cg/_bbx/interSwitchFifoDistRam_fifo_generator_v6_2_xst_1.vhd" Line 60: Binding entity <arg fmt="%s" index="1">fifo_generator_v6_2_xst</arg> does not have generic <arg fmt="%s" index="2">c_use_out_clk_enable</arg>
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="244" delta="old" >"./tmp/_cg/_bbx/interSwitchFifoDistRam_fifo_generator_v6_2_xst_1.vhd" Line 70: Binding entity <arg fmt="%s" index="1">fifo_generator_v6_2_xst</arg> does not have generic <arg fmt="%s" index="2">c_enable_sync_clocking</arg>
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="244" delta="old" >"./tmp/_cg/_bbx/interSwitchFifoDistRam_fifo_generator_v6_2_xst_1.vhd" Line 96: Binding entity <arg fmt="%s" index="1">fifo_generator_v6_2_xst</arg> does not have generic <arg fmt="%s" index="2">c_use_inp_clk_enable</arg>
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"./tmp/_cg/_bbx/fifo_generator_v6_2/ramfifo/memory.vhd" Line 1131: Net &lt;<arg fmt="%s" index="1">gdm.dm_srst</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"./tmp/_cg/_bbx/fifo_generator_v6_2/ramfifo/wr_status_flags_ss.vhd" Line 168: Net &lt;<arg fmt="%s" index="1">ram_afull_i</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"./tmp/_cg/_bbx/fifo_generator_v6_2/ramfifo/wr_status_flags_ss.vhd" Line 169: Net &lt;<arg fmt="%s" index="1">ram_afull_fb</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">BACKUP</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">BACKUP_MARKER</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INT_CLK</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">/home/rihuber/ma/coregen/tmp/_cg/_bbx/fifo_generator_v6_2/ramfifo/fifo_generator_ramfifo.vhd</arg>&quot; line <arg fmt="%d" index="2">358</arg>: Output port &lt;<arg fmt="%s" index="3">INT_CLK_I</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inblk</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">WR_RST</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">RD_RST</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SRST</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PROG_EMPTY_THRESH&lt;9:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PROG_EMPTY_THRESH_ASSERT&lt;9:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PROG_EMPTY_THRESH_NEGATE&lt;9:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PROG_FULL_THRESH&lt;9:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PROG_FULL_THRESH_ASSERT&lt;9:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PROG_FULL_THRESH_NEGATE&lt;9:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">RD_CLK</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">WR_CLK</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INT_CLK</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTDBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTSBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTDBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INJECTSBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">SBITERR</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">memory</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">DBITERR</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">memory</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">gdm.dm_srst</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">memory</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PROG_EMPTY_THRESH&lt;9:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PROG_EMPTY_THRESH_ASSERT&lt;9:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PROG_EMPTY_THRESH_NEGATE&lt;9:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ALMOST_FULL_FB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">/home/rihuber/ma/coregen/tmp/_cg/_bbx/fifo_generator_v6_2/ramfifo/rd_logic.vhd</arg>&quot; line <arg fmt="%d" index="2">362</arg>: Output port &lt;<arg fmt="%s" index="3">RAM_EMPTY</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">grss.rsts</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">/home/rihuber/ma/coregen/tmp/_cg/_bbx/fifo_generator_v6_2/ramfifo/rd_logic.vhd</arg>&quot; line <arg fmt="%d" index="2">362</arg>: Output port &lt;<arg fmt="%s" index="3">RAM_ALMOST_EMPTY_FB</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">grss.rsts</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">/home/rihuber/ma/coregen/tmp/_cg/_bbx/fifo_generator_v6_2/ramfifo/rd_logic.vhd</arg>&quot; line <arg fmt="%d" index="2">571</arg>: Output port &lt;<arg fmt="%s" index="3">ALMOST_EMPTY_FWFT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gr1.rfwft</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">/home/rihuber/ma/coregen/tmp/_cg/_bbx/fifo_generator_v6_2/ramfifo/rd_logic.vhd</arg>&quot; line <arg fmt="%d" index="2">571</arg>: Output port &lt;<arg fmt="%s" index="3">RAM_VALID_FWFT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gr1.rfwft</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">/home/rihuber/ma/coregen/tmp/_cg/_bbx/fifo_generator_v6_2/ramfifo/rd_logic.vhd</arg>&quot; line <arg fmt="%d" index="2">571</arg>: Output port &lt;<arg fmt="%s" index="3">VALID_FWFT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gr1.rfwft</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">UNDERFLOW</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">rd_logic</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">RD_PNTR_PLUS2&lt;9:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">RAM_ALMOST_EMPTY_FB</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">rd_status_flags_ss</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">RAM_ALMOST_EMPTY</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PROG_FULL_THRESH&lt;9:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PROG_FULL_THRESH_ASSERT&lt;9:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PROG_FULL_THRESH_NEGATE&lt;9:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">/home/rihuber/ma/coregen/tmp/_cg/_bbx/fifo_generator_v6_2/ramfifo/wr_logic.vhd</arg>&quot; line <arg fmt="%d" index="2">214</arg>: Output port &lt;<arg fmt="%s" index="3">PNTR_PLUS3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wpntr</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">/home/rihuber/ma/coregen/tmp/_cg/_bbx/fifo_generator_v6_2/ramfifo/wr_logic.vhd</arg>&quot; line <arg fmt="%d" index="2">381</arg>: Output port &lt;<arg fmt="%s" index="3">RAM_ALMOST_FULL</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gwss.wsts</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">WR_PNTR_PLUS2&lt;9:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">WR_RST</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SRST</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">ram_afull_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">wr_status_flags_ss</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">1</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">ram_afull_fb</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">wr_status_flags_ss</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">1</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">DATA_COUNT_I&lt;10:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">WR_DATA_COUNT_I&lt;10:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">RD_DATA_COUNT_I&lt;10:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ALMOST_FULL_I</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">PROG_FULL_I</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ALMOST_EMPTY_I</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">PROG_EMPTY_I</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">WR_ACK_I</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">VALID_I</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">OVERFLOW_I</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">UNDERFLOW_I</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SBITERR_I</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DBITERR_I</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3030" delta="new" >HDL ADVISOR - Register &lt;<arg fmt="%s" index="1">dout_i</arg>&gt; currently described with an asynchronous reset, could be combined with distributed RAM &lt;<arg fmt="%s" index="2">Mram_RAM</arg>&gt; for implementation on block RAM resources if you made this reset synchronous instead.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/grf.rf/gl0.rd/grss.rsts/ram_empty_i</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">interSwitchFifoDistRam_fifo_generator_v6_2_xst_1</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">interSwitchFifoDistRam_fifo_generator_v6_2_xst_1</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">interSwitchFifoDistRam_fifo_generator_v6_2_xst_1</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/grf.rf/gl0.rd/gr1.rfwft/user_valid</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">interSwitchFifoDistRam_fifo_generator_v6_2_xst_1</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/grf.rf/gl0.rd/gr1.rfwft/aempty_fwft_fb</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">interSwitchFifoDistRam_fifo_generator_v6_2_xst_1</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/grf.rf/gl0.rd/gr1.rfwft/aempty_fwft_i</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">interSwitchFifoDistRam_fifo_generator_v6_2_xst_1</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>
+

@@ -6,15 +6,15 @@ use work.headerPkg.all;
 
 entity switch is
 	generic(
-		globalAddress	: globalAddr
+		globalAddress	: globalAddr	-- The global address of this switch. Packets with this global address are forwarded to the internal output link corresponding to the local address of the packet.
 	);
 	port (
 		clk				: in std_logic;
 		reset			: in std_logic;
-		inputLinksIn	: in inputLinkInArray(numPorts-1 downto 0);
-		inputLinksOut	: out inputLinkOutArray(numPorts-1 downto 0);
-		outputLinksIn	: in outputLinkInArray(numPorts-1 downto 0);
-		outputLinksOut	: out outputLinkOutArray(numPorts-1 downto 0)
+		inputLinksIn	: in inputLinkInArray(numPorts-1 downto 0);		-- Input signals of the input links (internal AND external links)
+		inputLinksOut	: out inputLinkOutArray(numPorts-1 downto 0);	-- Output signals of the input links (internal AND external links)
+		outputLinksIn	: in outputLinkInArray(numPorts-1 downto 0);	-- Input signals of the output links (internal AND external links)
+		outputLinksOut	: out outputLinkOutArray(numPorts-1 downto 0)	-- Output signals of the output links (internal AND external)
 	);
 end entity switch;
 

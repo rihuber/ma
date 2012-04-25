@@ -430,7 +430,7 @@ NET  "fpga_0_DDR3_SDRAM_DDR3_Clk_n_pin[0]"                              LOC = "H
 # MMCM Location Constraints
 ###############################################################################
 
-INST "clock_generator_0/clock_generator_0/MMCM0_INST/MMCM_ADV_inst" LOC = "MMCM_ADV_X0Y9";
+#INST "clock_generator_0/clock_generator_0/MMCM0_INST/MMCM_ADV_inst" LOC = "MMCM_ADV_X0Y5";
 
 ###############################################################################
 # Capture Clock Constraints
@@ -601,9 +601,9 @@ NET "*Hard_Ethernet_MAC*/SPLB_Clk"          TNM_NET = "PLBCLK"; #name of signal 
 #
 # Changed NET
 # NET "GTX_CLK" TNM_NET = "ref_gtx_clk";
-NET "Hard_Ethernet_MAC*/GTX_CLK_0"   TNM_NET = "ref_gtx_clk"; #name of signal connected to TEMAC GTX_CLK_0 input
-TIMEGRP "v6_emac_v1_3_clk_ref_gtx" = "ref_gtx_clk";
-TIMESPEC "TS_v6_emac_v1_3_clk_ref_gtx" = PERIOD "v6_emac_v1_3_clk_ref_gtx" 8 ns HIGH 50 %;
+NET "temac_clk_s"   TNM_NET = "ref_gtx_clk"; #name of signal connected to TEMAC GTX_CLK_0 input
+TIMEGRP "v6_emac_clk_ref_gtx" = "ref_gtx_clk";
+TIMESPEC "TS_v6_emac_clk_ref_gtx" = PERIOD "v6_emac_clk_ref_gtx" 8 ns HIGH 50 %;
 
 # Multiplexed 1 Gbps, 10/100 Mbps output inherits constraint from GTX_CLK                                                        
 #                      __________                         
@@ -614,8 +614,8 @@ TIMESPEC "TS_v6_emac_v1_3_clk_ref_gtx" = PERIOD "v6_emac_v1_3_clk_ref_gtx" 8 ns 
 # Changed NET name
 # NET "tx_clk" TNM_NET = "ref_mux_clk";
 NET "*/Tx_Cl_Clk" TNM_NET = "ref_mux_clk";
-TIMEGRP "v6_emac_v1_3_clk_ref_mux" = "ref_mux_clk";
-TIMESPEC "TS_v6_emac_v1_3_clk_ref_mux" = PERIOD "v6_emac_v1_3_clk_ref_mux" TS_v6_emac_v1_3_clk_ref_gtx HIGH 50%;
+TIMEGRP "v6_emac_clk_ref_mux" = "ref_mux_clk";
+TIMESPEC "TS_v6_emac_clk_ref_mux" = PERIOD "v6_emac_clk_ref_mux" TS_v6_emac_clk_ref_gtx HIGH 50%;
 
 # Ethernet GMII PHY-side receive clock
 #                      __________                         
@@ -626,22 +626,29 @@ TIMESPEC "TS_v6_emac_v1_3_clk_ref_mux" = PERIOD "v6_emac_v1_3_clk_ref_mux" TS_v6
 # Changed NET name
 # NET "GMII_RX_CLK" TNM_NET = "phy_clk_rx";
 NET "*/RxClientClk_0" TNM_NET = "phy_clk_rx";
-TIMEGRP "v6_emac_v1_3_clk_phy_rx" = "phy_clk_rx";
-TIMESPEC "TS_v6_emac_v1_3_clk_phy_rx" = PERIOD "v6_emac_v1_3_clk_phy_rx" 7.5 ns HIGH 50 %;
+TIMEGRP "v6_emac_clk_phy_rx" = "phy_clk_rx";
+TIMESPEC "TS_v6_emac_clk_phy_rx" = PERIOD "v6_emac_clk_phy_rx" 7.5 ns HIGH 50 %;
                                                                                 
 # IDELAYCTRL 200 MHz reference clock
 # Changed NET name 
 # NET "REFCLK" TNM_NET  = "clk_ref_clk";
-NET "*/REFCLK" TNM_NET  = "clk_ref_clk";
+NET "MPMC_Clk0" TNM_NET  = "clk_ref_clk";
 TIMEGRP "ref_clk" = "clk_ref_clk";
 TIMESPEC "TS_ref_clk" = PERIOD "ref_clk" 5 ns HIGH 50 %;
 
 # Constrain the DCR interface clock to an example frequency of 100 MHz
 # Changed NET name
 # NET "DCREMACCLK" TNM_NET = "host_clock";
-NET "*/SPLB_Clk" TNM_NET = "host_clock";
+NET "Internal_BRAM_port_BRAM_Clk" TNM_NET = "host_clock";
 TIMEGRP "clk_host" = "host_clock";
 TIMESPEC "TS_clk_host" = PERIOD "clk_host" 10 ns HIGH 50 %;
+
+# Constrain the 50 MHz System Monitor/Second PLB Bus clock to an example frequency of 50 MHz (PLB to PLB bridge can work at 1:1, 1:2, and 1:4 ratios)
+# Component switching limit on the System Monitor is 80 MHz, introduced in 12.4.
+# The system monitor IP, xps_sysmon_adc, uses the PLB bus clock directly, so the PLB bus it is on must run at 80 MHz or less.
+NET "plb_v46_0_clk" TNM_NET = "second_plb_clock";
+TIMEGRP "second_clk_plb" = "second_plb_clock";
+TIMESPEC "TS_second_clk_plb" = PERIOD "second_clk_plb" 20 ns HIGH 50 %;
 
 ###############################################################################
 # PHYSICAL INTERFACE CONSTRAINTS

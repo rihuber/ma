@@ -1,0 +1,24 @@
+
+# LEDs
+Net ledIO<0> LOC=AP24;
+Net ledIO<1> LOC=AD21;
+Net ledIO<2> LOC=AH28;
+Net ledIO<3> LOC=AE21;
+Net ledIO<4> LOC=AH27;
+Net ledIO<*> IOSTANDARD=LVCMOS15;
+
+
+# CLK SOURCE
+NET  sys_clk_p            LOC = J9  | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;
+NET  sys_clk_n            LOC = H9  | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;
+NET  sys_clk_p TNM_NET = sys_clk_p;
+TIMESPEC ts_sys_clk_p = PERIOD sys_clk_p 5 ns HIGH 50%;
+
+
+# PUSH BUTTONS (center, west, south, east, north)
+Net buttons<0> LOC = G26;
+Net buttons<1> LOC = H17;
+Net buttons<2> LOC = A18;
+Net buttons<3> LOC = G17;
+Net buttons<4> LOC = A19;
+#Net buttons<*> IOSTANDARD=SSTL15_T_DCI;

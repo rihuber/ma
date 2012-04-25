@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="C:\ml605_bist\SDK\SDK_Workspace_35\ml605_bist_hw_platform\system.bit" key="ml605_bist_hw_platform-bitFile"/>
+	<item value="C:\ml605_bist\SDK\SDK_Workspace_35\bootloader\Debug\bootloader.elf" key="ml605_bist_hw_platform-microblaze_0-initElf"/>
+	<item value="C:\ml605_bist\SDK\SDK_Workspace_35\ml605_bist_hw_platform\system_bd.bmm" key="ml605_bist_hw_platform-bmmFile"/>
+</section>

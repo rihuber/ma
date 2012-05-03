@@ -333,9 +333,9 @@
      borderopacity="1"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4603241"
-     inkscape:cx="204.32012"
-     inkscape:cy="353.84735"
+     inkscape:zoom="2.0652101"
+     inkscape:cx="248.16942"
+     inkscape:cy="322.01094"
      inkscape:document-units="pt"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -344,8 +344,8 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1920"
-     inkscape:window-height="956"
+     inkscape:window-width="1280"
+     inkscape:window-height="676"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -847,7 +847,7 @@
          x="473.21738"
          y="181.83409"
          style="font-size:8.30000019px;text-align:start;text-anchor:start;fill:#000000"
-         id="tspan7703">NoC Upstream</tspan></text>
+         id="tspan7703">to NoC</tspan></text>
     <g
        id="g7937"
        inkscape:transform-center-x="-7.5"

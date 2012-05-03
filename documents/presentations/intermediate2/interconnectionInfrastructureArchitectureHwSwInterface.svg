@@ -15,8 +15,8 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.2 r9819"
-   sodipodi:docname="interconnectionInfrastructureArchitecture.svg"
-   inkscape:export-filename="/Users/richardhuber/ma/repos/ma/documents/presentations/intermediate2/interconnectionInfrastructureArchitecture.png"
+   sodipodi:docname="interconnectionInfrastructureArchitectureHwSwInterface.svg"
+   inkscape:export-filename="/Users/richardhuber/ma/repos/ma/documents/presentations/intermediate2/hwSwInterfaceFucus.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300">
   <defs
@@ -334,8 +334,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
-     inkscape:cx="282.64271"
-     inkscape:cy="537.9525"
+     inkscape:cx="226.26487"
+     inkscape:cy="500.48966"
      inkscape:document-units="pt"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -344,8 +344,8 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1920"
-     inkscape:window-height="956"
+     inkscape:window-width="1280"
+     inkscape:window-height="676"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -395,9 +395,10 @@
      transform="translate(-115.71739,284.41591)">
     <g
        id="g6038"
-       transform="translate(10.000013,-42.500001)">
+       transform="translate(10.000013,-42.500001)"
+       style="opacity:0.4">
       <rect
-         style="fill:#f2f2f2;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="fill:#f2f2f2;fill-opacity:1;stroke:#000000;stroke-width:0.75000000000000000;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          id="rect6040"
          width="330.00003"
          height="197.5"
@@ -411,10 +412,10 @@
        id="text5547"
        y="-178.16591"
        x="468.21738"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Medium"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Medium;opacity:0.4"
        xml:space="preserve"><tspan
          id="tspan5549"
-         style="font-size:8.30000019px;text-align:start;text-anchor:start;fill:#000000"
+         style="font-size:8.30000019000000044px;text-align:start;text-anchor:start;fill:#000000"
          y="-178.16591"
          x="468.21738"
          sodipodi:role="line">FPGA</tspan></text>
@@ -634,7 +635,8 @@
     </g>
     <g
        id="g4316"
-       transform="translate(-4.9999997,0)">
+       transform="translate(-4.9999997,0)"
+       style="opacity:0.4">
       <path
          sodipodi:nodetypes="cc"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#TriangleInM);marker-mid:none;marker-end:url(#TriangleOutM)"
@@ -650,7 +652,8 @@
     </g>
     <g
        id="g4312"
-       transform="translate(-4.9999997,0)">
+       transform="translate(-4.9999997,0)"
+       style="opacity:0.4">
       <path
          sodipodi:nodetypes="cc"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#TriangleInM);marker-mid:none;marker-end:url(#TriangleOutM)"
@@ -727,11 +730,11 @@
       </g>
     </g>
     <g
-       style="fill:#cccccc"
+       style="fill:#cccccc;opacity:0.4"
        id="g4287"
        transform="translate(272.5,62.499999)">
       <rect
-         style="fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0.75000000000000000;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          id="rect4279"
          width="55"
          height="25.000002"
@@ -750,11 +753,11 @@
            sodipodi:role="line"
            x="173.21739"
            y="-108.16591"
-           style="font-size:8.30000019px;fill:#000000"
+           style="font-size:8.30000019000000044px;fill:#000000"
            id="tspan4283">Switch</tspan></text>
     </g>
     <g
-       style="fill:#cccccc"
+       style="fill:#cccccc;opacity:0.4"
        id="g4292"
        transform="translate(192.5,62.499999)">
       <rect
@@ -766,7 +769,7 @@
          height="25.000002"
          width="55"
          id="rect4294"
-         style="fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+         style="fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0.75000000000000000;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
       <text
          sodipodi:linespacing="125%"
          id="text4296"
@@ -775,17 +778,17 @@
          style="font-size:10px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Medium"
          xml:space="preserve"><tspan
            id="tspan4298"
-           style="font-size:8.30000019px;fill:#000000"
+           style="font-size:8.30000019000000044px;fill:#000000"
            y="-108.16591"
            x="173.21739"
            sodipodi:role="line">Switch</tspan></text>
     </g>
     <g
-       style="fill:#cccccc"
+       style="fill:#cccccc;opacity:0.4"
        transform="translate(112.5,62.499999)"
        id="g4300">
       <rect
-         style="fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0.75000000000000000;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          id="rect4302"
          width="55"
          height="25.000002"
@@ -804,12 +807,12 @@
            sodipodi:role="line"
            x="173.21739"
            y="-108.16591"
-           style="font-size:8.30000019px;fill:#000000"
+           style="font-size:8.30000019000000044px;fill:#000000"
            id="tspan4306">Switch</tspan></text>
     </g>
     <path
        sodipodi:nodetypes="cc"
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#TriangleInM);marker-mid:none;marker-end:url(#TriangleOutM)"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#TriangleInM);marker-mid:none;marker-end:url(#TriangleOutM);opacity:0.4"
        d="m 305.71739,-63.16591 0,-12.5"
        id="path4322"
        inkscape:connector-curvature="0" />
@@ -817,11 +820,12 @@
        inkscape:connector-curvature="0"
        id="path4324"
        d="m 265.71739,-63.16591 0,-12.5"
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#TriangleInM);marker-mid:none;marker-end:url(#TriangleOutM)"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#TriangleInM);marker-mid:none;marker-end:url(#TriangleOutM);opacity:0.4"
        sodipodi:nodetypes="cc" />
     <g
        id="g5170"
-       transform="translate(-4.9999997,0)">
+       transform="translate(-4.9999997,0)"
+       style="opacity:0.4">
       <path
          sodipodi:nodetypes="cc"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#TriangleInM);marker-mid:none;marker-end:none"
@@ -843,7 +847,8 @@
     </g>
     <g
        id="g5175"
-       transform="translate(75,0.5)">
+       transform="translate(75,0.5)"
+       style="opacity:0.4">
       <path
          inkscape:connector-curvature="0"
          id="path5177"
@@ -865,7 +870,8 @@
     </g>
     <g
        transform="translate(155,0)"
-       id="g5183">
+       id="g5183"
+       style="opacity:0.4">
       <path
          sodipodi:nodetypes="cssssc"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#TriangleInM);marker-mid:none;marker-end:none"
@@ -887,7 +893,8 @@
     </g>
     <g
        id="g5191"
-       transform="matrix(-1,0,0,1,573.93478,0)">
+       transform="matrix(-1,0,0,1,573.93478,0)"
+       style="opacity:0.4">
       <path
          inkscape:connector-curvature="0"
          id="path5193"
@@ -1074,13 +1081,14 @@
        inkscape:connector-curvature="0" />
     <g
        transform="translate(182.49999,0)"
-       id="g6724">
+       id="g6724"
+       style="opacity:0.4">
       <g
          style="fill:#ececec"
          id="g6726"
          transform="translate(157.5,9.9999988)">
         <rect
-           style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:0.75000000000000000;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
            id="rect6728"
            width="35"
            height="35"
@@ -1099,7 +1107,7 @@
              sodipodi:role="line"
              x="193.21739"
              y="-103.16591"
-             style="font-size:8.30000019px;fill:#000000"
+             style="font-size:8.30000019000000044px;fill:#000000"
              id="tspan6732">PHY</tspan></text>
       </g>
       <path

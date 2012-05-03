@@ -181,9 +181,9 @@
      borderopacity="1"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="237.9456"
-     inkscape:cy="586.24011"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="354.83232"
+     inkscape:cy="397.15"
      inkscape:document-units="pt"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -192,8 +192,8 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1920"
-     inkscape:window-height="956"
+     inkscape:window-width="1280"
+     inkscape:window-height="676"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -224,7 +224,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -611,84 +611,74 @@
          id="path3935"
          inkscape:connector-curvature="0" />
     </g>
-    <g
-       id="g3970"
-       transform="translate(120,52.5)">
-      <g
-         transform="translate(157.5,9.9999988)"
-         id="g3972"
-         style="fill:#cccccc">
-        <rect
-           ry="5.1999998"
-           rx="5"
-           transform="translate(115.71739,-284.41591)"
-           y="161.25"
-           x="-117.5"
-           height="17.500002"
-           width="212.5"
-           id="rect3974"
-           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-        <text
-           sodipodi:linespacing="125%"
-           id="text3976"
-           y="-110.66591"
-           x="110.71739"
-           style="font-size:10px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Medium"
-           xml:space="preserve"><tspan
-             id="tspan3978"
-             style="font-size:8.30000019px;fill:#000000"
-             y="-110.66591"
-             x="110.71739"
-             sodipodi:role="line">High throughput communication infrastructure</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-size:10px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Medium;opacity:0.4"
-           x="-53.670357"
-           y="-115.66591"
-           id="text5432"
-           sodipodi:linespacing="125%"><tspan
-             sodipodi:role="line"
-             x="-53.670357"
-             y="-115.66591"
-             style="font-size:8.30000019000000044px;text-align:start;text-anchor:start;fill:#000000"
-             id="tspan5434">configure</tspan></text>
-      </g>
-      <path
-         sodipodi:nodetypes="cc"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#TriangleInM);marker-mid:none;marker-end:url(#TriangleOutM)"
-         d="m 350.71739,-115.66591 0,-12.5"
-         id="path3980"
-         inkscape:connector-curvature="0" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path3982"
-         d="m 310.71739,-115.66591 0,-12.5"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#TriangleInM);marker-mid:none;marker-end:url(#TriangleOutM)"
-         sodipodi:nodetypes="cc" />
-      <path
-         sodipodi:nodetypes="cc"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#TriangleInM);marker-mid:none;marker-end:url(#TriangleOutM)"
-         d="m 270.71739,-115.66591 0,-12.5"
-         id="path3984"
-         inkscape:connector-curvature="0" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path3986"
-         d="m 230.71739,-115.66591 0,-12.5"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#TriangleInM);marker-mid:none;marker-end:url(#TriangleOutM)"
-         sodipodi:nodetypes="cc" />
-      <path
-         sodipodi:nodetypes="cc"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#TriangleInM);marker-mid:none;marker-end:url(#TriangleOutM);opacity:0.4"
-         d="m 173.21739,-115.66591 0,-12.5"
-         id="path3988"
-         inkscape:connector-curvature="0" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path3990"
-         d="m 153.21739,-103.16591 -52.5,0 0,-27.5"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#TriangleInM);marker-mid:none;marker-end:none;opacity:0.4"
-         sodipodi:nodetypes="ccc" />
-    </g>
+    <rect
+       ry="5.1999998"
+       rx="5"
+       y="-60.665909"
+       x="275.71738"
+       height="17.500002"
+       width="212.5"
+       id="rect3974"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3976"
+       y="-48.165909"
+       x="388.21741"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Medium"
+       xml:space="preserve"><tspan
+         id="tspan3978"
+         style="font-size:8.30000019px;fill:#000000"
+         y="-48.165909"
+         x="388.21741"
+         sodipodi:role="line">High throughput communication infrastructure</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;opacity:0.4;fill:#000000;fill-opacity:1;stroke:none;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Medium"
+       x="223.82965"
+       y="-53.165909"
+       id="text5432"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="223.82965"
+         y="-53.165909"
+         style="font-size:8.30000019px;text-align:start;text-anchor:start;fill:#000000"
+         id="tspan5434">configure</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path3980"
+       d="m 470.71739,-63.16591 0,-12.5"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#TriangleInM);marker-mid:none;marker-end:url(#TriangleOutM)"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#TriangleInM);marker-mid:none;marker-end:url(#TriangleOutM)"
+       d="m 430.71739,-63.16591 0,-12.5"
+       id="path3982"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path3984"
+       d="m 390.71739,-63.16591 0,-12.5"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#TriangleInM);marker-mid:none;marker-end:url(#TriangleOutM)"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#TriangleInM);marker-mid:none;marker-end:url(#TriangleOutM)"
+       d="m 350.71739,-63.16591 0,-12.5"
+       id="path3986"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path3988"
+       d="m 293.21739,-63.16591 0,-12.5"
+       style="opacity:0.4;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#TriangleInM);marker-mid:none;marker-end:url(#TriangleOutM)"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="ccc"
+       style="opacity:0.4;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#TriangleInM);marker-mid:none;marker-end:none"
+       d="m 273.21739,-50.66591 -52.5,0 0,-27.5"
+       id="path3990"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>

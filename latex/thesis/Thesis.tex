@@ -10,7 +10,8 @@
 %**							Added \include{appendix.tex}
 %****************************************************************************
 
-\documentclass[10pt,final,a4paper,twoside]{book}
+\documentclass[12pt,final,a4paper,twoside]{book}
+%\documentclass[12pt,draft,a4paper,twoside]{book}
 %\documentclass[10pt,draft,a4paper,oneside]{report}
 %\documentclass[10pt,draft,a4paper,oneside]{article}
 
@@ -25,6 +26,7 @@
 %** begin the document environment
 \begin{document}
 
+
 \frenchspacing
 \sloppy
 
@@ -38,16 +40,16 @@
 
 %** Abstract.tex: Contains a brief description
 %                 of what the reader may expect
-\include{Abstract}
+%\include{Abstract}
 
 %** Table of Contents
 \tableofcontents
 
 %** Table of Figures
-\listoffigures
+%\listoffigures
 
 %** Table of Figures
-\listoftables
+%\listoftables
 
 %** Introduction.tex: Contains an introduction to
 %                     the topic and motivates the work.
@@ -58,24 +60,24 @@
 %                be addressed in this document:
 %                What is the challenge, why is it useful what you
 %                plan to do.
-\include{Problem}
+%\include{Problem}
 
 %** Design.tex: How was the problem attacked, what was the design
 %               the architecture 
-\include{Design}
+%\include{Design}
 
 %** Results.tex: What were the results achieved including an evaluation
 %
-\include{Results}
+%\include{Results}
 
 %** Outlook.tex: What needs to be done further, what is planed
 %
-\include{Outlook}
+%\include{Outlook}
 
 %** Summary.tex: What have you achieved, what have you presented in this
 %                document.  What are the highlights of your work.
 %                It should conclude by a conclusion.
-\include{Summary}
+%\include{Summary}
 
 %** Switch to appendix-mode in Latex.
 %
@@ -88,21 +90,19 @@
 %** appendix.tex: Install instructions, configurations, test results,
 %		simulation data, additional theoretical disquisitions, ...
 %
-\include{appendix}
+%\include{appendix}
 
 %** Timetable.tex: Timetable you worked out.
 %
-\include{Timetable}
+%\include{Timetable}
 
 %** Originalproblem.tex: The problem statement you received.
 %
 \include{Originalproblem}
 
 
-%** Bibliography.tex: All cited documents are stored in here.
-%                     Of course, we could work with bibtex too.
-%                     Bur for a short thesis, this style is ok.
-\include{Bibliography}
+\bibliography{bibliography}{}
+\bibliographystyle{plain}
 
 %** end the document environment
 \end{document}

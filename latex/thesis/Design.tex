@@ -1,2 +1,14 @@
-\chapter{\label{design}Title}
-Description of the theory/software/hardware that you designed.
+\chapter{\label{design}Design}
+
+\section{Design Targets}
+
+In ReconOS, multiple hardware threads execute tasks on behalf of the CPU. To this end, the hardware threads and the software running in the CPU need to exchange data with each other. ReconOS provides different mechanisms for this purpose, most notably message boxes and shared memory. As we showed in Chapter \ref{introduction}, these mechanisms are not applicable for a networking application such as ANA. We therefor have to extend the ReconOS architecture with a high throughput communication infrastructure.\\
+We distinguish three different applications of data transfer:
+\begin{itemize}
+	\item Data transfer from one hardware thread to another hardware thread
+	\item Data transfer from a hardware thread to a software thread
+	\item Data transfer from a software thread to a hardware thread
+\end{itemize}
+
+The case of data transfer from one software thread to another software thread is out of the scope of this thesis.\\
+In this project, we do not make any assumptions on the nature of the processed network traffic mix. The communication infrastructure should be able to handle a specific worst-case load. This worst-case load is upper bounded by the maximum throughput on the physical link of the platform. 

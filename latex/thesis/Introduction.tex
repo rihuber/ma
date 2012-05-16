@@ -1,29 +1,37 @@
-%****************************************************************************
-%** Copyright 2002 by Lukas Ruf, ruf@topsy.net
-%** Information is provided under the terms of the
-%** GNU Free Documentation License http://www.gnu.org/copyleft/fdl.html
-%** Fairness: Cite the source of information, visit http://www.topsy.net
-%****************************************************************************
-
-%Example structure for an introduction
-%****************************************************************************
-%** Copyright 2002, 2003 by Lukas Ruf, <ruf@topsy.net>
-%** Information is provided under the terms of the
-%** GNU Free Documentation License <http://www.gnu.org/copyleft/fdl.html>
-%** Fairness: Cite the source of information, visit <http://www.topsy.net>
-%****************************************************************************
 
 \chapter{\label{introduction}Introduction}
-Introduce the related research field/the project.
 
-\section{\label{introduction:motivation}Motivation}
-The motivation to write this thesis was...
+The increasing number and diversity of networking devices is challenging the network research community. More and more applications and protocols are developed to address the needs of different platforms and use cases. For performance reasons, these protocols and applications are often tightly bound to each other. The resulting systems may then perform well for a specific application, but lack of flexibility in the underlying architecture. This inflexibility is well demonstrated by the still ongoing switch from IPv4 to IPv6 in the TCP/IP protocol stack of the current internet.
 
-\section{\label{introduction:taskdescription}The Task}
-Describe your task.
+The Autonomic Network Architecture~(ANA)~\cite{ana} targets this problem with a fundamental change of paradigms. In ANA, all functionality is encapsulated in so called functional blocks. The size of functional blocks is a priori not defined, it may range from a minimalistic checksum calculation engine up to a huge holistic protocol stack. ANA provides a set of abstraction models and generic communication methods that the functional blocks use to interact with each other. This framework allows a completely isolated development of the algorithms running in the functional blocks. The networking devices then interconnect the functional blocks and build up an individual protocol stack. The device chooses the functional blocks for this protocol stack depending on the capabilities of the platform and the requirements of the running applications. The result is a flexible and dynamic protocol stack, that is able to adapt itself to any given situation and may change at runtime. Figure~\ref{protocolStack.eps} shows such a dynamic protocol stack and compares it to the strongly layered protocol stack of the current internet.
 
-\section{\label{introduction:relatedwork}Related Work} 
-A relevant work was~\cite{bib:relevantwork}... 
+\begin{figure}
+  \begin{center}
+		 \includegraphics[scale=1.3]{protocolStack.eps}
+  \caption{a) The strongly layered static protocol stack of the current internet, b) The dynamically adaptable protocol stack of an ANA node}
+  \label{protocolStack.eps}
+  \end{center}
+\end{figure}
+The level of indirection introduced by ANA trades some performance optimization features of the application for a higher flexibility and modularity of the overall system. In order to compensate this performance penalty, a hardware acceleration for ANA is desired. It is not feasible to use application specific integrated circuits~(ASIC) for this purpose, since the functionality of these devices must be completely specified at design time. This static characteristic of ASICs would wipe out ANA's effort towards flexibility and adaptability.
 
-\section{\label{introduction:overview}Overview}
-Chapter 2 describes... Chapter 3 presents... 
+The evolving partial reconfiguration capabilities of modern field programmable gate arrays (FPGA) combine the flexibility of a software implementation with the high-performance acceleration features of ASICs. \cite{towardsAdaptiveNetworkingForEmbeddedDevices} and \cite{reconfigurableNodesForFutureNetworks} therefore came up with the idea of porting ANA to a reconfigurable system on chip (rSoC). On these devices, a microprocessor core (either soft- or hardcore)  is combined with a programmable logic fabric. The software running in the microprocessor may then decide to shift the execution of computational intensive and frequently used functional blocks from the microprocessor to the programmable logic. Based on the partial reconfiguration features, this mapping of functional blocks to hardware or software can be adapted at runtime.
+
+In order to reduce the engineering effort, \cite{towardsAdaptiveNetworkingForEmbeddedDevices} and \cite{reconfigurableNodesForFutureNetworks} further suggest to use ReconOS~\cite{reconos} as base system. In ReconOS, partially reconfigurable logic slots are used as so called hardware threads. These hardware threads appear to the software like normal software threads. ReconOS enables the hardware threads to access operating system objects like semaphores, message boxes and shared memory. The combination of these mechanisms simplifies the interaction of software and hardware elements. The suggested approach is now to benefit from the hardware acceleration provided by ReconOS by implementing the functionality of some functional blocks as hardware threads. Figure~\ref{reconosForAna.eps} shows the architecture of ReconOS and how the functional blocks are mapped to the hardware threads.
+
+\begin{figure}
+  \begin{center}
+		 \includegraphics[width=\textwidth]{reconosForANA.eps}
+  \caption{a) The ReconOS architecture: partially reconfigurable logic slots are used as hardware threads. b) Using ReconOS for ANA: a set of functional blocks is executed in hardware threads.}
+  \label{reconosForAna.eps}
+  \end{center}
+\end{figure}
+The major problem of this approach is the shared bus architecture of ReconOS. Especially with a data intensive application like ANA the shared bus soon becomes the bottleneck of the system. In this thesis we present an extension of the ReconOS framework with a high throughput communication infrastructure shown in figure~\ref{interconnectionInfrastructure.eps}. This infrastructure contains a packet based network on chip (NoC) that guarantees each hardware thread a worst case incoming and outgoing data throughput. Additionally, a ring buffer based gateway was designed to speed up the transfer from software to hardware and vice versa.
+
+\begin{figure}
+  \begin{center}
+		 \includegraphics[width=\textwidth]{interconnectionInfrastructure.eps}
+  \caption{The high throughput communication interface guarantees the functional blocks a worst case incoming and outgoing bandwith.}
+  \label{interconnectionInfrastructure.eps}
+  \end{center}
+\end{figure}
+The reminder of this thesis is organized in the following way: TODO!

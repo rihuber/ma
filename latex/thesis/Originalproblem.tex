@@ -1,2 +1,153 @@
-\chapter{\label{originalproblem}Title}
-Here comes the original task description that you agreed on with your supervisor/tutor.
+\chapter{\label{originalproblem}Original Task Description}
+%\includegraphics[width=\linewidth]{TIKETHhdr.pdf}
+	
+%	\begin{center}
+%	\LARGE ~\\
+%	\LARGE Master Thesis\\
+%	\large ~\\
+%	\huge A Dynamic Hardware Architecture\\for Future Networks
+%        \large ~\\
+%        \large ~\\
+%	\LARGE Richard Huber\\
+%	\large ~\\
+%	\large Advisor: 	Ariane Keller, ariane.keller@tik.ee.ethz.ch\\
+%	\large Co-Advisor:	Dr. Stephan Neuhaus, stephan.neuhaus@tik.ee.ethz.ch \\
+%	\large Co-Advisor:	Daniel Borkmann, daniel.borkmann@tik.ee.ethz.ch \\
+%	\large Professor: Prof. Dr. Bernhard Plattner, plattner@tik.ee.ethz.ch \\
+%	\large ~\\
+%	\large December 2011 - June 2012
+%	\vspace{10mm}
+%	\end{center}
+
+\section{Introduction}
+This master thesis is in the context of the EPiCS project.
+The goal of the EPiCS project is to lay the foundation for engineering the novel class of proprioceptive computing systems.
+Proprioceptive computing systems collect and maintain information about their state and progress, which enables self-awareness by reasoning about their behaviour, and self- expression by effectively and autonomously adapting their behaviour to changing conditions. Concepts of self-awareness and self-expression are new to the domains of computing and networking; the successful transfer and development of these concepts will help create future heterogeneous and distributed systems capable of efficiently responding to a multitude of requirements with respect to functionality and flexibility, performance, resource usage and costs, reliability and safety, and security. 
+
+In this thesis we focus on the networking aspect of EPiCS which we call \textit{EmbedNet}. EPiCS uses the network architecture developed in the ANA project as a basis. 
+The ANA network architecture is a novel architecture that enables flexible, dynamic, and fully autonomous formation of network nodes.
+In the EPiCS project we develop the ANA architecture further. On the one hand we will develop mechanisms to adapt the functionality provided by the protocol stack at runtime, on the other hand we will develop mechanisms that map the networking functionality dynamically to either hardware or software.
+
+The objective of this Masters Thesis is to refine the hardware architecture and the hardware/software interface of EmbedNet. 
+
+
+\section{Assignment}
+This assignment aims to outline the work to be conducted during this thesis. 
+The assignment may need to be adapted over the course of the project. 
+
+\subsection{Objectives}
+The goal of this Master thesis is to develop a hardware architecture for future dynamic protocol graphs. 
+The developed architecture has to partition networking functionality into individual blocks. 
+The architecture should allow for the dynamic reconfiguration of whole networking blocks as well as for the runtime configuration of communication parameters in the networking blocks.
+An interconnect between the functional blocks should be provided that allows for the forwarding of packets at line rate. The transmit data path should not interfere with the reception data path.
+
+\subsection{Tasks}
+This section gives a brief overview of the tasks the student is expected to perform towards achieving the objective outlined above. 
+The binding project plan will be derived over the course of the first three weeks depending on the knowledge and skills the student brings into the project.
+
+\subsubsection{Familiarization}
+\begin{itemize}
+	\item Study the available literature on ANA, EmbedNet and Reconos [1, 2, 3, 4].
+	\item Setup a FPGA development environment with the Xilinx tools 12.3 (exact) and ModelSim SE version 6.1f (or higher).
+        \item Familiarize yourself with git/github and clone the reconos source code repository [5].
+        \item Install the eCos source code and cross compile toolchain [6].
+        \item Verify your toolchain by running first the sort\_demo\_thermal and then the pr\_demo.
+	\item In collaboration with the advisor, derive a project plan for your master thesis. 
+		Allow time for the design, implementation, evaluation, and documentation of your software.
+\end{itemize}
+
+\subsubsection{Architecture and hardware design}
+\begin{itemize}
+        \item Develop a dedicated communication interface between the different hardware networking blocks. Adapt the hardware blocks where needed. 
+        The interface should be able to forward data at line rate (1Gbit/s). Transmission and reception direction should be treated independently. 
+        The interface should support different priorities of either sending networking blocks or individual packets. 
+        \item Develop a configuration interface for the hardware networking blocks. 
+        Each hardware block needs to be configured with the information required for forwarding the individual packets to the next protocol. 
+        The configuration interface should be able to set, delete, and replace configuration entries. The configuration should be initiated by a software program. 
+        \item Develop a data path for sending data between hardware and software networking blocks. 
+        Consider using two ring buffers per networking block, one for packets to be transmitted and one for packets to be received. 
+        The reader/writer synchronization should be handled properly. An interface should be developed to send and receive packets from software.
+        \item Optional: Adapt the data path to work with the LANA protocol stack [7].
+        \item Optional: Develop a monitoring framework for the measurement of hardware parameter such as temperature, utilisation or power consumption. 
+        The framework should collect the data in hardware and make them accessible to a software program.  
+\end{itemize}
+
+\subsubsection{Implementation}
+\begin{itemize}
+        \item Determine an appropriate version control system. The EPiCS project is hosted at github. You might want to put your code in the same repository.
+	\item Implement a static version of the dedicated communication interface together with some dummy networking blocks for validation purposes.
+        \item Add the possibility for partial reconfiguration of hardware networking blocks to the communication interface.
+        \item Implement the configuration interface. 
+        Depending on the overall EPiCS project status use either the eCos operating system or the Linux operating system (preferred).
+        \item Implement the data path for the hw/sw interface.
+        Depending on the overall EPiCS project status use either the eCos operating system or the Linux operating system (preferred).
+        \item Optional: Implement the interface to LANA.
+        \item Optional: Implement the monitoring framework.
+\end{itemize}
+
+\subsubsection{Validation}
+\begin{itemize}
+	\item Validate the correct operation of your implementation after each implementation step. 
+        Use for your evaluation different packet sizes (short, long, even or odd number of bytes, etc.).
+	\item Check the resilience of the implementation, including its configuration interface, to uneducated users.
+\end{itemize}
+
+\subsubsection{Evaluation}
+\begin{itemize}
+	\item Do a performance evaluation of your implementation.
+        \item Optional: Determine the bottlenecks of your implementation.
+        \item Optional: Do a performance comparison between packet forwarding for different combinations of hardware and software networking functional blocks.
+\end{itemize}
+
+\subsubsection{Documentation}
+\begin{itemize}
+	\item Appropriate source code documentation.
+        \item Write a step-by-step how to that describes the compilation of your code, the loading of the code into the hardware and the execution of your code.
+	\item Write a documentation about the design, implementation, validation and evaluation of your work.
+\end{itemize}
+
+
+\section{Milestones}
+\begin{itemize}
+    \item Provide a "project plan" which identifies the mile stones. 
+    \item Two intermediate presentations: Give a presentation of 10 minutes to the professor and the advisors. 
+    			In this presentation, the student presents major aspects of the ongoing work including results, obstacles, and remaining work.
+    \item Final presentation of 15 minutes in the CSG group meeting, or, alternatively, via teleconference. 
+    			The presentation should carefully introduce the setting and fundamental assumptions of the project. 
+    			The main part should focus on the major results and conclusions from the work.
+    \item Any software that is produced in the context of this thesis and its documentation needs to be delivered before conclusion of the thesis. 
+    	This includes all source code and documentation.
+    	The source files for the final report and all data, scripts and tools developed to generate the figures of the report must be included. 
+    	Preferred format for delivery is a CD-R.
+    \item Final report. The final report must contain a summary, the assignment, the time schedule and the Declaration of Originality. Its structure should include the following sections: Introduction, Background/Related Work, Design/Methodology, Validation/Evaluation, Conclusion, and Future work. Related work must be referenced appropriately.
+\end{itemize}
+
+\section{Organization}
+\begin{itemize}
+	\item 	Student and advisor hold a weekly meeting to discuss progress of work and next steps. 
+		The student should not hesitate to contact the advisor at any time. 
+		The common goal of the advisor and the student is to maximize the outcome of the project.
+	\item 	The student is encouraged to write all reports in English; German is accepted as well. 
+    	\item	The core source code will be published under the GNU general public license.
+\end{itemize}
+
+\section{References}
+[1] ReconOS: Multithreaded Programming for Reconfigurable Computers: Description of the hardware/software architecture
+\newline
+[2] Reconifgurable Nodes for Future Networks: Description of how we would like to use the hw/sw architecture to build reconfigurable networks
+\newline
+[3] The Autonomic Network Architecture (ANA): Description of the ideas and sw prototype for configurable networks
+\newline
+[4] https://github.com/EPiCS/epics-org/blob/master/deliverables/D3-1\_Architecture\_And\_Tool\_Flow/D3-1\_Architecture\_And\_Tool\_Flow.pdf
+\newline
+[5] https://github.com/EPiCS/reconos/
+\newline
+[6] webpage: ecos.sourceware.org, a version that is compliant with reconos is in the github repository, cross compilation tools: gcc-4.1.2 glibc-2.3.6
+\newline
+Webpages:
+\newline
+http://www.ana-project.org
+\newline
+http://www.epics-project.eu
+\newline
+http://www.reconos.de

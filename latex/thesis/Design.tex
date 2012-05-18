@@ -1,14 +1,46 @@
 \chapter{\label{design}Design}
 
-\section{Design Targets}
+In this chapter we present... TODO!
 
-In ReconOS, multiple hardware threads execute tasks on behalf of the CPU. To this end, the hardware threads and the software running in the CPU need to exchange data with each other. ReconOS provides different mechanisms for this purpose, most notably message boxes and shared memory. As we showed in Chapter \ref{introduction}, these mechanisms are not applicable for a networking application such as ANA. We therefor have to extend the ReconOS architecture with a high throughput communication infrastructure.\\
+\section{\label{designTargets}Design Targets}
+
+In ReconOS, multiple hardware threads execute tasks on behalf of the CPU. To this end, the hardware threads and the software running in the CPU need to exchange data with each other. ReconOS provides different mechanisms for this purpose, most notably message boxes and shared memory. All of these mechanisms have in common that they use a shared bus for the data transmission. This shared bus architecture is not well suited for a networking application like ANA. Imagine a packet that has to be processed by a set of functional blocks, all of them mapped to a hardware thread. In this case, the bus has to repeatedly forward the whole packet from one functional block to the next. The overall data transfer on the bus therefore increases linearly to the number of participating functional blocks.
+
+In this thesis, we want to extend the ReconOS architecture with a high throughput communication infrastructure. The data rate at which each functional block can send data over the communication infrastructure to a specific destination should be independent of the traffic in the communication infrastructure targeting a different destination.
+
 We distinguish three different applications of data transfer:
 \begin{itemize}
-	\item Data transfer from one hardware thread to another hardware thread
 	\item Data transfer from a hardware thread to a software thread
 	\item Data transfer from a software thread to a hardware thread
+	\item Data transfer from one hardware thread to another hardware thread
 \end{itemize}
+The case of data transfer from one software thread to another software thread is out of the scope of this thesis.
 
-The case of data transfer from one software thread to another software thread is out of the scope of this thesis.\\
-In this project, we do not make any assumptions on the nature of the processed network traffic mix. The communication infrastructure should be able to handle a specific worst-case load. This worst-case load is upper bounded by the maximum throughput on the physical link of the platform. 
+ANA distinguishes two directions in which a specific packet could be processed. \textit{Ingress} packets arrive at the physical interface, traverse the protocol stack upward and are then passed to the corresponding application. \textit{Egress} packets are produced by an application, traverse the protocol stack downwards and then transmitted on the physical interface.
+
+\subsection{Throughput}
+In this thesis, we assume that the size of a packet does not significantly change on its way through the protocol stack. We can therefore upper bound the total data rate at the input and output port of each functional block with the data rate on the physical interface. In our development environment, the Xilinx ML605 evaluation kit~\cite{ml605}, this physical interface is a Gigabit Ethernet module.
+
+We therefore expect form the communication infrastructure to forward 1 GB/s of data to each hardware mapped functional block, independent of the origin of the data, as long as the outgoing data rate of each hardware thread is upper bounded by 1 GB/s.
+
+\subsection{Latency}
+Data transfers that cross the hardware/software boundary cause an orders of magnitudes higher latency than data transfers in the hardware domain~\cite{reconfigurableNodesForFutureNetworks}. This is caused by the shared memory access and by the high overhead of the unavoidable interrupts. The total latency of a packet is therefore mainly influenced by the performance of the hardware to software or software to hardware data transfer, respectively. We therefore neglect latencies caused by the communication infrastructure between hardware threads and focus on the latencies induced when crossing the hardware/software boundary.
+
+\subsection{Hardware Resource Utilization}
+The desired communication infrastructure is only a helper construct for the actual application running on the device. We therefore want to keep it as small as possible, so that there is a maximum of programmable logic still available for the application.
+
+\section{Evaluation of Design Principles}
+In this section, we discuss possible design principles for the communication infrastructure. The discussion is based on the results of~\cite{communicationArchitectureExploration}. In subsection~\ref{designPrinciples:conclusion} we then conclude which design principle is best fit to the design targets stated in section \ref{designTargets}.
+
+\subsection{Point to Point Interconnection (P2P)}
+In a P2P architecture, all hardware threads are directly connected to all other hardware threads. The data transmission rate and the latency is optimal, since the packets do not share the resources with any other transmission. The receiving hardware thread is responsible for the serialization of the packets concurrently arriving on the different input ports. The logic and routing resource utilization of this architecture scales very bad with an increasing number of hardware threads.
+
+\subsection{Multibus}
+The multibus architecture is a mixture of the original shared bus architecture of ReconOS and the P2P architecture. In this architecture, all hardware threads read from their own individual bus. In order to send a packet to a hardware thread, the source hardware thread writes the packet to the bus of the destination hardware thread. An individual bus arbiter is required for each hardware thread.
+
+The data rate on this architecture is optimal, since each hardware thread can receive data with the full data rate of his bus. The latency depends on the response time of the bus arbiter. This architecture has a high routing resource utilization. Additionally, the parasitic capacities of the high impedance bus interfaces might limit the clock rate on the bus when the number of hardware thread increases.
+
+\subsection{Network on Chip (NoC)}
+
+
+\subsection{\label{designPrinciples:conclusion}Conclusion}

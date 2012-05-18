@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.2 r9819"
-   sodipodi:docname="protocolStack.eps"
+   sodipodi:docname="protocolStack.svg"
    inkscape:export-filename="/Users/richardhuber/ma/repos/ma/documents/presentations/intermediate1/protocolStack.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300">
@@ -168,9 +168,9 @@
      borderopacity="1"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.8101934"
-     inkscape:cx="103.11695"
-     inkscape:cy="496.70798"
+     inkscape:zoom="2.5600001"
+     inkscape:cx="132.64481"
+     inkscape:cy="468.03668"
      inkscape:document-units="pt"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -363,7 +363,7 @@
        x="240.71739"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Medium"
        xml:space="preserve"><tspan
-         style="font-size:8.30000019px;fill:#000000"
+         style="font-size:10px;fill:#000000"
          y="67.834091"
          x="240.71739"
          id="tspan3294"
@@ -773,6 +773,6 @@
          id="tspan7398"
          x="425.71738"
          y="67.834091"
-         style="font-size:8.30000019px;fill:#000000">b)</tspan></text>
+         style="font-size:10px;fill:#000000">b)</tspan></text>
   </g>
 </svg>

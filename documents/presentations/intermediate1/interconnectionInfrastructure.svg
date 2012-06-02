@@ -181,9 +181,9 @@
      borderopacity="1"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="246.93525"
-     inkscape:cy="555.24927"
+     inkscape:zoom="11.313708"
+     inkscape:cx="46.749717"
+     inkscape:cy="517.10447"
      inkscape:document-units="pt"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -192,8 +192,8 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1281"
-     inkscape:window-height="673"
+     inkscape:window-width="1701"
+     inkscape:window-height="824"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -224,7 +224,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -687,5 +687,16 @@
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#TriangleInM);marker-mid:none;marker-end:none"
          sodipodi:nodetypes="ccc" />
     </g>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Medium"
+       x="160.71739"
+       y="-53.165909"
+       id="text6313"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6315"
+         x="160.71739"
+         y="-53.165909">a)</tspan></text>
   </g>
 </svg>

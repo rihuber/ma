@@ -1,12 +1,12 @@
 \chapter{\label{design}Design}
 
-In this chapter we present... TODO!
+We start this chapter by introducing the design goals of the ReconOS extension in section \ref{designGoals}. This is followed by an evaluation of architectures and NoC topologies in the sections \ref{evaluationOfDesignPrinciples} and \ref{evaluationOfTopologies}, respectively. Section \ref{hwSwDataTransfer} describes the design of the hardware/software data transfer mechanism.
 
-\section{\label{designTargets}Design Targets}
+\section{\label{designGoals}Design Goals}
 
-In ReconOS, multiple hardware threads execute tasks on behalf of the CPU. To this end, the hardware threads and the software running in the CPU need to exchange data with each other. ReconOS provides different mechanisms for this purpose, most notably message boxes and shared memory. All of these mechanisms have in common that they use a shared bus for the data transmission. This shared bus architecture is not well suited for a networking application like ANA. Imagine a packet that has to be processed by a set of functional blocks, all of them mapped to a hardware thread. In this case, the bus has to repeatedly forward the whole packet from one functional block to the next. The overall data transfer on the bus therefore increases linearly to the number of participating functional blocks.
+In ReconOS, multiple hardware threads can execute tasks independent of the CPU. To this end, the hardware threads and software running in the CPU still need to exchange data with each other. ReconOS provides different mechanisms for this purpose, most notably message boxes and shared memory. All of these mechanisms have in common that they use a shared bus for data transmission. This shared bus architecture is not well suited for networking applications like ANA. Imagine a packet that has to be processed by a set of functional blocks, all of them mapped to hardware threads. In this case, the bus has to repeatedly forward the whole packet from one functional block to the next. The overall data transfer on the bus therefore increases linearly to the number of participating functional blocks.
 
-In this thesis, we want to extend the ReconOS architecture with a high throughput communication infrastructure. The data rate at which each functional block can send data over the communication infrastructure to a specific destination should be independent of the traffic in the communication infrastructure targeting a different destination.
+In this thesis, we want to extend the ReconOS architecture with a high-throughput communication infrastructure. The data rate at which each functional block can send data over the communication infrastructure to a specific destination should be independent of the traffic passing by targeting a different destination.
 
 We distinguish three different applications of data transfer:
 \begin{itemize}
@@ -16,31 +16,242 @@ We distinguish three different applications of data transfer:
 \end{itemize}
 The case of data transfer from one software thread to another software thread is out of the scope of this thesis.
 
-ANA distinguishes two directions in which a specific packet could be processed. \textit{Ingress} packets arrive at the physical interface, traverse the protocol stack upward and are then passed to the corresponding application. \textit{Egress} packets are produced by an application, traverse the protocol stack downwards and then transmitted on the physical interface.
+ANA processes packets in two distinct directions. \textit{Ingress} packets arrive at the physical interface, traverse the protocol stack upward and finally reach the corresponding application. \textit{Egress} packets have their origin in the application layer, traverse the protocol stack downwards and then leave the device on the physical interface.
 
-\subsection{Throughput}
-In this thesis, we assume that the size of a packet does not significantly change on its way through the protocol stack. We can therefore upper bound the total data rate at the input and output port of each functional block with the data rate on the physical interface. In our development environment, the Xilinx ML605 evaluation kit~\cite{ml605}, this physical interface is a Gigabit Ethernet module.
+\paragraph{Throughput}
+In this thesis, we assume that the size of a packet does not significantly change on its way through the protocol stack. We can therefore set an upper bound of the total data rate at the input and output port of each functional block. This upper bound is equal to the data rate of the physical interface. In our development environment we use a Xilinx ML605 evaluation kit~\cite{ml605}. Its physical interface is a Gigabit Ethernet Module.
 
-We therefore expect form the communication infrastructure to forward 1 GB/s of data to each hardware mapped functional block, independent of the origin of the data, as long as the outgoing data rate of each hardware thread is upper bounded by 1 GB/s.
+We therefore specify the following requirement for the communication infrastructure: The outgoing data rate of each functional block is upper bounded by 1 Gigabit/s. The communication infrastructure then forwards 1 Gigabit/s of data to each hardware-mapped functional block, independently of the origin of the data.
 
-\subsection{Latency}
-Data transfers that cross the hardware/software boundary cause an orders of magnitudes higher latency than data transfers in the hardware domain~\cite{reconfigurableNodesForFutureNetworks}. This is caused by the shared memory access and by the high overhead of the unavoidable interrupts. The total latency of a packet is therefore mainly influenced by the performance of the hardware to software or software to hardware data transfer, respectively. We therefore neglect latencies caused by the communication infrastructure between hardware threads and focus on the latencies induced when crossing the hardware/software boundary.
+\paragraph{Latency}
+Data transfers that cross the hardware/software boundary cause an orders of magnitudes higher latency than data transfers in the hardware domain~\cite{reconfigurableNodesForFutureNetworks}. This is caused by shared memory access and by the high overhead of unavoidable interrupts. The total latency of an ingress or egress of packet is therefore mainly influenced by the performance of the hardware to software or software to hardware data transfer, respectively. We therefore neglect latencies caused by the communication infrastructure between hardware threads and focus on the latencies induced by crossing the hardware/software boundary.
 
-\subsection{Hardware Resource Utilization}
-The desired communication infrastructure is only a helper construct for the actual application running on the device. We therefore want to keep it as small as possible, so that there is a maximum of programmable logic still available for the application.
+\paragraph{Hardware Resource Utilization}
+The desired communication infrastructure is only a helper construct for the actual application running on the device. Hence, we want to keep it as small as possible, so that there is a maximum of programmable logic still available for the application.
 
-\section{Evaluation of Design Principles}
-In this section, we discuss possible design principles for the communication infrastructure. The discussion is based on the results of~\cite{communicationArchitectureExploration}. In subsection~\ref{designPrinciples:conclusion} we then conclude which design principle is best fit to the design targets stated in section \ref{designTargets}.
+\section{\label{evaluationOfDesignPrinciples}Evaluation of Architectures}
+In this section, we discuss possible design principles for the communication infrastructure. The discussion is based on the results of Lee et. al.~\cite{communicationArchitectureExploration}. In subsection~\ref{designPrinciples:conclusion}, we then conclude which design principle best fits to the design goals stated in section \ref{designGoals}.
 
-\subsection{Point to Point Interconnection (P2P)}
-In a P2P architecture, all hardware threads are directly connected to all other hardware threads. The data transmission rate and the latency is optimal, since the packets do not share the resources with any other transmission. The receiving hardware thread is responsible for the serialization of the packets concurrently arriving on the different input ports. The logic and routing resource utilization of this architecture scales very bad with an increasing number of hardware threads.
+\subsection{\label{evaluation:p2p}Point to Point Interconnection (P2P)}
+In a P2P architecture, all hardware threads are directly connected to each other. The data transmission rate and the latency is optimal, since the packets do not need to share resources with any other transmission. The receiving hardware thread is responsible for the serialization of packets that concurrently arrive on different input ports. Lee et. al.~\cite{communicationArchitectureExploration} show that the logic and routing resource utilization of this architecture scales very bad with an increasing number of peers.
 
 \subsection{Multibus}
 The multibus architecture is a mixture of the original shared bus architecture of ReconOS and the P2P architecture. In this architecture, all hardware threads read from their own individual bus. In order to send a packet to a hardware thread, the source hardware thread writes the packet to the bus of the destination hardware thread. An individual bus arbiter is required for each hardware thread.
 
-The data rate on this architecture is optimal, since each hardware thread can receive data with the full data rate of his bus. The latency depends on the response time of the bus arbiter. This architecture has a high routing resource utilization. Additionally, the parasitic capacities of the high impedance bus interfaces might limit the clock rate on the bus when the number of hardware thread increases.
+The data rate on this architecture is optimal, since each hardware thread can receive data with the full data rate of its bus. The latency depends on the response time of the bus arbiter. Since all hardware threads have their own bus that must connect to each hardware thread, we assume that this architecture has a high routing resource utilization. We further assume, that the long bus wires and the parasitic capacities of the high impedance bus interfaces limit the clock rate on the bus when the number of hardware threads increase.
 
-\subsection{Network on Chip (NoC)}
+\subsection{\label{evaluation:noc}Network on Chip (NoC)}
+A NoC is a packet based communication architecture. Intellectual property (IP) cores (hardware threads in the context of ReconOS) are connected to a dedicated switch. The switches are then interconnected with each other according to a selected topology. When a packet arrives on an incoming link of a switch, the switch selects an outgoing link depending on the packet's header and forwards the packet on this link.
 
+A NoC is subject to many configuration issues, e.g. the topology, the number of IP cores per switch or the routing policy. This configuration possibility enables the developer to adapt the NoC architecture to any given requirements.
+
+The latency of the packets and the flow through the network strongly depend on the selected topology and the routing policy. The NoC architecture has a higher latency compared to the Multibus architecture. The reason for this is that the packets must traverse the network hop by hop. Thereby every hop induces a latency of one clock cycle and possibly an additional latency caused by the routing mechanism. On the other hand, the length of the hop signals~-~and with this also their clock rate~-~is independent of the number of IP cores. This is not the case for the Multibus architecture. We can therefore state, that the NoC architecture scales better with increasing number of hardware threads than the Multibus architecture.
 
 \subsection{\label{designPrinciples:conclusion}Conclusion}
+Based on the discussion in subsections \ref{evaluation:p2p} to \ref{evaluation:noc}, we assigned grades from 1 to 10 to each presented architecture. The total grade of the architectures is a weighted average of the individual grades. The grades are:
+\begin{itemize}
+	\item \textbf{Data Rate} (weight 5): The average throughput of the architecture. 10 is the highest throughput.
+	\item \textbf{Latency} (weight 2): The average latency of the packets. 10 is the lowest latency.
+	\item \textbf{Chip Area} (Weight 3): The expected chip area consumed by the architecture. 10 is the smallest chip area.
+	\item \textbf{Engineering Effort} (weight 2): The engineering effort for developing an implementation of the architecture. 10 is the least effort (e.g. ReconOS as is).
+	\item \textbf{Scalability} (weight 4): The scalability of the architecture in all the above mentioned criteria for an increasing number of hardware threads. 10 is the best scalability.
+\end{itemize}
+The assigned grades are shown in figure \ref{evaluationOfDesignPrinciples.eps}.
+\begin{figure}
+  \begin{center}
+		 \includegraphics[width=\textwidth]{evaluationOfDesignPrinciples.eps}
+  \caption{For each design goal a grade ranging from 1 to 10 is assigned to each architecture. The weighted average of the grades represents the overall suitability of the architectures for the problem at hand.}
+  \label{evaluationOfDesignPrinciples.eps}
+  \end{center}
+\end{figure}
+As we expected, the global bus architecture (weighted average 3.81) and the P2P architecture (weighted average 5.94) get significantly lower grades than the Multibus architecture (weighted average 7.13) and the NoC architecture (weighted average 7.63). The higher weighted average of the NoC architecture compared to the Multibus architecture is mainly due to the better scalability.
+
+Based on these results, we decided to implement the communication infrastructure as NoC. An evaluation of NoC topologies is presented in section \ref{evaluationOfTopologies}.
+
+
+
+
+
+\section{\label{evaluationOfTopologies}Evaluation of NoC Topologies}
+The performance of a NoC heavily depends on the topology used to interconnect the switches and the corresponding routing policy. In this section, we first present the evaluated topologies and routing mechanisms in subsection~\ref{evaluationOfTopologies:topologies}. Subsection \ref{linkFlowMeasure} then presents the \textit{total link flow} measure used to estimate the resources consumed by the links of a given NoC topology. In subsection \ref{evaluationOfTopologies:conclusion}, we then conclude which topology fits the requirements best.
+
+In this thesis we ignore load balancing since any benefit from this approach would be cancelled out by the worst-case traffic pattern.
+
+\subsection{\label{evaluationOfTopologies:topologies}Topologies and Routing Policies}
+The topology of an NoC describes how the switches are interconnected with each other and how the functional blocks are connected to the switches. The routing policy specifies the outgoing link of a switch on which an incoming packet is forwarded depending on the destination address of the packet. The topology is specified at design time and does not change at runtime. Each switch has therefore a global knowledge on the topology and can use this knowledge for the routing decision.
+
+\paragraph{Grid topology}
+In the grid topology, the switches are arranged in a mesh. Figure~\ref{nocTopologies.eps}~a) shows an example of the grid topology. We evaluated this topology with the xy-routing policy. In this routing policy, an x- and an y-coordinate is assigned to each switch. The switches forward packets in the x-dimension until the x-coordinate of the destination address and the x-coordinate of the processing switch is equal. The switches then forward the packets in the y-dimension until the packet reaches its destination.
+
+An advantage of the grid topology is, that it is easily mappable to the available chip area. A big drawback is that it is not applicable to all possible number of functional blocks. If the number of functional blocks is not a square number, the resulting topology will not be optimal.
+
+\paragraph{Torus topology}
+The torus topology is build in the same way as the grid topology with the exception that border switches are also interconnected. An example of the torus topology is shown in figure~\ref{nocTopologies.eps}~b). For the torus topology we also used the xy-routing policy. The advantages and disadvantages of the torus topology are much the same as for the grid topology.
+
+\paragraph{Ring topology}
+In the ring topology, the switches are arranged in a ring as shown in figure~\ref{nocTopologies.eps}~c) and d). We distinguish two different routing policies: \textit{unidirectional} routing and \textit{bidirectional} routing. Switches using the unidirectional routing policy forward all packets to the same switch. Therefore all packets travel in the same direction, e.g. clockwise. Switches using the bidirectional routing mechanism first determine the number of hops to the destination of the packet in the clockwise and anticlockwise direction. They then send the packet in the direction where the number of hops is smaller.
+
+We further extend the ring topology by connecting multiple functional blocks to the switches. The destination address of the packets then consists of a \textit{global address} and a \textit{local address}. The global address represents the switch to which the destination functional block is connected. The local address identifies the functional block in the set of functional blocks connected to the same switch. The combination of global and local addresses is then unique within the NoC.
+
+The routing mechanism of the ring topology (especially when using unidirectional routing) is easier than xy-routing. We therefore expect that a switch in the ring topology requires less hardware resources than a switch in the grid- or torus topology.
+
+\begin{figure}
+  \begin{center}
+		 \includegraphics[width=\textwidth]{nocTopologies.eps}
+  \caption{Examples of NoC topologies: a) Grid b) Torus c) Ring with one hardware thread per switch d) Ring with two hardware threads per switch}
+  \label{nocTopologies.eps}
+  \end{center}
+\end{figure}
+
+\subsection{\label{linkFlowMeasure}The Total Link Flow Measure}
+In order to guarantee the required throughput for the hardware threads, each link in the NoC must be able to forward an individual worst-case data rate. We adapt the capacity of each link to its worst-case data rate by manipulating the number of parallel channels the link contains. We assume that the hardware resources needed by a link is approximately proportional to its number of parallel channels.
+
+We define the \textit{total link flow} of a topology as the sum of the worst-case data rates on the individual links of the whole topology. According to the above argumentation, this measure is approximately proportional to the total hardware resources used by the links of the NoC. 
+
+\paragraph{\label{linkFlowAlgorithm}Algorithm}
+In order to estimate the resources used by the links of an NoC, we designed an algorithm that calculates the total link flow for an arbitrary NoC given the NoC's topology and routing policy. In this algorithm we assume, that each hardware thread is able to consume and produce data at exactly the rate 1.
+
+The idea of the algorithm is to virtually send explorer packets from each hardware thread to all other hardware threads, containing the ID of the source and destination hardware thread. Every time a packet traverses a link, the link adds the source and destination ID pair to a link-local list. This list is then interpreted as a bipartide graph with the senders in one partition 	and the receivers in the other partition. The worst-case data rate of a link is then determined by the cardinality of the maximum matching of the bipartide graph.
+
+Here is how the algorithm works:
+\begin{enumerate}
+\item Set up the network as a directed graph $G_{net}=(V,E)$ with
+	\begin{enumerate}
+		\item $V$ the set of all nodes $v$
+		\item $E$ the set of all links $e=(v_i,v_j)$ able to forward packets from $v_i$ to $v_j$.
+	\end{enumerate}
+\item Let $E_{out,i}$ be the set of negative incident edges of node $v_i$.
+\item For all nodes $v_i$ in $V$ select a routing policy $R_i:v_{dest}\rightarrow e_{out}$ where $v_{dest}\neq v_i$ is the destination of the routed packet and $e_{out} \in E_{out,i}$ is the outgoing link chosen to forward the packet.
+\item Send explorer packets
+	\begin{enumerate}
+		\item All nodes $v_{src}\in V$ send exactly one packet $p=(v_{src},v_{dest})$ to all nodes $v_{dest}	\in V, v_{src}\ne v_{dest}$.
+		\item All links $e_i \in E$ refer to a bipartide graph $G_{link,i}=(S_i\cup D_i,L_i)$. $S_i$, $D_i$ and $L_i$ are initialized as empty sets. Upon forwarding packet $p=(v_{src},v_{dest})$ on the link $e_i$, the link
+		\begin{enumerate}
+			\item adds $v_{src}$ to $S_i$ (if $v_{src}\not\in S_i$),
+			\item adds $v_{dst}$ to $D_i$ (if $v_{dest}\not\in D_i$),
+			\item adds the edge $(v_{src},v_{dest})$ to $L_i$.
+		\end{enumerate}
+	\end{enumerate}
+	\item Select the worst case data rate on 	all links $e_i$
+	\begin{enumerate}
+		\item For the bipartide graph $G_{link, i}$ find a maximum matching $M_i$ (e.g. using the Hopcroft-Karp algorithm).
+		\item From graph theory we know, that for a bipartide graph, the cardinality $|M_i|$ of a maximum matching is equal to the cardinality of the maximum flow $|f_i|$ from one partition of the graph to the other.
+		\item The worst-case data rate on the link $e_i$ is therefore equal to $|M_i|$.
+	\end{enumerate}
+	\item The total link flow $f_{tot}$ of the given topology and routing policy is then $	f_{tot} = \sum_{v_i\in V} |M_i|$
+
+\end{enumerate}
+
+
+\paragraph{\label{linkFlowResults}Results}
+We implemented the algorithm presented above using the Java programming language. Table~\ref{totalLinkFlowResults} presents the results for a set of topologies and routing algorithms. Additionally, figure \ref{totalLinkFlow.eps} shows a graphical visualization of the most representative values.
+
+We see from these results, that the simplest version of the ring topology (with 1 functional block per switch) has a much higher total link flow than the grid topology. With an increasing number of functional blocks connected to the switches in the ring topology, the difference in the total link flow decreases more and more. Finally, the total link flow of the ring topology with 4 functional blocks per switch is comparable to the total link flow of the grid topology.
+
+The most surprising result is that the total link flow of the grid topology is exactly the same as that of the torus topology. The total link flow of the various ring topologies is also independent of the chosen routing algorithm.
+
+\begin{table}
+\begin{center}
+\begin{tabular}{|l|l|rrrrrrrr|}
+\hline
+	\multicolumn{2}{|l|}{Nodes} & 1 & 4 & 6 & 9 & 12 & 16 & 20  & 25 \\
+\hline
+\hline
+	Topology & Routing & & & & & & & & \\
+\hline
+	Grid & XY & 0 & 8 & & 36 & & 96 & & 200 \\
+	Torus & XY & 0 & 8 & & 36 & & 96 & & 200 \\
+	Ring (1 FB/SW) & Unidirectional & 0 & 12 & 30 & 72 & 132 & 240 & 380 & 600\\
+	Ring (1 FB/SW) & Bidirectional & 0 & 12 & 30 & 72 & 132 & 240 & 380 & 600\\
+	Ring (2 FB/SW) & Unidirectional &0& 12 & 24 & 53 & 84 & 144 & 220 & 349\\
+	Ring (3 FB/SW) & Unidirecitonal &0 & 10 & 18 & 36 & 60 & 110 & 159 & 248\\
+	Ring (4 FB/SW) & Unidirectional &0 & 8 & 16 & 33 & 48 & 80 & 120 & 197\\
+\hline
+\end{tabular}
+\caption{Total link flow of NoCs with a specific topology and routing algorithm.}
+\label{totalLinkFlowResults}
+\end{center}
+\end{table}
+
+\begin{figure}
+  \begin{center}
+		 \includegraphics[width=\textwidth]{totalLinkFlow.eps}
+  \caption{Total link flow of the ring and grid topology}
+  \label{totalLinkFlow.eps}
+  \end{center}
+\end{figure}
+
+\subsection{\label{evaluationOfTopologies:conclusion}Conclusion}
+The evaluation of NoC topologies results in a trade-off decision. On one hand we have the grid topology with a relatively complex routing mechanism and a low resource consumption for the links. On the other hand we have the ring topology with a very simple routing mechanism and a high resource consumption for the links. The ring topology with multiple functional blocks per switch seems to be a good trade-off between these two extremes. We therefore decided to implement the ring topology with an adaptable number of functional blocks per switch. Figure~\ref{interconnectionInfrastructureRing.eps} shows an example of the resulting architecture with two functional blocks per switch and three parallel channels between the switches.
+\begin{figure}
+  \begin{center}
+		 \includegraphics[width=\textwidth]{interconnectionInfrastructureRing.eps}
+  \caption{An example of the resulting NoC topology: a ring with two functional blocks per switch and three parallel channels between the switches}
+  \label{interconnectionInfrastructureRing.eps}
+  \end{center}
+\end{figure}
+
+
+\section{\label{hwSwDataTransfer}Hardware - Software Data Transfer}
+In sections~\ref{evaluationOfDesignPrinciples} and \ref{evaluationOfTopologies} we focused on the exchange of data between two hardware threads. In this section we now want to concentrate on the data transfer between hardware- and software threads. 
+
+\subsection{Utilities provided by ReconOS}
+\paragraph{Message Boxes} In ReconOS, a thread - either hardware or software - can write 32 bit words to a message box. These words stay in a message box until any thread reads them. The write and read access of message boxes is automatically thread-safe. When a thread reads from an empty message box, the corresponding system call blocks until another thread writes data into the message box. ReconOS raises an interrupt at the CPU whenever a data word is written to a message box. It is therefore not feasible to handle high volume data transfers with message boxes, since this would cause a very high interrupt load. Message boxes are more appropriate for notifying other threads about infrequent events.
+\paragraph{Shared Memory}
+ReconOS provides hardware and software threads with concurrent access to shared memory. Typically, a software thread allocates the shared memory segment and then sends the starting address of the segment to the hardware threads using message boxes. The access to shared memory is inherently not thread-safe. Therefore, threads must define appropriate critical sections when accessing the shared memory. The data transfer rate of shared memory is much higher than the data transfer rate of message boxes. However, threads waiting for new data are not notified about a write access of other threads and must therefore poll the shared memory.
+
+
+
+\subsection{Distributed versus Centralized}
+We can see from figure~\ref{interconnectionInfrastructureRing.eps} that the hardware threads are now at the same time connected to the NoC and the shared bus. The hardware threads can therefore simultaneously transfer packets to other hardware threads via the NoC and to software threads via the ReconOS interface.
+
+% distributed
+This distributed approach is not optimal in the case where two or more hardware threads send packets to the software at the same time. In this scenario, all sending hardware threads raise interrupts at the CPU for notifying the software thread about the availability of new data.
+
+% centralized
+In order to avoid this problem, we decided to implement a more centralized architecture. In this approach, two hardware threads form a \textit{hardware-to-software-} and a \textit{software-to-hardware gateway}, respectively. Hardware mapped functional blocks that want to transfer packets to a software thread send these packets via the NoC to the hardware-to-software gateway. The gateway is then responsible for transferring the packets to the software. The software-to-hardware gateway works just the same way. Software threads send packets to the software-to-hardware gateway which then redistributes the packets to their destination hardware thread using the NoC. Figure \ref{hwSwGateways.eps} visualizes this centralized architecture.
+
+These gateways can aggregate multiple packets that have to cross the hardware/software boundary within a specific time interval and therefore reduce the total number of required interrupts. The higher latency of the packets caused by the additional transfer on the NoC is well compensated by the reduced interrupt handling time.
+
+\begin{figure}
+  \begin{center}
+		 \includegraphics[width=\textwidth]{hwSwGateways.eps}
+  \caption{Two dedicated hardware threads for a hardware-to-software and a software-to-hardware gateway, respectively}
+  \label{hwSwGateways.eps}
+  \end{center}
+\end{figure}
+
+\subsection{Ring Buffer}
+The hardware-to-software gateway and the software-to-hardware gateway are very similar in concept. We therefore generalize the gateway's mechanism in order to reduce the documentation effort. Both gateways consist of a \textit{producer} thread and a \textit{consumer}. In the hardware-to-software gateway, the producer is a hardware thread and the consumer is a set of software threads. Conversely, in the software-to-hardware gateway, the producer is a set of software threads and the consumer is a hardware thread.
+
+Both gateways transfer data across the hardware/software boundary by using ring buffers in the shared memory. The producer and the consumer both hold a copy of the read and write pointer of the ring buffer. When a packet is ready to be transferred, the producer first checks whether there is enough free space available in the ring buffer for the packet. If this is the case, the producer then writes the size of the packet and the actual packet to the shared memory. A padding block may be necessary to fill the gap between the end of the packet and the the next word offset. After this write procedure, the producer sets its write pointer to the first offset after the packet. Figure \ref{ringBufferPacketFormat.eps} illustrates the format of the packets in the ring buffer.
+
+\begin{figure}
+  \begin{center}
+		 \includegraphics[width=\textwidth]{ringBufferPacketFormat3.eps}
+  \caption{The format a packet in the ring buffer}
+  \label{ringBufferPacketFormat.eps}
+  \end{center}
+\end{figure}
+Eventually, the producer decides that it is reasonable to notify the consumer about the packets in the ring buffer. The producer then writes its current write pointer to a message box. Upon receiving a new write pointer via the message box, the consumer knows that the area between the read pointer and the newly received write pointer is filled with valid packets. After the consumer processed all packets in this area, it updates its read pointer with the value of the received write pointer. The consumer then writes its read pointer to another message box, which is read by the producer. When the producer receives the newly read pointer of the consumer, it knows that the corresponding area of the ring buffer can be used again for the transfer of new packets.
+
+The tricky question is now: when should the producer initiate such an exchange of read and write pointers? The answer to this question is a trade-off. On one hand, we want to aggregate as much packets as possible in order to reduce the interrupt load. On the other hand, we need an upper bound for the latency of the packets. We further want to provide a non-blocking write access to the producer. We therefore require that a minimum amount of free space is always available in the ring buffer. Additionally, some packets may be very delay sensitive. We want to support these urgent packets and even allow them to decrease overall performance of the system. We therefore specify the following rules for the pointer exchange:
+\begin{itemize}
+\item The producer starts a timer when it writes a packet to the ring buffer for the first time after sending the write pointer to the consumer. An pointer exchange is initiated when this timer expires. This guarantees that the packets are not blocked in the ring buffer for more than one timer period.
+\item After the producer has written a packet to the ring buffer, it checks the amount of free space in the ring buffer. If this value is below a specific threshold, the producer initiates a pointer exchange. This enables the producer to continue writing packets to the ring buffer during the pointer exchange procedure.
+\item Delay sensitive packets have a specific flag set in their packet header. After writing such packets to the ring buffer, the producer immediately initiates a pointer exchange. 
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

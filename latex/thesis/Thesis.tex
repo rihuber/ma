@@ -10,7 +10,7 @@
 %**							Added \include{appendix.tex}
 %****************************************************************************
 
-\documentclass[12pt,final,a4paper,twoside]{book}
+\documentclass[10pt,final,a4paper,twoside]{book}
 %\documentclass[12pt,draft,a4paper,twoside]{book}
 %\documentclass[10pt,draft,a4paper,oneside]{report}
 %\documentclass[10pt,draft,a4paper,oneside]{article}
@@ -36,70 +36,21 @@
 %** environments.tex: Predefined Environments
 \include{environments}
 
-%**Documentation****************
-
-%** Abstract.tex: Contains a brief description
-%                 of what the reader may expect
 %\include{Abstract}
-
-%** Table of Contents
 \tableofcontents
-
-%** Table of Figures
 %\listoffigures
-
-%** Table of Figures
 %\listoftables
-
-%** Introduction.tex: Contains an introduction to
-%                     the topic and motivates the work.
-%                     State what the reader can find where.
 \include{Introduction}
-
-%** Problem.tex: Documentation in own words of the problem to
-%                be addressed in this document:
-%                What is the challenge, why is it useful what you
-%                plan to do.
-%\include{Problem}
-
-%** Design.tex: How was the problem attacked, what was the design
-%               the architecture 
 \include{Design}
+%\include{HardwareImplementation}
 
-%** Results.tex: What were the results achieved including an evaluation
-%
-%\include{Results}
-
-%** Outlook.tex: What needs to be done further, what is planed
-%
-%\include{Outlook}
-
-%** Summary.tex: What have you achieved, what have you presented in this
-%                document.  What are the highlights of your work.
-%                It should conclude by a conclusion.
-%\include{Summary}
-
-%** Switch to appendix-mode in Latex.
-%
 \appendix
 
 %** I would like to have the appendices enumerated by Alphabetical
 %   characters.
 \renewcommand{\thepart}{\Alph{part}}
 
-%** appendix.tex: Install instructions, configurations, test results,
-%		simulation data, additional theoretical disquisitions, ...
-%
-%\include{appendix}
-
-%** Timetable.tex: Timetable you worked out.
-%
-%\include{Timetable}
-
-%** Originalproblem.tex: The problem statement you received.
-%
 \include{Originalproblem}
-
 
 \bibliography{bibliography}{}
 \bibliographystyle{plain}

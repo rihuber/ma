@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.2 r9819"
-   sodipodi:docname="reconosForANA.eps"
+   sodipodi:docname="reconosForANA.svg"
    inkscape:export-filename="/Users/richardhuber/ma/repos/ma/documents/presentations/intermediate1/reconosArchitecture.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300">
@@ -333,9 +333,9 @@
      borderopacity="1"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2"
-     inkscape:cx="90.110706"
-     inkscape:cy="652.37091"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="300.81344"
+     inkscape:cy="559.88654"
      inkscape:document-units="pt"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -376,7 +376,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -986,7 +986,7 @@
                height="14.849242"
                x="-156.97771"
                y="122.91025" /></flowRegion><flowPara
-             id="flowPara4808"></flowPara></flowRoot>      </g>
+             id="flowPara4808" /></flowRoot>      </g>
       <path
          sodipodi:nodetypes="cc"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#TriangleInM);marker-mid:none;marker-end:url(#TriangleOutM)"
